@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Search by University | RESIDIA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/search-univ.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">
+    <img src="../src/logo.png" alt="">
+      RESIDIA
+    </div>
+
+    <div class="menu">
+    <a href="index.html" class="">Home</a>
+    <a href="article.html" class="">Discussion</a>
+    <a href="search-univ.html" class="active">Search</a>
+    <a href="catalogue.html" class="">Browse Catalog</a>
+    <a href="saved.html" class="">Saved</a>
+  </div>
+
+  <div class="hamburger" id="sidebarOpen">☰</div>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="univ-hero">
+
+    <div class="hero-image">
+      <img src="../src/search-univ-hero.jpg" alt="University area">
+    </div>
+
+    <div class="hero-content">
+      <p class="small-label">DISCOVER · FILTER · MOVE IN</p>
+
+      <h1>
+        FIND THE PERFECT<br>
+        CAMPUS HUB
+      </h1>
+
+      <p class="hero-subtitle">
+        Curated residences tailored for your academic lifestyle and personal growth.
+      </p>
+
+      <div class="search-tabs">
+    <button type="button" onclick="window.location.href='search.html'">
+        ⌖ By Location
+    </button>
+
+    <button type="button" class="active" onclick="window.location.href='search-univ.html'">
+        ▦ By University
+    </button>
+    </div>
+
+      <form class="search-form" id="searchUnivForm">
+        <input type="text" id="searchUnivInput" placeholder="Search by university or area...">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+  </header>
+
+  <!-- MAIN -->
+  <main class="univ-content">
+
+    <!-- SIDEBAR -->
+    <aside class="search-sidebar">
+
+      <section class="sidebar-block">
+        <div class="sidebar-title-row">
+          <h3>Recent Searches</h3>
+          <button id="clearRecent">Clear All</button>
+        </div>
+
+        <div class="recent-list" id="recentList">
+          <button>Apartment Jakarta Selatan</button>
+          <button>Studio Bandung furnished</button>
+        </div>
+      </section>
+
+      <section class="sidebar-block">
+        <h3>Popular Searches</h3>
+
+        <div class="popular-tags">
+          <button>Apartment Jakarta Selatan</button>
+          <button>Kos dekat kampus</button>
+          <button>Studio Bandung furnished</button>
+          <button>Bali monthly rental</button>
+          <button>Penthouse SCBD</button>
+          <button>Kos Surabaya murah</button>
+        </div>
+      </section>
+
+      <section class="near-card">
+        <div class="pin-icon">⌖</div>
+
+        <h3>Find Near You</h3>
+
+        <p>
+          Enable location to discover premium residences closest to where you are.
+        </p>
+
+        <button id="locationBtn">Enable Location</button>
+      </section>
+
+    </aside>
+
+    <!-- UNIVERSITY LIST -->
+    <section class="univ-section">
+
+      <p class="small-label gold">CAMPUS LIVING</p>
+
+      <h2>Popular Universities</h2>
+
+      <div class="univ-list">
+
+        <article class="univ-card">
+          <img src="../src/univ-ui.png" alt="">
+          <div>
+            <h3>Universitas Indonesia</h3>
+            <p>⌖ Depok, Jawa Barat</p>
+          </div>
+          <span>⌂ 350+ kos</span>
+          <button>›</button>
+        </article>
+
+        <article class="univ-card">
+          <img src="../src/univ-itb.png" alt="">
+          <div>
+            <h3>Institut Teknologi Bandung</h3>
+            <p>⌖ Bandung, Jawa Barat</p>
+          </div>
+          <span>⌂ 280+ kos</span>
+          <button>›</button>
+        </article>
+
+        <article class="univ-card">
+          <img src="../src/univ-ugm.png" alt="">
+          <div>
+            <h3>Universitas Gadjah Mada</h3>
+            <p>⌖ Yogyakarta, DIY</p>
+          </div>
+          <span>⌂ 420+ kos</span>
+          <button>›</button>
+        </article>
+
+        <article class="univ-card">
+          <img src="src/univ-its.png" alt="">
+          <div>
+            <h3>ITS Surabaya</h3>
+            <p>⌖ Surabaya, Jawa Timur</p>
+          </div>
+          <span>⌂ 190+ kos</span>
+          <button>›</button>
+        </article>
+
+        <article class="univ-card">
+          <img src="../src/univ-unair.png" alt="">
+          <div>
+            <h3>Universitas Airlangga</h3>
+            <p>⌖ Surabaya, Jawa Timur</p>
+          </div>
+          <span>⌂ 210+ kos</span>
+          <button>›</button>
+        </article>
+
+        <article class="univ-card">
+          <img src="src/univ-unpad.png" alt="">
+          <div>
+            <h3>Universitas Padjadjaran</h3>
+            <p>⌖ Bandung, Jawa Barat</p>
+          </div>
+          <span>⌂ 175+ kos</span>
+          <button>›</button>
+        </article>
+
+        <article class="univ-card">
+          <img src="../src/univ-undip.png" alt="">
+          <div>
+            <h3>Universitas Diponegoro</h3>
+            <p>⌖ Semarang, Jawa Tengah</p>
+          </div>
+          <span>⌂ 160+ kos</span>
+          <button>›</button>
+        </article>
+
+        <article class="univ-card">
+          <img src="../src/univ-ub.png" alt="">
+          <div>
+            <h3>Universitas Brawijaya</h3>
+            <p>⌖ Malang, Jawa Timur</p>
+          </div>
+          <span>⌂ 130+ kos</span>
+          <button>›</button>
+        </article>
+
+        <article class="univ-card">
+          <img src="../src/univ-uns.png" alt="">
+          <div>
+            <h3>Universitas Sebelas Maret</h3>
+            <p>⌖ Surakarta, Jawa Tengah</p>
+          </div>
+          <span>⌂ 98+ kos</span>
+          <button>›</button>
+        </article>
+
+        <article class="univ-card">
+          <img src="../src/univ-ipb.png" alt="">
+          <div>
+            <h3>Institut Pertanian Bogor</h3>
+            <p>⌖ Bogor, Jawa Barat</p>
+          </div>
+          <span>⌂ 110+ kos</span>
+          <button>›</button>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- EXCLUSIVE -->
+  <section class="exclusive-section">
+    <img src="../src/search-banner.jpg" alt="">
+
+    <div class="exclusive-content">
+      <p>HAND-PICKED · VERIFIED · ELITE</p>
+      <h2>Exclusive Collection</h2>
+
+      <span>
+        Featuring hand-picked premium residences near top campuses.
+      </span>
+
+      <a href="catalogue.html">
+        Browse Luxury Residences →
+      </a>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <div></div>
+
+    <p>
+      “A residence is not merely a dwelling — it is a statement of who you are,
+      and the world you choose to inhabit.”
+    </p>
+
+    <span>RESIDIA · EST. 2024</span>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+
+    <div class="footer-top">
+
+      <div>
+        <h2>RESIDIA</h2>
+        <p>
+          Curating premium living experiences across Indonesia's finest urban addresses.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>Explore</h4>
+          <a href="index.html">Home</a>
+          <a href="search.html">Search</a>
+          <a href="catalogue.html">Catalogue</a>
+          <a href="article.html">Articles</a>
+          <a href="#">About Us</a>
+        </div>
+
+        <div>
+          <h4>Support</h4>
+          <a href="#">FAQ</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 RESIDIA. All rights reserved.</p>
+      <p>Premium Rental Platform · Indonesia</p>
+    </div>
+
+  </footer>
+
+  <script src="../script/search-univ.js"></script>
+</body>
+</html>

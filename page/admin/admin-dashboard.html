@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Admin Dashboard | RESIDIA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../styles/admin/admin-dashboard.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="admin-sidebar">
+
+    <div class="sidebar-logo">
+      <img src="../../src/logo.png" alt="RESIDIA Logo">
+      <span>RESIDIA</span>
+    </div>
+
+    <div class="admin-profile">
+      <div class="avatar">A</div>
+      <p>Welcome back,</p>
+      <h3>Admin Residia</h3>
+      <span>Platform Manager</span>
+    </div>
+
+    <nav class="sidebar-menu">
+      <a href="admin-dashboard.html" class="active">▣ Dashboard</a>
+      <a href="admin-mitra.html">☰ Kelola Mitra</a>
+      <a href="admin-report.html">□ Laporan Mitra</a>
+      <a href="../login.html" class="logout">↪ Logout</a>
+    </nav>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="admin-main">
+
+    <!-- TOP HEADER -->
+    <header class="admin-header">
+
+      <div>
+        <p class="small-label">ADMIN DASHBOARD</p>
+        <h1>Partner Verification</h1>
+        <span>
+          Manage mitra registration, review partner documents, and monitor verification activity.
+        </span>
+      </div>
+
+      <div class="header-actions">
+        <a href="admin-mitra.html" class="primary-btn">Review Mitra</a>
+        <button class="outline-btn" id="exportBtn">Export Report</button>
+      </div>
+
+    </header>
+
+    <!-- OVERVIEW -->
+    <section class="overview-section">
+
+      <article class="overview-card">
+        <span>☰</span>
+        <p>Total Mitra</p>
+        <h2>142</h2>
+        <small>Registered partners</small>
+      </article>
+
+      <article class="overview-card">
+        <span>✓</span>
+        <p>Verified Mitra</p>
+        <h2>120</h2>
+        <small>Active partners</small>
+      </article>
+
+      <article class="overview-card">
+        <span>◷</span>
+        <p>Pending Review</p>
+        <h2>15</h2>
+        <small>Need verification</small>
+      </article>
+
+      <article class="overview-card warning">
+        <span>×</span>
+        <p>Rejected</p>
+        <h2>7</h2>
+        <small>Incomplete documents</small>
+      </article>
+
+    </section>
+
+    <!-- CONTENT GRID -->
+    <section class="dashboard-grid">
+
+      <!-- LEFT -->
+      <div class="left-column">
+
+        <section class="panel">
+
+          <div class="panel-header">
+            <div>
+              <p class="small-label">VERIFICATION QUEUE</p>
+              <h2>Mitra Waiting Approval</h2>
+            </div>
+
+            <a href="admin-mitra.html">View All</a>
+          </div>
+
+          <div class="mitra-list">
+
+            <article class="mitra-row">
+              <div class="mitra-avatar">AL</div>
+
+              <div class="mitra-info">
+                <h3>Alexandra Living</h3>
+                <p>4 properties submitted · Jakarta</p>
+              </div>
+
+              <span class="status pending">Pending</span>
+
+              <div class="row-actions">
+                <button class="approve-btn">Approve</button>
+                <button class="reject-btn">Reject</button>
+              </div>
+            </article>
+
+            <article class="mitra-row">
+              <div class="mitra-avatar">BR</div>
+
+              <div class="mitra-info">
+                <h3>Beryl Residence</h3>
+                <p>2 properties submitted · Surabaya</p>
+              </div>
+
+              <span class="status pending">Pending</span>
+
+              <div class="row-actions">
+                <button class="approve-btn">Approve</button>
+                <button class="reject-btn">Reject</button>
+              </div>
+            </article>
+
+            <article class="mitra-row">
+              <div class="mitra-avatar">SR</div>
+
+              <div class="mitra-info">
+                <h3>Samudra Realty</h3>
+                <p>1 property submitted · Bandung</p>
+              </div>
+
+              <span class="status pending">Pending</span>
+
+              <div class="row-actions">
+                <button class="approve-btn">Approve</button>
+                <button class="reject-btn">Reject</button>
+              </div>
+            </article>
+
+          </div>
+
+        </section>
+
+        <section class="panel">
+
+          <div class="panel-header">
+            <div>
+              <p class="small-label">PARTNER GROWTH</p>
+              <h2>Mitra Registration</h2>
+            </div>
+          </div>
+
+          <div class="chart-box">
+            <div class="bar" style="height:45%"><span>Jan</span></div>
+            <div class="bar" style="height:52%"><span>Feb</span></div>
+            <div class="bar" style="height:48%"><span>Mar</span></div>
+            <div class="bar" style="height:66%"><span>Apr</span></div>
+            <div class="bar" style="height:78%"><span>May</span></div>
+            <div class="bar" style="height:86%"><span>Jun</span></div>
+          </div>
+
+        </section>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="right-column">
+
+        <section class="panel">
+          <p class="small-label">NEEDS ATTENTION</p>
+          <h2>Admin Alerts</h2>
+
+          <div class="attention-list">
+            <div>
+              <strong>15 Pending Mitra</strong>
+              <p>Waiting for document review.</p>
+            </div>
+
+            <div>
+              <strong>4 Expired Documents</strong>
+              <p>Mitra need to re-upload verification.</p>
+            </div>
+
+            <div>
+              <strong>2 Suspicious Accounts</strong>
+              <p>Require manual checking.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <p class="small-label">QUICK ACTIONS</p>
+          <h2>Admin Shortcut</h2>
+
+          <div class="quick-actions">
+            <a href="admin-mitra.html">Review Mitra</a>
+            <button>Approve All Eligible</button>
+            <button>Export Mitra Data</button>
+            <button>Generate Monthly Report</button>
+          </div>
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="../../script/admin/admin-dashboard.js"></script>
+</body>
+</html>

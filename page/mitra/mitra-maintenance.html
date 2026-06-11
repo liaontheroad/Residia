@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Maintenance | RESIDIA Mitra</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../styles/mitra/mitra-bookings.css">
+</head>
+
+<body>
+
+  <nav class="mitra-nav">
+    <a href="../index.html" class="logo">
+      <img src="../../src/logo.png" alt="">
+      <span>RESIDIA</span>
+    </a>
+
+    <div class="nav-menu">
+      <a href="mitra-dashboard.html">Dashboard</a>
+      <a href="mitra-properties.html">Properties</a>
+      <a href="mitra-units.html">Units</a>
+      <a href="mitra-bookings.html">Bookings</a>
+    </div>
+
+    <button class="hamburger" id="sidebarOpen">☰</button>
+  </nav>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <aside class="mitra-sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <button class="sidebar-close" id="sidebarClose">☰</button>
+
+      <div class="sidebar-logo">
+        <img src="../../src/logo.png" alt="">
+        <span>RESIDIA</span>
+      </div>
+    </div>
+
+    <div class="mitra-profile">
+      <div class="avatar">A</div>
+      <p>Welcome back,</p>
+      <h3>Alexandra</h3>
+      <span>Verified Partner</span>
+    </div>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">MITRA MENU</h4>
+
+    <a href="mitra-dashboard.html" class="sidebar-link">▣ Dashboard</a>
+    <a href="mitra-properties.html" class="sidebar-link">⌂ Kelola Properti</a>
+    <a href="mitra-units.html" class="sidebar-link">▦ Kelola Unit</a>
+    <a href="mitra-bookings.html" class="sidebar-link">◷ Booking Masuk</a>
+    <a href="mitra-renter.html" class="sidebar-link">☰ Data Penyewa</a>
+    <a href="mitra-maintenance.html" class="sidebar-link active">✦ Maintenance</a>
+    <a href="mitra-payments.html" class="sidebar-link">$ Payments</a>
+    <a href="../history-transaction.html" class="sidebar-link">⇄ Riwayat Transaksi</a>
+
+    <div class="sidebar-line"></div>
+
+    <a href="#" class="sidebar-link">⚙ Pengaturan</a>
+    <a href="../login.html" class="sidebar-link logout">↪ Logout</a>
+  </aside>
+
+  <section class="bookings-hero">
+    <div class="hero-content">
+      <p class="small-label">MAINTENANCE MANAGEMENT</p>
+
+      <h1>
+        Service<br>
+        Requests
+      </h1>
+
+      <p>
+        Track repair reports, assign maintenance tasks, and monitor unit readiness.
+      </p>
+
+      <div class="hero-actions">
+        <button class="primary-btn" id="checkInBtn">Urgent Requests</button>
+        <button class="outline-btn" id="exportBtn">Export Report</button>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="../../src/featured.jpg" alt="">
+    </div>
+  </section>
+
+  <main class="bookings-main">
+
+    <section class="overview-section">
+      <article class="overview-card">
+        <span>!</span>
+        <p>Urgent Issues</p>
+        <h2>3</h2>
+        <small>Need immediate action</small>
+      </article>
+
+      <article class="overview-card">
+        <span>◷</span>
+        <p>In Progress</p>
+        <h2>8</h2>
+        <small>Currently handled</small>
+      </article>
+
+      <article class="overview-card">
+        <span>✓</span>
+        <p>Resolved</p>
+        <h2>24</h2>
+        <small>This month</small>
+      </article>
+
+      <article class="overview-card">
+        <span>▦</span>
+        <p>Affected Units</p>
+        <h2>6</h2>
+        <small>Across properties</small>
+      </article>
+    </section>
+
+    <section class="filter-panel">
+      <div class="filter-title">
+        <p class="small-label">FILTER</p>
+        <h2>Maintenance Requests</h2>
+      </div>
+
+      <div class="filter-tools">
+        <input type="text" id="searchInput" placeholder="Search issue, tenant, unit, or property...">
+
+        <div class="filter-tabs">
+          <button class="active" data-filter="all">All</button>
+          <button data-filter="pending">Urgent</button>
+          <button data-filter="confirmed">In Progress</button>
+          <button data-filter="checkin">Scheduled</button>
+          <button data-filter="rejected">Resolved</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-list" id="bookingList">
+
+      <article class="booking-card" data-status="pending" data-name="mt-2026-001 ac not working kevin hartono azure penthouse a-101">
+        <div class="booking-top">
+          <div>
+            <p class="booking-id">MT-2026-001</p>
+            <h2>AC Not Working</h2>
+            <span>Kevin Hartono · Azure Penthouse · Unit A-101</span>
+          </div>
+
+          <span class="status pending">Urgent</span>
+        </div>
+
+        <div class="booking-info">
+          <div>
+            <span>Reported Date</span>
+            <strong>11 Jun 2026</strong>
+          </div>
+
+          <div>
+            <span>Category</span>
+            <strong>Electrical</strong>
+          </div>
+
+          <div>
+            <span>Priority</span>
+            <strong>High</strong>
+          </div>
+
+          <div>
+            <span>Assigned To</span>
+            <strong>Not Assigned</strong>
+          </div>
+        </div>
+
+        <div class="booking-note">
+          <span>Issue Description:</span>
+          <p>Tenant reported that the AC stopped cooling since last night.</p>
+        </div>
+
+        <div class="booking-actions">
+          <button class="detail-btn">View Detail</button>
+          <button class="approve-btn">Assign Technician</button>
+          <button class="reject-btn">Mark Resolved</button>
+        </div>
+      </article>
+
+      <article class="booking-card" data-status="confirmed" data-name="mt-2026-002 water leak amanda putri ivory residence b-201">
+        <div class="booking-top">
+          <div>
+            <p class="booking-id">MT-2026-002</p>
+            <h2>Water Leak</h2>
+            <span>Amanda Putri · Ivory Residence · Unit B-201</span>
+          </div>
+
+          <span class="status confirmed">In Progress</span>
+        </div>
+
+        <div class="booking-info">
+          <div>
+            <span>Reported Date</span>
+            <strong>10 Jun 2026</strong>
+          </div>
+
+          <div>
+            <span>Category</span>
+            <strong>Plumbing</strong>
+          </div>
+
+          <div>
+            <span>Priority</span>
+            <strong>Medium</strong>
+          </div>
+
+          <div>
+            <span>Assigned To</span>
+            <strong>Budi Technician</strong>
+          </div>
+        </div>
+
+        <div class="booking-note">
+          <span>Progress:</span>
+          <p>Technician has inspected the pipe and scheduled replacement tomorrow.</p>
+        </div>
+
+        <div class="booking-actions">
+          <button class="detail-btn">View Detail</button>
+          <button class="invoice-btn">Update Progress</button>
+        </div>
+      </article>
+
+      <article class="booking-card" data-status="checkin" data-name="mt-2026-003 door lock replacement rachel tan azure penthouse a-102">
+        <div class="booking-top">
+          <div>
+            <p class="booking-id">MT-2026-003</p>
+            <h2>Door Lock Replacement</h2>
+            <span>Rachel Tan · Azure Penthouse · Unit A-102</span>
+          </div>
+
+          <span class="status checkin">Scheduled</span>
+        </div>
+
+        <div class="booking-info">
+          <div>
+            <span>Schedule</span>
+            <strong>12 Jun 2026</strong>
+          </div>
+
+          <div>
+            <span>Category</span>
+            <strong>Security</strong>
+          </div>
+
+          <div>
+            <span>Priority</span>
+            <strong>Medium</strong>
+          </div>
+
+          <div>
+            <span>Assigned To</span>
+            <strong>Vendor LockPro</strong>
+          </div>
+        </div>
+
+        <div class="booking-note">
+          <span>Note:</span>
+          <p>Tenant requested lock replacement after access card issue.</p>
+        </div>
+
+        <div class="booking-actions">
+          <button class="detail-btn">View Detail</button>
+          <button class="approve-btn">Start Work</button>
+        </div>
+      </article>
+
+      <article class="booking-card" data-status="rejected" data-name="mt-2026-004 kitchen lamp fixed nabila solara suites c-301">
+        <div class="booking-top">
+          <div>
+            <p class="booking-id">MT-2026-004</p>
+            <h2>Kitchen Lamp Fixed</h2>
+            <span>Nabila Salsabila · Solara Suites · Unit C-301</span>
+          </div>
+
+          <span class="status rejected">Resolved</span>
+        </div>
+
+        <div class="booking-info">
+          <div>
+            <span>Resolved Date</span>
+            <strong>8 Jun 2026</strong>
+          </div>
+
+          <div>
+            <span>Category</span>
+            <strong>Electrical</strong>
+          </div>
+
+          <div>
+            <span>Cost</span>
+            <strong>Rp 150.000</strong>
+          </div>
+
+          <div>
+            <span>Resolved By</span>
+            <strong>Internal Team</strong>
+          </div>
+        </div>
+
+        <div class="booking-note">
+          <span>Resolution:</span>
+          <p>Lamp was replaced and tenant confirmed the issue is solved.</p>
+        </div>
+
+        <div class="booking-actions">
+          <button class="detail-btn">View Detail</button>
+          <button class="invoice-btn">View Report</button>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <script src="../../script/mitra/mitra-bookings.js"></script>
+</body>
+</html>

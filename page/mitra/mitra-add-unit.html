@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Add Unit | RESIDIA Mitra</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- REUSE -->
+  <link rel="stylesheet" href="../../styles/mitra/mitra-add-property.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="mitra-nav">
+
+    <a href="../index.html" class="logo">
+      <img src="../../src/logo.png" alt="">
+      <span>RESIDIA</span>
+    </a>
+
+    <div class="nav-menu">
+      <a href="mitra-dashboard.html">Dashboard</a>
+      <a href="mitra-properties.html">Properties</a>
+      <a href="mitra-units.html" class="active">Units</a>
+      <a href="mitra-bookings.html">Bookings</a>
+      <a href="mitra-payments.html">Payments</a>
+    </div>
+
+    <button class="hamburger" id="sidebarOpen">☰</button>
+
+  </nav>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <aside class="mitra-sidebar" id="sidebar">
+
+    <div class="sidebar-top">
+
+      <button class="sidebar-close" id="sidebarClose">☰</button>
+
+      <div class="sidebar-logo">
+        <img src="../../src/logo.png" alt="">
+        <span>RESIDIA</span>
+      </div>
+
+    </div>
+
+    <div class="mitra-profile">
+
+      <div class="avatar">A</div>
+
+      <p>Welcome back,</p>
+      <h3>Alexandra</h3>
+      <span>Verified Partner</span>
+
+    </div>
+
+    <div class="sidebar-line"></div>
+
+    <a href="mitra-dashboard.html" class="sidebar-link">▣ Dashboard</a>
+    <a href="mitra-properties.html" class="sidebar-link">⌂ Kelola Properti</a>
+    <a href="mitra-units.html" class="sidebar-link active">▦ Kelola Unit</a>
+
+  </aside>
+
+  <!-- HERO -->
+
+  <section class="add-property-hero">
+
+    <div class="hero-content">
+
+      <a href="mitra-units.html" class="back-link">
+        ← Back to Units
+      </a>
+
+      <p class="small-label">
+        UNIT MANAGEMENT
+      </p>
+
+      <h1>
+        Add New<br>
+        Unit
+      </h1>
+
+      <p>
+        Create a new rental unit and assign it to an existing property listing.
+      </p>
+
+    </div>
+
+    <div class="hero-image">
+      <img src="../../src/featured.jpg" alt="">
+    </div>
+
+  </section>
+
+  <!-- FORM -->
+
+  <main class="add-property-main">
+
+    <form id="unitForm">
+
+      <!-- BASIC -->
+
+      <section class="form-section">
+
+        <div class="section-title">
+          <p>UNIT INFORMATION</p>
+          <h2>Basic Details</h2>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label>Property</label>
+
+            <select>
+              <option>Azure Penthouse</option>
+              <option>Ivory Residence</option>
+              <option>Mirasol Seminyak</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Unit Code</label>
+
+            <input
+              type="text"
+              placeholder="A-103">
+          </div>
+
+          <div class="form-group">
+            <label>Floor</label>
+
+            <input
+              type="text"
+              placeholder="10th Floor">
+          </div>
+
+          <div class="form-group">
+            <label>Status</label>
+
+            <select>
+              <option>Available</option>
+              <option>Occupied</option>
+              <option>Reserved</option>
+              <option>Maintenance</option>
+            </select>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- RENTAL -->
+
+      <section class="form-section">
+
+        <div class="section-title">
+          <p>RENTAL INFORMATION</p>
+          <h2>Pricing</h2>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label>Monthly Rent</label>
+
+            <input
+              type="number"
+              placeholder="8500000">
+          </div>
+
+          <div class="form-group">
+            <label>Security Deposit</label>
+
+            <input
+              type="number"
+              placeholder="8500000">
+          </div>
+
+          <div class="form-group">
+            <label>Minimum Stay</label>
+
+            <input
+              type="text"
+              placeholder="3 Months">
+          </div>
+
+          <div class="form-group">
+            <label>Availability Date</label>
+
+            <input
+              type="date">
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- SPECIFICATION -->
+
+      <section class="form-section">
+
+        <div class="section-title">
+          <p>SPECIFICATION</p>
+          <h2>Unit Details</h2>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label>Bedrooms</label>
+            <input type="number" placeholder="2">
+          </div>
+
+          <div class="form-group">
+            <label>Bathrooms</label>
+            <input type="number" placeholder="2">
+          </div>
+
+          <div class="form-group">
+            <label>Area (m²)</label>
+            <input type="number" placeholder="85">
+          </div>
+
+          <div class="form-group">
+            <label>Furnishing</label>
+
+            <select>
+              <option>Fully Furnished</option>
+              <option>Semi Furnished</option>
+              <option>Unfurnished</option>
+            </select>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- DESCRIPTION -->
+
+      <section class="form-section">
+
+        <div class="section-title">
+          <p>DESCRIPTION</p>
+          <h2>Unit Description</h2>
+        </div>
+
+        <textarea
+          placeholder="Describe the unit..."></textarea>
+
+      </section>
+
+      <!-- FACILITIES -->
+
+      <section class="form-section">
+
+        <div class="section-title">
+          <p>FACILITIES</p>
+          <h2>Unit Features</h2>
+        </div>
+
+        <div class="amenities-grid">
+
+          <label><input type="checkbox"> Smart Lock</label>
+          <label><input type="checkbox"> Balcony</label>
+          <label><input type="checkbox"> Air Conditioner</label>
+          <label><input type="checkbox"> Wi-Fi Ready</label>
+          <label><input type="checkbox"> Kitchen Set</label>
+          <label><input type="checkbox"> Washer</label>
+          <label><input type="checkbox"> Refrigerator</label>
+          <label><input type="checkbox"> Parking Access</label>
+          <label><input type="checkbox"> City View</label>
+
+        </div>
+
+      </section>
+
+      <!-- IMAGES -->
+
+      <section class="form-section">
+
+        <div class="section-title">
+          <p>MEDIA</p>
+          <h2>Unit Images</h2>
+        </div>
+
+        <div class="upload-box">
+
+          <span>📷</span>
+
+          <h3>
+            Upload Unit Photos
+          </h3>
+
+          <p>
+            Drag & drop or browse files
+          </p>
+
+          <input
+            type="file"
+            multiple
+            id="imageUpload">
+
+        </div>
+
+        <div
+          class="preview-grid"
+          id="previewGrid">
+        </div>
+
+      </section>
+
+      <!-- ACTION -->
+
+      <section class="submit-section">
+
+        <button
+          type="button"
+          class="secondary-btn"
+          onclick="window.location.href='mitra-units.html'">
+
+          Cancel
+
+        </button>
+
+        <button
+          type="submit"
+          class="primary-btn">
+
+          Create Unit
+
+        </button>
+
+      </section>
+
+    </form>
+
+  </main>
+
+  <!-- REUSE -->
+  <script src="../../script/mitra/mitra-add-property.js"></script>
+
+</body>
+</html>

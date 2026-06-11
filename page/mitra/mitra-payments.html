@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Payments | RESIDIA Mitra</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../styles/mitra/mitra-payments.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="mitra-nav">
+    <a href="../index.html" class="logo">
+      <img src="../../src/logo.png" alt="">
+      <span>RESIDIA</span>
+    </a>
+
+    <div class="nav-menu">
+      <a href="mitra-dashboard.html">Dashboard</a>
+      <a href="mitra-properties.html">Properties</a>
+      <a href="mitra-units.html">Units</a>
+      <a href="mitra-bookings.html">Bookings</a>
+      <a href="mitra-payments.html" class="active">Payments</a>
+    </div>
+
+    <button class="hamburger" id="sidebarOpen">☰</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="payments-hero">
+
+    <div class="hero-content">
+      <p class="small-label">PAYMENT MANAGEMENT</p>
+
+      <h1>
+        Tenant<br>
+        Payments
+      </h1>
+
+      <p>
+        Monitor rent payments, verify proof of payment, and track outstanding tenant bills.
+      </p>
+
+      <div class="hero-actions">
+        <button class="primary-btn" id="generateInvoiceBtn">+ Generate Invoice</button>
+        <button class="outline-btn" id="exportBtn">Export Payment Report</button>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="../../src/featured.jpg" alt="">
+    </div>
+
+  </section>
+
+  <!-- MAIN -->
+  <main class="payments-main">
+
+    <!-- OVERVIEW -->
+    <section class="overview-section">
+
+      <article class="overview-card">
+        <span>$</span>
+        <p>Monthly Revenue</p>
+        <h2>Rp128jt</h2>
+        <small>Paid this month</small>
+      </article>
+
+      <article class="overview-card">
+        <span>!</span>
+        <p>Outstanding</p>
+        <h2>Rp24jt</h2>
+        <small>Needs collection</small>
+      </article>
+
+      <article class="overview-card">
+        <span>◷</span>
+        <p>Due This Week</p>
+        <h2>7</h2>
+        <small>Upcoming payments</small>
+      </article>
+
+      <article class="overview-card">
+        <span>✓</span>
+        <p>Paid Tenants</p>
+        <h2>42</h2>
+        <small>Verified payments</small>
+      </article>
+
+    </section>
+
+    <!-- FILTER -->
+    <section class="filter-panel">
+
+      <div class="filter-title">
+        <p class="small-label">FILTER</p>
+        <h2>Payment Records</h2>
+      </div>
+
+      <div class="filter-tools">
+        <input type="text" id="searchInput" placeholder="Search tenant, unit, property, or invoice...">
+
+        <div class="filter-tabs">
+          <button class="active" data-filter="all">All</button>
+          <button data-filter="paid">Paid</button>
+          <button data-filter="pending">Pending</button>
+          <button data-filter="late">Late</button>
+          <button data-filter="rejected">Rejected</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- PAYMENT LIST -->
+    <section class="payment-list" id="paymentList">
+
+      <article class="payment-card" data-status="paid" data-name="kevin hartono a-101 azure penthouse inv-2026-001">
+        <div class="payment-top">
+          <div>
+            <p class="invoice-id">INV-2026-001</p>
+            <h2>Kevin Hartono</h2>
+            <span>Azure Penthouse · Unit A-101</span>
+          </div>
+
+          <span class="status paid">Paid</span>
+        </div>
+
+        <div class="payment-info">
+          <div>
+            <span>Billing Period</span>
+            <strong>June 2026</strong>
+          </div>
+
+          <div>
+            <span>Due Date</span>
+            <strong>10 Jun 2026</strong>
+          </div>
+
+          <div>
+            <span>Paid Date</span>
+            <strong>9 Jun 2026</strong>
+          </div>
+
+          <div>
+            <span>Amount</span>
+            <strong>Rp 8.500.000</strong>
+          </div>
+        </div>
+
+        <div class="payment-proof">
+          <span>Payment Method: Bank Transfer</span>
+          <span>Proof uploaded and verified</span>
+        </div>
+
+        <div class="payment-actions">
+          <button class="detail-btn">View Detail</button>
+          <button class="invoice-btn">Download Invoice</button>
+        </div>
+      </article>
+
+      <article class="payment-card" data-status="pending" data-name="amanda putri b-201 ivory residence inv-2026-002">
+        <div class="payment-top">
+          <div>
+            <p class="invoice-id">INV-2026-002</p>
+            <h2>Amanda Putri</h2>
+            <span>Ivory Residence · Unit B-201</span>
+          </div>
+
+          <span class="status pending">Pending</span>
+        </div>
+
+        <div class="payment-info">
+          <div>
+            <span>Billing Period</span>
+            <strong>June 2026</strong>
+          </div>
+
+          <div>
+            <span>Due Date</span>
+            <strong>12 Jun 2026</strong>
+          </div>
+
+          <div>
+            <span>Paid Date</span>
+            <strong>-</strong>
+          </div>
+
+          <div>
+            <span>Amount</span>
+            <strong>Rp 3.800.000</strong>
+          </div>
+        </div>
+
+        <div class="payment-proof">
+          <span>Payment Method: Waiting</span>
+          <span>No proof uploaded yet</span>
+        </div>
+
+        <div class="payment-actions">
+          <button class="detail-btn">View Detail</button>
+          <button class="approve-btn">Send Reminder</button>
+        </div>
+      </article>
+
+      <article class="payment-card" data-status="late" data-name="rachel tan a-102 azure penthouse inv-2026-003">
+        <div class="payment-top">
+          <div>
+            <p class="invoice-id">INV-2026-003</p>
+            <h2>Rachel Tan</h2>
+            <span>Azure Penthouse · Unit A-102</span>
+          </div>
+
+          <span class="status late">Late</span>
+        </div>
+
+        <div class="payment-info">
+          <div>
+            <span>Billing Period</span>
+            <strong>June 2026</strong>
+          </div>
+
+          <div>
+            <span>Due Date</span>
+            <strong>5 Jun 2026</strong>
+          </div>
+
+          <div>
+            <span>Paid Date</span>
+            <strong>-</strong>
+          </div>
+
+          <div>
+            <span>Amount</span>
+            <strong>Rp 8.500.000</strong>
+          </div>
+        </div>
+
+        <div class="payment-proof">
+          <span>Payment Method: Waiting</span>
+          <span>Late by 6 days</span>
+        </div>
+
+        <div class="payment-actions">
+          <button class="detail-btn">View Detail</button>
+          <button class="approve-btn">Send Reminder</button>
+        </div>
+      </article>
+
+      <article class="payment-card" data-status="rejected" data-name="nabila salsabila c-301 solara suites inv-2026-004">
+        <div class="payment-top">
+          <div>
+            <p class="invoice-id">INV-2026-004</p>
+            <h2>Nabila Salsabila</h2>
+            <span>Solara Suites · Unit C-301</span>
+          </div>
+
+          <span class="status rejected">Rejected</span>
+        </div>
+
+        <div class="payment-info">
+          <div>
+            <span>Billing Period</span>
+            <strong>June 2026</strong>
+          </div>
+
+          <div>
+            <span>Due Date</span>
+            <strong>8 Jun 2026</strong>
+          </div>
+
+          <div>
+            <span>Submitted Date</span>
+            <strong>8 Jun 2026</strong>
+          </div>
+
+          <div>
+            <span>Amount</span>
+            <strong>Rp 5.200.000</strong>
+          </div>
+        </div>
+
+        <div class="payment-proof">
+          <span>Payment Method: E-Wallet</span>
+          <span>Proof rejected: unclear image</span>
+        </div>
+
+        <div class="payment-actions">
+          <button class="detail-btn">View Detail</button>
+          <button class="approve-btn">Request Re-upload</button>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <script src="../../script/mitra/mitra-payments.js"></script>
+</body>
+</html>

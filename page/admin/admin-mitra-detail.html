@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mitra Detail | RESIDIA Admin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../styles/admin/admin-mitra-detail.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="admin-sidebar">
+
+    <div class="sidebar-logo">
+      <img src="../../src/logo.png" alt="RESIDIA Logo">
+      <span>RESIDIA</span>
+    </div>
+
+    <div class="admin-profile">
+      <div class="avatar">A</div>
+      <p>Welcome back,</p>
+      <h3>Admin Residia</h3>
+      <span>Platform Manager</span>
+    </div>
+
+    <nav class="sidebar-menu">
+      <a href="admin-dashboard.html">▣ Dashboard</a>
+      <a href="admin-mitra.html" class="active">☰ Kelola Mitra</a>
+      <a href="admin-report.html">□ Laporan Mitra</a>
+      <a href="../login.html" class="logout">↪ Logout</a>
+    </nav>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="admin-main">
+
+    <!-- HEADER -->
+    <header class="admin-header">
+
+      <div>
+        <a href="admin-mitra.html" class="back-link">← Back to Mitra</a>
+
+        <p class="small-label">MITRA DETAIL</p>
+
+        <h1>Alexandra Living</h1>
+
+        <span>
+          Review partner identity, verification documents, account status, and basic portfolio summary.
+        </span>
+      </div>
+
+      <div class="header-actions">
+        <button class="primary-btn approve-btn">Approve Mitra</button>
+        <button class="outline-btn reject-btn">Reject</button>
+      </div>
+
+    </header>
+
+    <!-- STATUS STRIP -->
+    <section class="status-strip">
+
+      <div>
+        <span>Current Status</span>
+        <strong class="status pending">Pending Verification</strong>
+      </div>
+
+      <div>
+        <span>Registered</span>
+        <strong>9 Jun 2026</strong>
+      </div>
+
+      <div>
+        <span>Last Updated</span>
+        <strong>11 Jun 2026</strong>
+      </div>
+
+      <div>
+        <span>Review Type</span>
+        <strong>Manual Verification</strong>
+      </div>
+
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="overview-section">
+
+      <article class="overview-card">
+        <span>⌂</span>
+        <p>Submitted Properties</p>
+        <h2>4</h2>
+        <small>Waiting listing review</small>
+      </article>
+
+      <article class="overview-card">
+        <span>▦</span>
+        <p>Total Units</p>
+        <h2>128</h2>
+        <small>Across submitted assets</small>
+      </article>
+
+      <article class="overview-card">
+        <span>✓</span>
+        <p>Documents</p>
+        <h2>4/4</h2>
+        <small>Uploaded documents</small>
+      </article>
+
+      <article class="overview-card warning">
+        <span>!</span>
+        <p>Risk Flag</p>
+        <h2>Low</h2>
+        <small>No suspicious activity</small>
+      </article>
+
+    </section>
+
+    <!-- DETAIL LAYOUT -->
+    <section class="detail-grid">
+
+      <!-- LEFT COLUMN -->
+      <div class="left-column">
+
+        <section class="panel">
+
+          <div class="panel-header">
+            <div>
+              <p class="small-label">PARTNER INFORMATION</p>
+              <h2>Personal Details</h2>
+            </div>
+          </div>
+
+          <div class="info-grid">
+
+            <div>
+              <span>Owner Name</span>
+              <strong>Alexandra Putri</strong>
+            </div>
+
+            <div>
+              <span>Email</span>
+              <strong>alexandra@email.com</strong>
+            </div>
+
+            <div>
+              <span>Phone</span>
+              <strong>0812-3344-5566</strong>
+            </div>
+
+            <div>
+              <span>City</span>
+              <strong>Jakarta</strong>
+            </div>
+
+            <div>
+              <span>Address</span>
+              <strong>SCBD, South Jakarta</strong>
+            </div>
+
+            <div>
+              <span>Account Type</span>
+              <strong>Property Partner</strong>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="panel">
+
+          <div class="panel-header">
+            <div>
+              <p class="small-label">BUSINESS INFORMATION</p>
+              <h2>Company Data</h2>
+            </div>
+          </div>
+
+          <div class="info-grid">
+
+            <div>
+              <span>Business Name</span>
+              <strong>Alexandra Living Group</strong>
+            </div>
+
+            <div>
+              <span>Business Email</span>
+              <strong>partner@alexandraliving.com</strong>
+            </div>
+
+            <div>
+              <span>NPWP</span>
+              <strong>12.345.678.9-001</strong>
+            </div>
+
+            <div>
+              <span>Business Category</span>
+              <strong>Apartment Management</strong>
+            </div>
+
+            <div>
+              <span>Legal Status</span>
+              <strong>Private Company</strong>
+            </div>
+
+            <div>
+              <span>Verification Status</span>
+              <strong>Pending</strong>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="panel">
+
+          <div class="panel-header">
+            <div>
+              <p class="small-label">PORTFOLIO SUMMARY</p>
+              <h2>Submitted Properties</h2>
+            </div>
+          </div>
+
+          <div class="portfolio-list">
+
+            <article class="portfolio-row">
+              <img src="../../src/featured.jpg" alt="">
+              <div>
+                <h3>Azure Penthouse</h3>
+                <p>SCBD, Jakarta · 40 units</p>
+              </div>
+              <span class="portfolio-status pending">Pending</span>
+            </article>
+
+            <article class="portfolio-row">
+              <img src="../../src/apart2.jpg" alt="">
+              <div>
+                <h3>Ivory Residence</h3>
+                <p>Dago, Bandung · 34 units</p>
+              </div>
+              <span class="portfolio-status pending">Pending</span>
+            </article>
+
+            <article class="portfolio-row">
+              <img src="../../src/apart3.jpg" alt="">
+              <div>
+                <h3>Mirasol Seminyak</h3>
+                <p>Seminyak, Bali · 24 units</p>
+              </div>
+              <span class="portfolio-status pending">Pending</span>
+            </article>
+
+          </div>
+
+        </section>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <aside class="right-column">
+
+        <section class="panel">
+
+          <div class="panel-header">
+            <div>
+              <p class="small-label">DOCUMENTS</p>
+              <h2>Verification Files</h2>
+            </div>
+          </div>
+
+          <div class="document-list">
+
+            <div class="document-item">
+              <div>
+                <strong>KTP Owner</strong>
+                <span>Uploaded · PDF</span>
+              </div>
+              <button class="view-doc-btn">View</button>
+            </div>
+
+            <div class="document-item">
+              <div>
+                <strong>NPWP</strong>
+                <span>Uploaded · PDF</span>
+              </div>
+              <button class="view-doc-btn">View</button>
+            </div>
+
+            <div class="document-item">
+              <div>
+                <strong>Ownership Letter</strong>
+                <span>Uploaded · PDF</span>
+              </div>
+              <button class="view-doc-btn">View</button>
+            </div>
+
+            <div class="document-item">
+              <div>
+                <strong>Selfie Verification</strong>
+                <span>Uploaded · JPG</span>
+              </div>
+              <button class="view-doc-btn">View</button>
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="panel">
+
+          <p class="small-label">ADMIN DECISION</p>
+          <h2>Verification Action</h2>
+
+          <div class="decision-box">
+            <button class="decision-approve approve-btn">Approve Mitra</button>
+            <button class="decision-reject reject-btn">Reject Application</button>
+            <button class="decision-suspend suspend-btn">Suspend Account</button>
+          </div>
+
+        </section>
+
+        <section class="panel warning-panel">
+
+          <p class="small-label">REVIEW NOTE</p>
+          <h2>Admin Checklist</h2>
+
+          <ul>
+            <li>Check identity document clarity.</li>
+            <li>Confirm NPWP and business data.</li>
+            <li>Review ownership document.</li>
+            <li>Make sure contact information is valid.</li>
+          </ul>
+
+        </section>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+  <script src="../../script/admin/admin-mitra-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Riwayat Transaksi | RESIDIA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/history-transaction.css">
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <header class="history-topbar">
+    <a href="index.html" class="back-btn">←</a>
+
+    <div class="brand">
+      <img src="../src/logo.png" alt="">
+      <span>RESIDIA</span>
+    </div>
+
+    <a href="search.html" class="top-link">Cari Properti</a>
+  </header>
+
+  <main class="history-page">
+
+    <!-- SIDEBAR -->
+    <aside class="account-sidebar">
+
+      <div class="profile-card">
+        <div class="avatar">A</div>
+
+        <p>Selamat datang,</p>
+        <h3>Alexandra D.</h3>
+
+        <div class="member-badge">★ Member Gold</div>
+      </div>
+
+      <nav class="account-menu">
+        <a href="index.html">⌂ Beranda</a>
+        <a href="search.html">⌕ Cari Properti</a>
+        <a href="#">♡ Properti Tersimpan</a>
+        <a href="history-transaction.html" class="active">▣ Riwayat Transaksi</a>
+        <a href="#">⚙ Pengaturan Akun</a>
+        <a href="#" class="logout">↪ Keluar</a>
+      </nav>
+
+      <div class="summary-box">
+        <h4>RINGKASAN</h4>
+
+        <div>
+          <span>Total Transaksi</span>
+          <strong>5</strong>
+        </div>
+
+        <div>
+          <span>Sedang Aktif</span>
+          <strong>1</strong>
+        </div>
+
+        <div>
+          <span>Selesai</span>
+          <strong>2</strong>
+        </div>
+      </div>
+
+    </aside>
+
+    <!-- CONTENT -->
+    <section class="history-content">
+
+      <div class="page-heading">
+        <h1>Riwayat Transaksi</h1>
+        <p>Kelola semua pemesanan dan riwayat pembayaran Anda.</p>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <p>Total Transaksi</p>
+          <h3>5</h3>
+          <span>semua waktu</span>
+        </div>
+
+        <div class="stat-card">
+          <p>Sedang Aktif</p>
+          <h3>1</h3>
+          <span>saat ini</span>
+        </div>
+
+        <div class="stat-card">
+          <p>Total Pengeluaran</p>
+          <h3>Rp 85.300.000</h3>
+          <span>sudah dibayar</span>
+        </div>
+
+        <div class="stat-card">
+          <p>Menunggu</p>
+          <h3>1</h3>
+          <span>perlu tindakan</span>
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <div class="filter-tabs">
+          <button class="active" data-filter="all">Semua</button>
+          <button data-filter="aktif">Aktif <span>1</span></button>
+          <button data-filter="menunggu">Menunggu <span>1</span></button>
+          <button data-filter="selesai">Selesai <span>2</span></button>
+          <button data-filter="dibatalkan">Dibatalkan <span>1</span></button>
+        </div>
+
+        <select id="sortSelect">
+          <option value="terbaru">Terbaru</option>
+          <option value="termahal">Harga Tertinggi</option>
+          <option value="termurah">Harga Terendah</option>
+        </select>
+      </div>
+
+      <div class="transaction-list">
+
+        <article class="transaction-card" data-status="aktif" data-price="25500000">
+          <div class="transaction-image">
+            <img src="../src/featured.jpg" alt="">
+            <span>Exclusive</span>
+          </div>
+
+          <div class="transaction-info">
+            <div class="transaction-top">
+              <p>#RSD-2024-8821</p>
+              <span class="status active">Aktif</span>
+            </div>
+
+            <h2>Azure Penthouse</h2>
+            <p class="location">⌖ Pantai Indah Kapuk, Jakarta</p>
+
+            <div class="date-grid">
+              <div>
+                <span>Check-in</span>
+                <strong>1 Jan 2025</strong>
+              </div>
+
+              <div>
+                <span>Check-out</span>
+                <strong>31 Mar 2025</strong>
+              </div>
+
+              <div>
+                <span>Durasi</span>
+                <strong>3 bulan</strong>
+              </div>
+            </div>
+
+            <div class="transaction-bottom">
+              <div>
+                <span>Total Pembayaran</span>
+                <h3>Rp 25.500.000</h3>
+                <p>via Credit Card</p>
+              </div>
+
+              <div class="action-buttons">
+                <button>⇩ Invoice</button>
+                <button class="detail-btn">⊙ Detail</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="transaction-card" data-status="selesai" data-price="11400000">
+          <div class="transaction-image">
+            <img src="../src/apart2.jpg" alt="">
+            <span>Premium</span>
+          </div>
+
+          <div class="transaction-info">
+            <div class="transaction-top">
+              <p>#RSD-2024-7743</p>
+              <span class="status done">Selesai</span>
+            </div>
+
+            <h2>Ivory Residence</h2>
+            <p class="location">⌖ Dago, Bandung</p>
+
+            <div class="date-grid">
+              <div>
+                <span>Check-in</span>
+                <strong>1 Sep 2024</strong>
+              </div>
+
+              <div>
+                <span>Check-out</span>
+                <strong>30 Nov 2024</strong>
+              </div>
+
+              <div>
+                <span>Durasi</span>
+                <strong>3 bulan</strong>
+              </div>
+            </div>
+
+            <div class="transaction-bottom">
+              <div>
+                <span>Total Pembayaran</span>
+                <h3>Rp 11.400.000</h3>
+                <p>via Bank Transfer</p>
+              </div>
+
+              <div class="action-buttons">
+                <button>★★★★★ 4.8</button>
+                <button>⇩ Invoice</button>
+                <button class="detail-btn">⊙ Detail</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="transaction-card" data-status="selesai" data-price="12400000">
+          <div class="transaction-image">
+            <img src="../src/apart3.jpg" alt="">
+            <span>Premium</span>
+          </div>
+
+          <div class="transaction-info">
+            <div class="transaction-top">
+              <p>#RSD-2024-6102</p>
+              <span class="status done">Selesai</span>
+            </div>
+
+            <h2>Mirasol Seminyak</h2>
+            <p class="location">⌖ Seminyak, Bali</p>
+
+            <div class="date-grid">
+              <div>
+                <span>Check-in</span>
+                <strong>15 Jun 2024</strong>
+              </div>
+
+              <div>
+                <span>Check-out</span>
+                <strong>14 Aug 2024</strong>
+              </div>
+
+              <div>
+                <span>Durasi</span>
+                <strong>2 bulan</strong>
+              </div>
+            </div>
+
+            <div class="transaction-bottom">
+              <div>
+                <span>Total Pembayaran</span>
+                <h3>Rp 12.400.000</h3>
+                <p>via GoPay</p>
+              </div>
+
+              <div class="action-buttons">
+                <button>★★★★★ 5</button>
+                <button>⇩ Invoice</button>
+                <button class="detail-btn">⊙ Detail</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="transaction-card cancelled" data-status="dibatalkan" data-price="8200000">
+          <div class="transaction-image">
+            <img src="../src/apart4.jpg" alt="">
+            <span>Premium</span>
+          </div>
+
+          <div class="transaction-info">
+            <div class="transaction-top">
+              <p>#RSD-2024-5580</p>
+              <span class="status cancelled">Dibatalkan</span>
+            </div>
+
+            <h2>Cobalt Tower Suite</h2>
+            <p class="location">⌖ Darmo, Surabaya</p>
+
+            <div class="date-grid">
+              <div>
+                <span>Check-in</span>
+                <strong>1 Apr 2024</strong>
+              </div>
+
+              <div>
+                <span>Check-out</span>
+                <strong>31 May 2024</strong>
+              </div>
+
+              <div>
+                <span>Durasi</span>
+                <strong>2 bulan</strong>
+              </div>
+            </div>
+
+            <div class="transaction-bottom">
+              <div>
+                <span>Total Refund</span>
+                <h3>Rp 8.200.000</h3>
+                <p>via OVO</p>
+              </div>
+
+              <div class="action-buttons">
+                <button>⇩ Invoice</button>
+                <button class="detail-btn">⊙ Detail</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="transaction-card" data-status="menunggu" data-price="36000000">
+          <div class="transaction-image">
+            <img src="../src/article-4.jpg" alt="">
+            <span>Exclusive</span>
+          </div>
+
+          <div class="transaction-info">
+            <div class="transaction-top">
+              <p>#RSD-2025-0044</p>
+              <span class="status waiting">Menunggu</span>
+            </div>
+
+            <h2>Velvet Suites SCBD</h2>
+            <p class="location">⌖ SCBD, Jakarta</p>
+
+            <div class="date-grid">
+              <div>
+                <span>Check-in</span>
+                <strong>1 Apr 2025</strong>
+              </div>
+
+              <div>
+                <span>Check-out</span>
+                <strong>30 Jun 2025</strong>
+              </div>
+
+              <div>
+                <span>Durasi</span>
+                <strong>3 bulan</strong>
+              </div>
+            </div>
+
+            <div class="transaction-bottom">
+              <div>
+                <span>Total Pembayaran</span>
+                <h3>Rp 36.000.000</h3>
+                <p>via Credit Card</p>
+              </div>
+
+              <div class="action-buttons">
+                <button>⇩ Invoice</button>
+                <button class="detail-btn">⊙ Detail</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="history-footer">
+    <h2>RESIDIA</h2>
+    <p>© 2025 RESIDIA · Luxury Living, Redefined</p>
+  </footer>
+
+  <script src="../script/history-transaction.js"></script>
+
+</body>
+</html>

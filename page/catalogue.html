@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RESIDIA Catalogue</title>
+
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../styles/catalogue.css">
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav>
+
+    <div class="logo">
+      <img src="../src/logo.png" alt="">
+      RESIDIA
+    </div>
+
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="#">Discussion</a>
+      <a href="search.html">Search</a>
+      <a href="catalogue.html" class="active">Browse Catalog</a>
+      <a href="saved.html">Saved</a>
+    </div>
+
+    <div class="hamburger" id="sidebarOpen">
+      ☰
+    </div>
+
+  </nav>
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <img src="../src/hero-catalogue.jpg" alt="Catalogue hero">
+
+    <div class="hero-content">
+
+      <h1>
+        FIND YOUR SPACE
+      </h1>
+
+      <p>
+        Where architectural precision meets the stillness of luxury
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CATALOGUE ================= -->
+
+  <section class="catalogue">
+
+    <!-- SIDEBAR FILTER -->
+
+    <aside class="sidebar">
+
+      <h3>
+        Refine By
+      </h3>
+
+      <div class="filter-group">
+
+        <h4>
+          Amenities
+        </h4>
+
+        <div class="tags">
+          <span>Infinity Pool</span>
+          <span>Concierge</span>
+          <span>Gym</span>
+          <span>Spa</span>
+          <span>Helipad</span>
+        </div>
+
+      </div>
+
+      <div class="filter-group">
+
+        <h4>
+          Districts
+        </h4>
+
+        <label>
+          <input type="checkbox">
+          Citraland
+        </label>
+
+        <label>
+          <input type="checkbox" checked>
+          Graha Family
+        </label>
+
+        <label>
+          <input type="checkbox">
+          Pakuwon Indah
+        </label>
+
+      </div>
+
+    </aside>
+
+    <!-- CATALOGUE CONTENT -->
+
+    <div class="catalogue-content">
+
+      <!-- FEATURED PROPERTY -->
+
+      <article class="featured-card">
+
+        <div class="featured-image">
+
+          <span>
+            Featured Property
+          </span>
+
+          <img src="../src/featured-apart.jpg" alt="Featured apartment">
+
+        </div>
+
+        <div class="featured-info">
+
+          <p class="property-type">
+            Penthouse
+          </p>
+
+          <h2>
+            The Azure Penthouse
+          </h2>
+
+          <p>
+            Rising above the Surabaya skyline with panoramic city views,
+            refined interiors, and premium private facilities.
+          </p>
+
+          <strong>
+            IDR 850M <small>/ yr</small>
+          </strong>
+
+          <a href="azure-details.html" class="details-btn">
+            View Property Details
+          </a>
+
+        </div>
+
+      </article>
+
+      <!-- PROPERTY GRID -->
+
+      <div class="property-grid">
+
+        <!-- CARD 1 -->
+
+        <article class="property-card">
+
+          <div class="property-image">
+            <img src="../src/apart1-catalogue.jpg" alt="Apartment 1">
+            <button>♡</button>
+          </div>
+
+          <div class="property-info">
+
+            <div>
+              <p>Graha Family, Surabaya</p>
+              <h3>Mirasol Estates</h3>
+              <strong>IDR 240M <small>/ yr</small></strong>
+            </div>
+
+            <span>★ 4.9</span>
+
+          </div>
+
+          <a href="#">
+            View Details
+          </a>
+
+        </article>
+
+        <!-- CARD 2 -->
+
+        <article class="property-card">
+
+          <div class="property-image">
+            <img src="../src/apart2-catalogue.jpg" alt="Apartment 2">
+            <button>♡</button>
+          </div>
+
+          <div class="property-info">
+
+            <div>
+              <p>Citraland, Surabaya</p>
+              <h3>The Ivory Suite</h3>
+              <strong>IDR 180M <small>/ yr</small></strong>
+            </div>
+
+            <span>★ 4.8</span>
+
+          </div>
+
+          <a href="#">
+            View Details
+          </a>
+
+        </article>
+
+        <!-- CARD 3 -->
+
+        <article class="property-card">
+
+          <div class="property-image">
+            <img src="../src/apart3-catalogue.jpg" alt="Apartment 3">
+            <button>♡</button>
+          </div>
+
+          <div class="property-info">
+
+            <div>
+              <p>Pakuwon, Surabaya</p>
+              <h3>Symmetry Loft</h3>
+              <strong>IDR 310M <small>/ yr</small></strong>
+            </div>
+
+            <span>★ 5.0</span>
+
+          </div>
+
+          <a href="#">
+            View Details
+          </a>
+
+        </article>
+
+        <!-- CARD 4 -->
+
+        <article class="property-card">
+
+          <div class="property-image">
+            <img src="../src/apart4-catalogue.jpg" alt="Apartment 4">
+            <button>♡</button>
+          </div>
+
+          <div class="property-info">
+
+            <div>
+              <p>Dharmahusada, Surabaya</p>
+              <h3>Origin Residences</h3>
+              <strong>IDR 150M <small>/ yr</small></strong>
+            </div>
+
+            <span>★ 4.7</span>
+
+          </div>
+
+          <a href="#">
+            View Details
+          </a>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer-section">
+
+    <div class="footer-image">
+      <img src="../src/footer.png" alt="Footer image">
+    </div>
+
+    <div class="footer-content">
+
+      <div class="footer-col">
+
+        <h4>
+          Residia
+        </h4>
+
+        <p>
+          Surabaya, Indonesia<br>
+          Premium apartment rental platform
+        </p>
+
+      </div>
+
+      <div class="footer-col">
+
+        <h4>
+          Contact
+        </h4>
+
+        <p>
+          hello@residia.com
+        </p>
+
+        <div class="socials">
+          <a href="#">f</a>
+          <a href="#">x</a>
+        </div>
+
+      </div>
+
+      <div class="footer-col newsletter">
+
+        <h4>
+          Subscribe to our newsletter
+        </h4>
+
+        <div class="subscribe-box">
+          <input type="email" placeholder="Your email">
+
+          <button>
+            Subscribe
+            <span>→</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <p>
+        Copyright <span>RESIDIA</span>, All Rights Reserved
+      </p>
+
+      <div>
+        <a href="#">Term of Use</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- JS -->
+  <script src="../script/catalogue.js"></script>
+
+</body>
+
+</html>

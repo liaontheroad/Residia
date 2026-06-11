@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Add Property | RESIDIA Mitra</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../styles/mitra/mitra-add-property.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="mitra-nav">
+
+    <a href="../index.html" class="logo">
+      <img src="../../src/logo.png" alt="">
+      <span>RESIDIA</span>
+    </a>
+
+    <div class="nav-menu">
+      <a href="mitra-dashboard.html">Dashboard</a>
+      <a href="mitra-properties.html" class="active">Properties</a>
+      <a href="mitra-units.html">Units</a>
+      <a href="mitra-bookings.html">Bookings</a>
+      <a href="mitra-payments.html">Payments</a>
+    </div>
+    <button class="hamburger" id="sidebarOpen">☰</button>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="add-property-hero">
+
+    <div class="hero-content">
+
+      <a href="mitra-properties.html" class="back-link">
+        ← Back to Properties
+      </a>
+
+      <p class="small-label">
+        PROPERTY MANAGEMENT
+      </p>
+
+      <h1>
+        Add New<br>
+        Property
+      </h1>
+
+      <p>
+        Create a new listing and prepare it for publication
+        on the RESIDIA marketplace.
+      </p>
+
+    </div>
+
+    <div class="hero-image">
+      <img src="../../src/featured.jpg" alt="">
+    </div>
+
+  </section>
+
+  <!-- FORM -->
+
+  <main class="add-property-main">
+
+    <form id="propertyForm">
+
+      <!-- BASIC INFORMATION -->
+
+      <section class="form-section">
+
+        <div class="section-title">
+          <p>BASIC INFORMATION</p>
+          <h2>Property Details</h2>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label>Property Name</label>
+            <input
+              type="text"
+              placeholder="Azure Penthouse">
+          </div>
+
+          <div class="form-group">
+            <label>Property Type</label>
+
+            <select>
+              <option>Premium Apartment</option>
+              <option>Luxury Residence</option>
+              <option>Villa Apartment</option>
+              <option>Modern Suite</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>City</label>
+
+            <input
+              type="text"
+              placeholder="Jakarta">
+          </div>
+
+          <div class="form-group">
+            <label>District</label>
+
+            <input
+              type="text"
+              placeholder="SCBD">
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- DESCRIPTION -->
+
+      <section class="form-section">
+
+        <div class="section-title">
+          <p>DESCRIPTION</p>
+          <h2>Listing Description</h2>
+        </div>
+
+        <textarea
+          placeholder="Describe the property..."></textarea>
+
+      </section>
+
+      <!-- RENTAL -->
+
+      <section class="form-section">
+
+        <div class="section-title">
+          <p>RENTAL INFORMATION</p>
+          <h2>Pricing & Units</h2>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label>Monthly Rent</label>
+            <input type="number">
+          </div>
+
+          <div class="form-group">
+            <label>Security Deposit</label>
+            <input type="number">
+          </div>
+
+          <div class="form-group">
+            <label>Total Units</label>
+            <input type="number">
+          </div>
+
+          <div class="form-group">
+            <label>Status</label>
+
+            <select>
+              <option>Draft</option>
+              <option>Active</option>
+            </select>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- AMENITIES -->
+
+      <section class="form-section">
+
+        <div class="section-title">
+          <p>AMENITIES</p>
+          <h2>Facilities</h2>
+        </div>
+
+        <div class="amenities-grid">
+
+          <label><input type="checkbox"> Swimming Pool</label>
+          <label><input type="checkbox"> Gym</label>
+          <label><input type="checkbox"> Parking Area</label>
+          <label><input type="checkbox"> Security 24/7</label>
+          <label><input type="checkbox"> Rooftop Lounge</label>
+          <label><input type="checkbox"> Co-working Space</label>
+
+        </div>
+
+      </section>
+
+      <!-- IMAGE -->
+
+      <section class="form-section">
+
+        <div class="section-title">
+          <p>MEDIA</p>
+          <h2>Property Images</h2>
+        </div>
+
+        <div class="upload-box">
+
+          <span>📷</span>
+
+          <h3>
+            Upload Property Images
+          </h3>
+
+          <p>
+            Drag & drop or browse files
+          </p>
+
+          <input
+            type="file"
+            multiple
+            id="imageUpload">
+
+        </div>
+
+        <div class="preview-grid" id="previewGrid"></div>
+
+      </section>
+
+      <!-- ACTIONS -->
+
+      <section class="submit-section">
+
+        <button
+          type="button"
+          class="secondary-btn"
+          onclick="window.location.href='mitra-properties.html'">
+
+          Cancel
+
+        </button>
+
+        <button
+          type="submit"
+          class="primary-btn">
+
+          Create Property
+
+        </button>
+
+      </section>
+
+    </form>
+
+  </main>
+
+  <script src="../../script/mitra/mitra-add-property.js"></script>
+
+</body>
+</html>

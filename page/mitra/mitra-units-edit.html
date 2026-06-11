@@ -1,0 +1,315 @@
+<!-- pages/mitra/mitra-unit-edit.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Edit Unit A-103 | RESIDIA Mitra</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Reuse edit property CSS -->
+  <link rel="stylesheet" href="../../styles/mitra/mitra-properties-detail.css">
+</head>
+
+<body>
+
+  <nav class="mitra-nav">
+    <a href="../index.html" class="logo">
+      <img src="../../src/logo.png" alt="">
+      <span>RESIDIA</span>
+    </a>
+
+    <div class="nav-menu">
+      <a href="mitra-dashboard.html">Dashboard</a>
+      <a href="mitra-properties.html">Properties</a>
+      <a href="mitra-units.html" class="active">Units</a>
+      <a href="mitra-bookings.html">Bookings</a>
+      <a href="mitra-payments.html">Payments</a>
+    </div>
+
+    <button class="hamburger" id="sidebarOpen">☰</button>
+  </nav>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <aside class="mitra-sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <button class="sidebar-close" id="sidebarClose">☰</button>
+
+      <div class="sidebar-logo">
+        <img src="../../src/logo.png" alt="">
+        <span>RESIDIA</span>
+      </div>
+    </div>
+
+    <div class="mitra-profile">
+      <div class="avatar">A</div>
+      <p>Welcome back,</p>
+      <h3>Alexandra</h3>
+      <span>Verified Partner</span>
+    </div>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">MITRA MENU</h4>
+
+    <a href="mitra-dashboard.html" class="sidebar-link">▣ Dashboard</a>
+    <a href="mitra-properties.html" class="sidebar-link">⌂ Kelola Properti</a>
+    <a href="mitra-units.html" class="sidebar-link active">▦ Kelola Unit</a>
+    <a href="mitra-bookings.html" class="sidebar-link">◷ Booking Masuk</a>
+    <a href="mitra-renter.html" class="sidebar-link">☰ Data Penyewa</a>
+    <a href="mitra-maintenance.html" class="sidebar-link">✦ Maintenance</a>
+    <a href="mitra-payments.html" class="sidebar-link">$ Pembayaran</a>
+
+    <div class="sidebar-line"></div>
+
+    <a href="#" class="sidebar-link">⚙ Pengaturan</a>
+    <a href="../login.html" class="sidebar-link logout">↪ Logout</a>
+  </aside>
+
+  <header class="detail-hero">
+    <div class="hero-image">
+      <img src="../../src/featured.jpg" alt="Azure Penthouse Unit A-103">
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <a href="mitra-unit-detail.html" class="back-link">← Back to Unit Detail</a>
+
+      <p class="small-label">EDIT UNIT</p>
+
+      <h1>
+        Unit<br>
+        A-103
+      </h1>
+
+      <p class="hero-subtitle">
+        Update unit information, rental status, pricing, facilities, and gallery visibility.
+      </p>
+
+      <div class="hero-actions">
+        <button class="primary-btn" id="saveTopBtn">Save Changes</button>
+
+        <a href="mitra-units-detail.html" class="outline-btn">
+          Cancel
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-status-card">
+      <p>Editing Status</p>
+      <h3>Available Unit</h3>
+      <span>Draft changes not yet saved</span>
+    </div>
+  </header>
+
+  <section class="quick-info">
+    <div class="quick-box">
+      <span>Property</span>
+      <strong>Azure Penthouse</strong>
+    </div>
+
+    <div class="quick-box">
+      <span>Unit Code</span>
+      <strong>A-103</strong>
+    </div>
+
+    <div class="quick-box">
+      <span>Monthly Rent</span>
+      <strong>Rp 8.500.000</strong>
+    </div>
+
+    <div class="quick-box">
+      <span>Status</span>
+      <strong>Available</strong>
+    </div>
+  </section>
+
+  <main class="detail-main">
+
+    <section class="detail-left">
+
+      <section class="panel edit-panel">
+        <div class="panel-header">
+          <div>
+            <p class="small-label">UNIT INFORMATION</p>
+            <h2>Edit Unit Details</h2>
+          </div>
+        </div>
+
+        <form id="propertyDetailForm">
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Unit Code</label>
+              <input type="text" value="A-103">
+            </div>
+
+            <div class="form-group">
+              <label>Property Name</label>
+              <select>
+                <option>Azure Penthouse</option>
+                <option>Ivory Residence</option>
+                <option>Mirasol Seminyak</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Floor</label>
+              <input type="text" value="10th Floor">
+            </div>
+
+            <div class="form-group">
+              <label>Status</label>
+              <select>
+                <option>Available</option>
+                <option>Occupied</option>
+                <option>Reserved</option>
+                <option>Maintenance</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Monthly Rent</label>
+              <input type="text" value="Rp 8.500.000">
+            </div>
+
+            <div class="form-group">
+              <label>Security Deposit</label>
+              <input type="text" value="Rp 8.500.000">
+            </div>
+
+            <div class="form-group">
+              <label>Living Area</label>
+              <input type="text" value="85 m²">
+            </div>
+
+            <div class="form-group">
+              <label>Minimum Stay</label>
+              <input type="text" value="3 Months">
+            </div>
+
+            <div class="form-group">
+              <label>Bedrooms</label>
+              <input type="number" value="2">
+            </div>
+
+            <div class="form-group">
+              <label>Bathrooms</label>
+              <input type="number" value="2">
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label>Unit Description</label>
+            <textarea>Fully furnished premium apartment unit with skyline view, smart lock access, private balcony, and complete residential facilities.</textarea>
+          </div>
+
+          <button type="submit" class="primary-submit">
+            Save Unit Information
+          </button>
+
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="small-label">FACILITIES</p>
+            <h2>Edit Unit Features</h2>
+          </div>
+
+          <button class="text-btn">+ Add Feature</button>
+        </div>
+
+        <div class="unit-grid">
+          <button class="available">Smart Lock</button>
+          <button class="available">Private Balcony</button>
+          <button class="available">Kitchen Set</button>
+          <button class="available">Washer</button>
+          <button class="available">Wi-Fi Ready</button>
+          <button class="available">City View</button>
+          <button class="available">Air Conditioner</button>
+          <button class="available">Parking Access</button>
+        </div>
+
+        <div class="unit-legend">
+          <span><i class="dot available-dot"></i> Active Feature</span>
+          <span><i class="dot maintenance-dot"></i> Click feature to cycle status</span>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="small-label">GALLERY</p>
+            <h2>Edit Unit Images</h2>
+          </div>
+
+          <button class="text-btn">Upload Image</button>
+        </div>
+
+        <div class="gallery-grid">
+          <img src="../../src/featured.jpg" alt="">
+          <img src="../../src/gallery1.jpg" alt="">
+          <img src="../../src/apart2.jpg" alt="">
+          <img src="../../src/apart3.jpg" alt="">
+        </div>
+      </section>
+
+    </section>
+
+    <aside class="detail-right">
+
+      <section class="side-card">
+        <p class="small-label">EDIT SUMMARY</p>
+        <h2>Unit Snapshot</h2>
+
+        <div class="side-stat">
+          <span>Current Status</span>
+          <strong>Available</strong>
+        </div>
+
+        <div class="side-stat">
+          <span>Listing Visibility</span>
+          <strong>Public</strong>
+        </div>
+
+        <div class="side-stat">
+          <span>Viewing Requests</span>
+          <strong>4</strong>
+        </div>
+
+        <div class="side-stat">
+          <span>Last Updated</span>
+          <strong>Today</strong>
+        </div>
+      </section>
+
+      <section class="side-card warning-card">
+        <p class="small-label">BEFORE SAVING</p>
+        <h2>Checklist</h2>
+
+        <ul>
+          <li>Confirm unit price is updated.</li>
+          <li>Check latest photos are accurate.</li>
+          <li>Make sure status matches actual availability.</li>
+        </ul>
+      </section>
+
+    </aside>
+
+  </main>
+
+  <!-- Reuse edit property JS -->
+  <script src="../../script/mitra/mitra-properties-detail.js"></script>
+
+</body>
+</html>

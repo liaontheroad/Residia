@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Articles | RESIDIA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/article.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      <img src="../src/logo.png" alt="">
+      RESIDIA
+    </div>
+
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="article.html" class="active">Discussion</a>
+      <a href="search.html">Search</a>
+      <a href="catalogue.html">Browse Catalog</a>
+      <a href="saved.html">Saved</a>
+    </div>
+
+    <div class="hamburger" id="sidebarOpen">☰</div>
+  </nav>
+
+  <!-- SIDEBAR OVERLAY -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- GUEST SIDEBAR -->
+  <aside class="side-menu" id="sidebar">
+    <div class="sidebar-top">
+      <button class="sidebar-close" id="sidebarClose">☰</button>
+
+      <div class="sidebar-logo">
+        <img src="../src/logo.png" alt="">
+        <span>RESIDIA</span>
+      </div>
+    </div>
+
+    <p class="guest-text">Welcome, Guest</p>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">EXPLORE</h4>
+
+    <a href="#" class="sidebar-link">ⓘ About us</a>
+    <a href="catalogue.html" class="sidebar-link">▦ Browse Apartments</a>
+    <a href="history-transaction.html" class="sidebar-link">▣ Riwayat Transaksi</a>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">CONNECT</h4>
+
+    <a href="#" class="sidebar-link">◎ Instagram</a>
+    <a href="#" class="sidebar-link">♘ Twitter</a>
+    <a href="#" class="sidebar-link">♧ Contact Person</a>
+
+    <div class="sidebar-line"></div>
+
+    <a href="login.html" class="login-link">
+      <button class="login-btn">⇥ Log in / Sign in</button>
+    </a>
+
+    <p class="create-account">
+      Dont have account?
+      <a href="register.html">Create account</a>
+    </p>
+  </aside>
+
+  <!-- ARTICLE HEADER -->
+  <header class="article-header">
+    <div class="article-header-top">
+      <p>RESIDIA JOURNAL</p>
+      <h1>Stories, tips, and rental insights for refined apartment living.</h1>
+    </div>
+  </header>
+
+  <!-- FEATURED EDITOR PICK -->
+  <section class="editor-pick">
+
+    <div class="editor-label">
+      <span>EDITOR'S PICK</span>
+    </div>
+
+    <article class="featured-article" data-category="editor">
+
+      <div class="featured-text">
+        <p class="featured-category">Editor's Pick</p>
+
+        <h2>
+          The Complete Guide to Renting an Apartment in Surabaya
+        </h2>
+
+        <p>
+          Everything you need to know about budgeting, choosing the right district,
+          understanding lease terms, and finding the perfect apartment for your lifestyle.
+        </p>
+
+        <div class="featured-meta">
+          <span>May 20, 2026</span>
+          <a href="#">Read Article</a>
+        </div>
+      </div>
+
+      <div class="featured-image">
+        <img src="../src/article-1.jpg" alt="">
+      </div>
+
+    </article>
+
+  </section>
+
+  <!-- FILTER -->
+  <section class="article-filter">
+    <div class="filter-inner">
+      <div class="filter-buttons">
+        <span>Filter by:</span>
+
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="tips">Tips</button>
+        <button class="filter-btn" data-filter="news">News</button>
+        <button class="filter-btn" data-filter="guide">Guide</button>
+      </div>
+
+      <p id="articleCount">Showing 11 articles</p>
+    </div>
+  </section>
+
+  <!-- ARTICLES -->
+  <main class="article-main">
+
+    <div class="article-grid">
+
+      <article class="article-card" data-category="tips">
+        <div class="article-img">
+          <img src="../src/trending-1.png" alt="">
+          <span>Tips</span>
+        </div>
+
+        <div class="article-content">
+          <h2>5 Things to Check Before Signing Your Apartment Lease</h2>
+          <p>Don't make these common mistakes when signing your rental agreement.</p>
+
+          <div class="article-meta">
+            <span>May 18, 2026</span>
+            <a href="article-detail.html">Read Article</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="news">
+        <div class="article-img">
+          <img src="../src/trending-2.png" alt="">
+          <span>News</span>
+        </div>
+
+        <div class="article-content">
+          <h2>Why East Surabaya is Becoming the Top Spot for Renters</h2>
+          <p>Discover why this area is attracting more apartment seekers in 2026.</p>
+
+          <div class="article-meta">
+            <span>May 15, 2026</span>
+            <a href="#">Read Article</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="guide">
+        <div class="article-img">
+          <img src="../src/trending-3.png" alt="">
+          <span>Guide</span>
+        </div>
+
+        <div class="article-content">
+          <h2>Studio vs Full Apartment: Which One Fits Your Lifestyle?</h2>
+          <p>Understanding the pros and cons of each rental space option.</p>
+
+          <div class="article-meta">
+            <span>May 12, 2026</span>
+            <a href="#">Read Article</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="tips">
+        <div class="article-img">
+          <img src="../src/article-5.jpg" alt="">
+          <span>Tips</span>
+        </div>
+
+        <div class="article-content">
+          <h2>How to Negotiate Rent Like a Pro</h2>
+          <p>Expert tips on getting the best deal on your next apartment rental.</p>
+
+          <div class="article-meta">
+            <span>May 10, 2026</span>
+            <a href="#">Read Article</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="guide">
+        <div class="article-img">
+          <img src="../src/article-6.jpg" alt="">
+          <span>Guide</span>
+        </div>
+
+        <div class="article-content">
+          <h2>Top 10 Neighborhoods in Jakarta for Young Professionals</h2>
+          <p>Find the perfect area that matches your lifestyle and budget.</p>
+
+          <div class="article-meta">
+            <span>May 8, 2026</span>
+            <a href="#">Read Article</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="news">
+        <div class="article-img">
+          <img src="../src/article-7.jpg" alt="">
+          <span>News</span>
+        </div>
+
+        <div class="article-content">
+          <h2>Understanding Tenant Rights in Indonesia</h2>
+          <p>Know your legal rights before signing an apartment contract.</p>
+
+          <div class="article-meta">
+            <span>May 5, 2026</span>
+            <a href="#">Read Article</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="tips">
+        <div class="article-img">
+          <img src="../src/article-8.jpg" alt="">
+          <span>Tips</span>
+        </div>
+
+        <div class="article-content">
+          <h2>Decorating on a Budget: Transform Your Rental Space</h2>
+          <p>Creative ways to make your rental feel like home without overspending.</p>
+
+          <div class="article-meta">
+            <span>May 3, 2026</span>
+            <a href="#">Read Article</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="news">
+        <div class="article-img">
+          <img src="../src/article-9.jpg" alt="">
+          <span>News</span>
+        </div>
+
+        <div class="article-content">
+          <h2>The Rise of Co-living Spaces in Indonesian Cities</h2>
+          <p>Exploring the growing trend of shared apartment living.</p>
+
+          <div class="article-meta">
+            <span>April 28, 2026</span>
+            <a href="#">Read Article</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="guide">
+        <div class="article-img">
+          <img src="../src/article-10.jpg" alt="">
+          <span>Guide</span>
+        </div>
+
+        <div class="article-content">
+          <h2>Pet-Friendly Rentals: What to Look For</h2>
+          <p>Finding the perfect home for you and your furry friends.</p>
+
+          <div class="article-meta">
+            <span>April 25, 2026</span>
+            <a href="#">Read Article</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="tips">
+        <div class="article-img">
+          <img src="../src/article-11.jpg" alt="">
+          <span>Tips</span>
+        </div>
+
+        <div class="article-content">
+          <h2>Security Features Every Rental Should Have</h2>
+          <p>Essential safety features to look for when apartment hunting.</p>
+
+          <div class="article-meta">
+            <span>April 22, 2026</span>
+            <a href="#">Read Article</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="article-card" data-category="news">
+        <div class="article-img">
+          <img src="../src/article-12.jpg" alt="">
+          <span>News</span>
+        </div>
+
+        <div class="article-content">
+          <h2>Rental Market Trends: What to Expect in 2026</h2>
+          <p>Industry insights on rental prices and apartment availability.</p>
+
+          <div class="article-meta">
+            <span>April 20, 2026</span>
+            <a href="#">Read Article</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <button class="load-more" id="loadMoreBtn">
+      Load More Articles
+    </button>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+    <div class="footer-image">
+      <img src="../src/footer.png" alt="">
+    </div>
+
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Residia</h4>
+        <p>
+          Surabaya, Indonesia<br>
+          Premium apartment rental platform
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>hello@residia.com</p>
+
+        <div class="socials">
+          <a href="#">f</a>
+          <a href="#">x</a>
+        </div>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h4>Subscribe to our newsletter</h4>
+
+        <div class="subscribe-box">
+          <input type="email" placeholder="Your email">
+          <button>Subscribe <span>→</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright <span>RESIDIA</span>, All Rights Reserved</p>
+
+      <div>
+        <a href="#">Term of Use</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script/article.js"></script>
+
+</body>
+</html>

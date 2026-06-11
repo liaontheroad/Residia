@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Renters | RESIDIA Mitra</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- reuse payment css -->
+  <link rel="stylesheet" href="../../styles/mitra/mitra-payments.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="mitra-nav">
+    <a href="../index.html" class="logo">
+      <img src="../../src/logo.png" alt="">
+      <span>RESIDIA</span>
+    </a>
+
+    <div class="nav-menu">
+      <a href="mitra-dashboard.html">Dashboard</a>
+      <a href="mitra-properties.html">Properties</a>
+      <a href="mitra-units.html">Units</a>
+      <a href="mitra-bookings.html">Bookings</a>
+      <a href="mitra-payments.html">Payments</a>
+    </div>
+
+    <button class="hamburger" id="sidebarOpen">☰</button>
+  </nav>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <aside class="mitra-sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <button class="sidebar-close" id="sidebarClose">☰</button>
+
+      <div class="sidebar-logo">
+        <img src="../../src/logo.png" alt="">
+        <span>RESIDIA</span>
+      </div>
+    </div>
+
+    <div class="mitra-profile">
+      <div class="avatar">A</div>
+      <p>Welcome back,</p>
+      <h3>Alexandra</h3>
+      <span>Verified Partner</span>
+    </div>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">MITRA MENU</h4>
+
+    <a href="mitra-dashboard.html" class="sidebar-link">▣ Dashboard</a>
+    <a href="mitra-properties.html" class="sidebar-link">⌂ Kelola Properti</a>
+    <a href="mitra-units.html" class="sidebar-link">▦ Kelola Unit</a>
+    <a href="mitra-bookings.html" class="sidebar-link">◷ Booking Masuk</a>
+    <a href="mitra-renter.html" class="sidebar-link active">☰ Data Penyewa</a>
+    <a href="mitra-maintenance.html" class="sidebar-link">✦ Maintenance</a>
+    <a href="mitra-payments.html" class="sidebar-link">$ Payments</a>
+    <a href="../history-transaction.html" class="sidebar-link">⇄ Riwayat Transaksi</a>
+
+    <div class="sidebar-line"></div>
+
+    <a href="#" class="sidebar-link">⚙ Pengaturan</a>
+    <a href="../login.html" class="sidebar-link logout">↪ Logout</a>
+  </aside>
+
+  <!-- HERO -->
+  <section class="payments-hero">
+
+    <div class="hero-content">
+      <p class="small-label">TENANT MANAGEMENT</p>
+
+      <h1>
+        Active<br>
+        Renters
+      </h1>
+
+      <p>
+        Monitor active tenants, lease periods, contact information, and occupancy status.
+      </p>
+
+      <div class="hero-actions">
+        <button class="primary-btn" id="generateInvoiceBtn">+ Add Tenant</button>
+        <button class="outline-btn" id="exportBtn">Export Tenant Report</button>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="../../src/featured.jpg" alt="">
+    </div>
+
+  </section>
+
+  <!-- MAIN -->
+  <main class="payments-main">
+
+    <!-- OVERVIEW -->
+    <section class="overview-section">
+
+      <article class="overview-card">
+        <span>👤</span>
+        <p>Total Renters</p>
+        <h2>42</h2>
+        <small>Active contracts</small>
+      </article>
+
+      <article class="overview-card">
+        <span>📄</span>
+        <p>Lease Ending Soon</p>
+        <h2>6</h2>
+        <small>Within 30 days</small>
+      </article>
+
+      <article class="overview-card">
+        <span>✓</span>
+        <p>Good Standing</p>
+        <h2>38</h2>
+        <small>Payment on time</small>
+      </article>
+
+      <article class="overview-card">
+        <span>!</span>
+        <p>Attention Needed</p>
+        <h2>4</h2>
+        <small>Requires follow up</small>
+      </article>
+
+    </section>
+
+    <!-- FILTER -->
+    <section class="filter-panel">
+
+      <div class="filter-title">
+        <p class="small-label">FILTER</p>
+        <h2>Tenant Directory</h2>
+      </div>
+
+      <div class="filter-tools">
+        <input type="text" id="searchInput" placeholder="Search tenant, unit, property, or phone...">
+
+        <div class="filter-tabs">
+          <button class="active" data-filter="all">All</button>
+          <button data-filter="paid">Active</button>
+          <button data-filter="pending">Lease Ending</button>
+          <button data-filter="late">Attention</button>
+          <button data-filter="rejected">Inactive</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- RENTER LIST - reuse payment-list/payment-card -->
+    <section class="payment-list" id="paymentList">
+
+      <article class="payment-card" data-status="paid" data-name="kevin hartono a-101 azure penthouse 081234567890">
+        <div class="payment-top">
+          <div>
+            <p class="invoice-id">TENANT-001</p>
+            <h2>Kevin Hartono</h2>
+            <span>Azure Penthouse · Unit A-101</span>
+          </div>
+
+          <span class="status paid">Active</span>
+        </div>
+
+        <div class="payment-info">
+          <div>
+            <span>Phone</span>
+            <strong>0812-3456-7890</strong>
+          </div>
+
+          <div>
+            <span>Move In</span>
+            <strong>12 Jan 2026</strong>
+          </div>
+
+          <div>
+            <span>Lease End</span>
+            <strong>12 Jan 2027</strong>
+          </div>
+
+          <div>
+            <span>Payment</span>
+            <strong>On Time</strong>
+          </div>
+        </div>
+
+        <div class="payment-proof">
+          <span>Emergency Contact: 0813-8899-1122</span>
+          <span>Document verified</span>
+        </div>
+
+        <div class="payment-actions">
+          <button class="detail-btn">View Profile</button>
+          <button class="invoice-btn">View Lease</button>
+        </div>
+      </article>
+
+      <article class="payment-card" data-status="pending" data-name="amanda putri b-201 ivory residence 081299887766">
+        <div class="payment-top">
+          <div>
+            <p class="invoice-id">TENANT-002</p>
+            <h2>Amanda Putri</h2>
+            <span>Ivory Residence · Unit B-201</span>
+          </div>
+
+          <span class="status pending">Lease Ending</span>
+        </div>
+
+        <div class="payment-info">
+          <div>
+            <span>Phone</span>
+            <strong>0812-9988-7766</strong>
+          </div>
+
+          <div>
+            <span>Move In</span>
+            <strong>20 Jun 2025</strong>
+          </div>
+
+          <div>
+            <span>Lease End</span>
+            <strong>20 Jun 2026</strong>
+          </div>
+
+          <div>
+            <span>Renewal</span>
+            <strong>Pending</strong>
+          </div>
+        </div>
+
+        <div class="payment-proof">
+          <span>Emergency Contact: 0821-4433-2100</span>
+          <span>Lease ends in 9 days</span>
+        </div>
+
+        <div class="payment-actions">
+          <button class="detail-btn">View Profile</button>
+          <button class="approve-btn">Offer Renewal</button>
+        </div>
+      </article>
+
+      <article class="payment-card" data-status="late" data-name="rachel tan a-102 azure penthouse 081277889900">
+        <div class="payment-top">
+          <div>
+            <p class="invoice-id">TENANT-003</p>
+            <h2>Rachel Tan</h2>
+            <span>Azure Penthouse · Unit A-102</span>
+          </div>
+
+          <span class="status late">Attention</span>
+        </div>
+
+        <div class="payment-info">
+          <div>
+            <span>Phone</span>
+            <strong>0812-7788-9900</strong>
+          </div>
+
+          <div>
+            <span>Move In</span>
+            <strong>05 Mar 2026</strong>
+          </div>
+
+          <div>
+            <span>Lease End</span>
+            <strong>05 Mar 2027</strong>
+          </div>
+
+          <div>
+            <span>Payment</span>
+            <strong>Late</strong>
+          </div>
+        </div>
+
+        <div class="payment-proof">
+          <span>Emergency Contact: 0819-7766-5544</span>
+          <span>Payment overdue by 6 days</span>
+        </div>
+
+        <div class="payment-actions">
+          <button class="detail-btn">View Profile</button>
+          <button class="approve-btn">Send Reminder</button>
+        </div>
+      </article>
+
+      <article class="payment-card" data-status="rejected" data-name="nabila salsabila c-301 solara suites 081355661122">
+        <div class="payment-top">
+          <div>
+            <p class="invoice-id">TENANT-004</p>
+            <h2>Nabila Salsabila</h2>
+            <span>Solara Suites · Unit C-301</span>
+          </div>
+
+          <span class="status rejected">Inactive</span>
+        </div>
+
+        <div class="payment-info">
+          <div>
+            <span>Phone</span>
+            <strong>0813-5566-1122</strong>
+          </div>
+
+          <div>
+            <span>Move In</span>
+            <strong>08 Dec 2025</strong>
+          </div>
+
+          <div>
+            <span>Move Out</span>
+            <strong>08 Jun 2026</strong>
+          </div>
+
+          <div>
+            <span>Status</span>
+            <strong>Moved Out</strong>
+          </div>
+        </div>
+
+        <div class="payment-proof">
+          <span>Emergency Contact: 0822-0099-1188</span>
+          <span>Deposit returned</span>
+        </div>
+
+        <div class="payment-actions">
+          <button class="detail-btn">View Profile</button>
+          <button class="invoice-btn">View Archive</button>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- reuse payment js -->
+  <script src="../../script/mitra/mitra-payments.js"></script>
+</body>
+</html>

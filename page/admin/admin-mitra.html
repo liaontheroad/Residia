@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Kelola Mitra | RESIDIA Admin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../styles/admin/admin-mitra.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="admin-sidebar">
+
+    <div class="sidebar-logo">
+      <img src="../../src/logo.png" alt="RESIDIA Logo">
+      <span>RESIDIA</span>
+    </div>
+
+    <div class="admin-profile">
+      <div class="avatar">A</div>
+      <p>Welcome back,</p>
+      <h3>Admin Residia</h3>
+      <span>Platform Manager</span>
+    </div>
+
+    <nav class="sidebar-menu">
+      <a href="admin-dashboard.html">▣ Dashboard</a>
+      <a href="admin-mitra.html" class="active">☰ Kelola Mitra</a>
+      <a href="admin-report.html">□ Laporan Mitra</a>
+      <a href="../login.html" class="logout">↪ Logout</a>
+    </nav>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="admin-main">
+
+    <!-- HEADER -->
+    <header class="admin-header">
+
+      <div>
+        <p class="small-label">PARTNER MANAGEMENT</p>
+        <h1>Kelola Mitra</h1>
+        <span>
+          Review partner registrations, verify submitted documents, and manage mitra account status.
+        </span>
+      </div>
+
+      <div class="header-actions">
+        <button class="primary-btn" id="pendingBtn">Pending Review</button>
+        <button class="outline-btn" id="exportBtn">Export Mitra Data</button>
+      </div>
+
+    </header>
+
+    <!-- OVERVIEW -->
+    <section class="overview-section">
+
+      <article class="overview-card">
+        <span>☰</span>
+        <p>Total Mitra</p>
+        <h2>142</h2>
+        <small>Registered partners</small>
+      </article>
+
+      <article class="overview-card">
+        <span>✓</span>
+        <p>Verified</p>
+        <h2>120</h2>
+        <small>Active accounts</small>
+      </article>
+
+      <article class="overview-card">
+        <span>◷</span>
+        <p>Pending</p>
+        <h2>15</h2>
+        <small>Need review</small>
+      </article>
+
+      <article class="overview-card warning">
+        <span>×</span>
+        <p>Rejected</p>
+        <h2>7</h2>
+        <small>Incomplete data</small>
+      </article>
+
+    </section>
+
+    <!-- FILTER -->
+    <section class="filter-panel">
+
+      <div class="filter-title">
+        <p class="small-label">FILTER</p>
+        <h2>Mitra Directory</h2>
+      </div>
+
+      <div class="filter-tools">
+        <input type="text" id="searchInput" placeholder="Search mitra name, email, city, or status...">
+
+        <div class="filter-tabs">
+          <button class="active" data-filter="all">All</button>
+          <button data-filter="verified">Verified</button>
+          <button data-filter="pending">Pending</button>
+          <button data-filter="rejected">Rejected</button>
+          <button data-filter="suspended">Suspended</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- MITRA LIST -->
+    <section class="mitra-list" id="mitraList">
+
+      <article class="mitra-card" data-status="pending" data-name="alexandra living alexandra@email.com jakarta pending">
+
+        <div class="mitra-top">
+          <div class="mitra-identity">
+            <div class="mitra-avatar">AL</div>
+
+            <div>
+              <p class="mitra-id">MITRA-001</p>
+              <h2>Alexandra Living</h2>
+              <span>alexandra@email.com · Jakarta</span>
+            </div>
+          </div>
+
+          <span class="status pending">Pending</span>
+        </div>
+
+        <div class="mitra-info">
+          <div>
+            <span>Owner Name</span>
+            <strong>Alexandra Putri</strong>
+          </div>
+
+          <div>
+            <span>Phone</span>
+            <strong>0812-3344-5566</strong>
+          </div>
+
+          <div>
+            <span>Properties</span>
+            <strong>4 Submitted</strong>
+          </div>
+
+          <div>
+            <span>Registered</span>
+            <strong>9 Jun 2026</strong>
+          </div>
+        </div>
+
+        <div class="mitra-proof">
+          <span>Documents: KTP, NPWP, Ownership Letter</span>
+          <span>Waiting for admin verification</span>
+        </div>
+
+        <div class="mitra-actions">
+          <button class="detail-btn" onclick="window.location.href='admin-mitra-detail.html'">View Detail</button>
+          <button class="approve-btn">Approve</button>
+          <button class="reject-btn">Reject</button>
+        </div>
+
+      </article>
+
+      <article class="mitra-card" data-status="verified" data-name="beryl residence beryl@email.com surabaya verified">
+
+        <div class="mitra-top">
+          <div class="mitra-identity">
+            <div class="mitra-avatar">BR</div>
+
+            <div>
+              <p class="mitra-id">MITRA-002</p>
+              <h2>Beryl Residence</h2>
+              <span>beryl@email.com · Surabaya</span>
+            </div>
+          </div>
+
+          <span class="status verified">Verified</span>
+        </div>
+
+        <div class="mitra-info">
+          <div>
+            <span>Owner Name</span>
+            <strong>Beryl Anggara</strong>
+          </div>
+
+          <div>
+            <span>Phone</span>
+            <strong>0812-9988-7766</strong>
+          </div>
+
+          <div>
+            <span>Properties</span>
+            <strong>2 Active</strong>
+          </div>
+
+          <div>
+            <span>Registered</span>
+            <strong>14 May 2026</strong>
+          </div>
+        </div>
+
+        <div class="mitra-proof">
+          <span>Documents verified</span>
+          <span>Account active</span>
+        </div>
+
+        <div class="mitra-actions">
+          <button class="detail-btn" onclick="window.location.href='admin-mitra-detail.html'">View Detail</button>
+          <button class="suspend-btn">Suspend</button>
+        </div>
+
+      </article>
+
+      <article class="mitra-card" data-status="rejected" data-name="samudra realty samudra@email.com bandung rejected">
+
+        <div class="mitra-top">
+          <div class="mitra-identity">
+            <div class="mitra-avatar">SR</div>
+
+            <div>
+              <p class="mitra-id">MITRA-003</p>
+              <h2>Samudra Realty</h2>
+              <span>samudra@email.com · Bandung</span>
+            </div>
+          </div>
+
+          <span class="status rejected">Rejected</span>
+        </div>
+
+        <div class="mitra-info">
+          <div>
+            <span>Owner Name</span>
+            <strong>Raka Samudra</strong>
+          </div>
+
+          <div>
+            <span>Phone</span>
+            <strong>0813-8899-2211</strong>
+          </div>
+
+          <div>
+            <span>Properties</span>
+            <strong>1 Submitted</strong>
+          </div>
+
+          <div>
+            <span>Registered</span>
+            <strong>3 Jun 2026</strong>
+          </div>
+        </div>
+
+        <div class="mitra-proof">
+          <span>Rejected reason: Ownership document unclear</span>
+          <span>Re-upload requested</span>
+        </div>
+
+        <div class="mitra-actions">
+          <button class="detail-btn" onclick="window.location.href='admin-mitra-detail.html'">View Detail</button>
+          <button class="approve-btn">Approve</button>
+        </div>
+
+      </article>
+
+      <article class="mitra-card" data-status="suspended" data-name="cobalt living cobalt@email.com jakarta suspended">
+
+        <div class="mitra-top">
+          <div class="mitra-identity">
+            <div class="mitra-avatar">CL</div>
+
+            <div>
+              <p class="mitra-id">MITRA-004</p>
+              <h2>Cobalt Living</h2>
+              <span>cobalt@email.com · Jakarta</span>
+            </div>
+          </div>
+
+          <span class="status suspended">Suspended</span>
+        </div>
+
+        <div class="mitra-info">
+          <div>
+            <span>Owner Name</span>
+            <strong>Celine Larasati</strong>
+          </div>
+
+          <div>
+            <span>Phone</span>
+            <strong>0812-7766-8899</strong>
+          </div>
+
+          <div>
+            <span>Properties</span>
+            <strong>3 Hidden</strong>
+          </div>
+
+          <div>
+            <span>Registered</span>
+            <strong>21 Apr 2026</strong>
+          </div>
+        </div>
+
+        <div class="mitra-proof">
+          <span>Suspended reason: Repeated tenant complaints</span>
+          <span>Manual review required</span>
+        </div>
+
+        <div class="mitra-actions">
+          <button class="detail-btn" onclick="window.location.href='admin-mitra-detail.html'">View Detail</button>
+          <button class="approve-btn">Reactivate</button>
+        </div>
+
+      </article>
+
+    </section>
+
+  </main>
+
+  <script src="../../script/admin/admin-mitra.js"></script>
+</body>
+</html>

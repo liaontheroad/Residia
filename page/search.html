@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Search | RESIDIA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/search.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="logo">
+    <img src="../src/logo.png" alt="">
+      RESIDIA
+    </div>
+
+    <div class="menu">
+    <a href="index.html" class="">Home</a>
+    <a href="article.html" class="">Discussion</a>
+    <a href="search.html" class="active">Search</a>
+    <a href="catalogue.html" class="">Browse Catalog</a>
+    <a href="saved.html" class="">Saved</a>
+  </div>
+
+  <div class="hamburger" id="sidebarOpen">☰</div>
+
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="search-hero">
+
+    <div class="hero-image">
+      <img src="../src/search-hero.jpg" alt="">
+    </div>
+
+    <div class="hero-search">
+      <p class="small-label">DISCOVER · FILTER · MOVE IN</p>
+
+      <h1>
+        FIND YOUR<br>
+        PERFECT SPACE
+      </h1>
+
+      <p class="hero-subtitle">
+        Curated residences tailored to your lifestyle.
+      </p>
+
+      <form class="search-form" id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search area, city, or property name...">
+        <button type="submit">Search</button>
+      </form>
+
+      <div class="search-tabs">
+        <button type="button" class="active" onclick="window.location.href='search.html'">
+            ⌖ By Location
+        </button>
+
+        <button type="button" onclick="window.location.href='search-univ.html'">
+            ▦ By University
+        </button>
+        </div>
+    </div>
+
+  </header>
+
+  <!-- CONTENT -->
+  <main class="search-content">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="search-sidebar">
+
+      <section class="sidebar-block">
+        <div class="sidebar-title-row">
+          <h3>Recent Searches</h3>
+          <button id="clearRecent">Clear All</button>
+        </div>
+
+        <div class="recent-list" id="recentList">
+          <button>Apartment Jakarta Selatan</button>
+          <button>Studio Bandung furnished</button>
+        </div>
+      </section>
+
+      <section class="sidebar-block">
+        <h3>Popular Searches</h3>
+
+        <div class="popular-tags">
+          <button>Apartment Jakarta Selatan</button>
+          <button>Kos dekat kampus</button>
+          <button>Studio Bandung furnished</button>
+          <button>Bali monthly rental</button>
+          <button>Penthouse SCBD</button>
+          <button>Kos Surabaya murah</button>
+        </div>
+      </section>
+
+      <section class="near-card">
+        <div class="pin-icon">⌖</div>
+
+        <h3>Find Near You</h3>
+
+        <p>
+          Enable location to discover premium residences closest to where you are.
+        </p>
+
+        <button id="locationBtn">Enable Location</button>
+      </section>
+
+    </aside>
+
+    <!-- MAIN CITY SECTION -->
+    <section class="city-section">
+
+      <p class="small-label gold">EXPLORE</p>
+
+      <h2>Browse By City</h2>
+
+      <div class="city-grid">
+
+        <article class="city-card">
+          <img src="../src/city-jakarta.jpg" alt="">
+          <div>
+            <h3>Jakarta</h3>
+            <p>DKI Jakarta</p>
+            <span>⌂ 2,500+ listings</span>
+          </div>
+        </article>
+
+        <article class="city-card">
+          <img src="../src/city-bandung.jpg" alt="">
+          <div>
+            <h3>Bandung</h3>
+            <p>Jawa Barat</p>
+            <span>⌂ 1,800+ listings</span>
+          </div>
+        </article>
+
+        <article class="city-card">
+          <img src="../src/city-bali.jpg" alt="">
+          <div>
+            <h3>Bali</h3>
+            <p>Bali</p>
+            <span>⌂ 950+ listings</span>
+          </div>
+        </article>
+
+        <article class="city-card">
+          <img src="../src/city-surabaya.jpg" alt="">
+          <div>
+            <h3>Surabaya</h3>
+            <p>Jawa Timur</p>
+            <span>⌂ 1,200+ listings</span>
+          </div>
+        </article>
+
+        <article class="city-card">
+          <img src="../src/city-semarang.jpg" alt="">
+          <div>
+            <h3>Semarang</h3>
+            <p>Jawa Tengah</p>
+            <span>⌂ 780+ listings</span>
+          </div>
+        </article>
+
+        <article class="city-card">
+          <img src="../src/city-malang.jpg" alt="">
+          <div>
+            <h3>Malang</h3>
+            <p>Jawa Timur</p>
+            <span>⌂ 640+ listings</span>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- EXCLUSIVE COLLECTION -->
+  <section class="exclusive-section">
+    <img src="../src/search-banner.jpg" alt="">
+
+    <div class="exclusive-content">
+      <p>HAND-PICKED · VERIFIED · ELITE</p>
+      <h2>Exclusive Collection</h2>
+
+      <span>
+        Featuring hand-picked premium residences for the discerning few.
+      </span>
+
+      <a href="catalogue.html">
+        Browse Luxury Residences →
+      </a>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="quote-section">
+    <div></div>
+
+    <p>
+      “A residence is not merely a dwelling — it is a statement of who you are,
+      and the world you choose to inhabit.”
+    </p>
+
+    <span>RESIDIA · EST. 2024</span>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+
+    <div class="footer-top">
+
+      <div>
+        <h2>RESIDIA</h2>
+        <p>
+          Curating premium living experiences across Indonesia's finest urban addresses.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>Explore</h4>
+          <a href="index.html">Home</a>
+          <a href="search.html">Search</a>
+          <a href="catalogue.html">Catalogue</a>
+          <a href="article.html">Articles</a>
+          <a href="#">About Us</a>
+        </div>
+
+        <div>
+          <h4>Support</h4>
+          <a href="#">FAQ</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 RESIDIA. All rights reserved.</p>
+      <p>Premium Rental Platform · Indonesia</p>
+    </div>
+
+  </footer>
+
+  <script src="../script/search.js"></script>
+</body>
+</html>

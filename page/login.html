@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | RESIDIA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/login.css">
+</head>
+
+<body>
+
+  <main class="login-page">
+
+    <section class="login-visual">
+      <img src="../src/login-bg.jpg" alt="">
+
+      <div class="visual-overlay"></div>
+
+      <div class="visual-content">
+        <a href="index.html" class="back-btn">← Back Home</a>
+
+        <h1>RESIDIA</h1>
+
+        <p>
+          Sign in to continue your journey toward refined living.
+        </p>
+      </div>
+    </section>
+
+    <section class="login-panel">
+
+      <div class="login-card">
+
+        <p class="small-label">WELCOME BACK</p>
+
+        <h2>Masuk Akun</h2>
+
+        <p class="subtitle">
+          Pilih tipe akun sesuai kebutuhanmu.
+        </p>
+
+        <div class="role-tabs">
+          <button class="active" data-role="user">User</button>
+          <button data-role="mitra">Mitra</button>
+          <button data-role="admin">Admin</button>
+        </div>
+
+        <form id="loginForm">
+
+          <input type="hidden" id="selectedRole" value="user">
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="you@email.com">
+            <small></small>
+          </div>
+
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            <small></small>
+          </div>
+
+          <div class="form-options">
+            <label>
+              <input type="checkbox">
+              Remember me
+            </label>
+
+            <a href="#">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="login-btn">
+            Masuk sebagai <span id="roleText">User</span>
+          </button>
+
+        </form>
+
+        <p class="register-text">
+          Belum punya akun?
+          <a href="register.html">Daftar sekarang</a>
+        </p>
+
+        <div class="quick-login">
+          <a href="/admin/admin-dashboard.html" data-role-link="admin">Masuk sebagai Admin</a>
+          <a href="/mitra/mitra-dashboard.html" data-role-link="mitra">Masuk sebagai Mitra</a>
+          <a href="index.html" data-role-link="user">Masuk sebagai User</a>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="../script/login.js"></script>
+</body>
+</html>

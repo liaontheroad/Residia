@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Kelola Unit | RESIDIA Mitra</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../styles/mitra/mitra-units.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="mitra-nav">
+    <a href="../index.html" class="logo">
+      <img src="../../src/logo.png" alt="">
+      <span>RESIDIA</span>
+    </a>
+
+    <div class="nav-menu">
+      <a href="mitra-dashboard.html">Dashboard</a>
+      <a href="mitra-properties.html">Properties</a>
+      <a href="mitra-units.html" class="active">Units</a>
+      <a href="mitra-bookings.html">Bookings</a>
+      <a href="mitra-payments.html">Payments</a>
+    </div>
+    <button class="hamburger" id="sidebarOpen">☰</button>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="units-hero">
+    <div class="hero-content">
+      <p class="small-label">UNIT MANAGEMENT</p>
+
+      <h1>
+        Manage<br>
+        Your Units
+      </h1>
+
+      <p>
+        Monitor availability, unit condition, tenant status, and monthly rental readiness.
+      </p>
+
+      <div class="hero-actions">
+        <button class="primary-btn"onclick="window.location.href='mitra-add-unit.html'">+ Add Unit</button>
+        <button class="outline-btn" id="exportBtn">Export Report</button>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="../../src/featured.jpg" alt="">
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main class="units-main">
+
+    <!-- OVERVIEW -->
+    <section class="overview-section">
+      <article class="overview-card">
+        <span>▦</span>
+        <p>Total Units</p>
+        <h2>128</h2>
+        <small>Across all properties</small>
+      </article>
+
+      <article class="overview-card">
+        <span>●</span>
+        <p>Occupied</p>
+        <h2>112</h2>
+        <small>Currently rented</small>
+      </article>
+
+      <article class="overview-card">
+        <span>○</span>
+        <p>Available</p>
+        <h2>12</h2>
+        <small>Ready to rent</small>
+      </article>
+
+      <article class="overview-card">
+        <span>!</span>
+        <p>Maintenance</p>
+        <h2>4</h2>
+        <small>Need attention</small>
+      </article>
+    </section>
+
+    <!-- FILTER -->
+    <section class="filter-panel">
+      <div class="filter-title">
+        <p class="small-label">FILTER</p>
+        <h2>Unit Collection</h2>
+      </div>
+
+      <div class="filter-tools">
+        <input type="text" id="searchInput" placeholder="Search unit, property, or tenant...">
+
+        <div class="filter-tabs">
+          <button class="active" data-filter="all">All</button>
+          <button data-filter="occupied">Occupied</button>
+          <button data-filter="available">Available</button>
+          <button data-filter="maintenance">Maintenance</button>
+          <button data-filter="reserved">Reserved</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNIT GRID -->
+    <section class="unit-grid" id="unitGrid">
+
+      <article class="unit-card" data-status="occupied" data-name="a-101 azure penthouse kevin hartono">
+        <div class="unit-top">
+          <span class="unit-code">A-101</span>
+          <span class="status occupied">Occupied</span>
+        </div>
+
+        <h2>Azure Penthouse</h2>
+        <p class="location">⌖ SCBD, Jakarta</p>
+
+        <div class="unit-info">
+          <div>
+            <span>Tenant</span>
+            <strong>Kevin Hartono</strong>
+          </div>
+
+          <div>
+            <span>Monthly Rent</span>
+            <strong>Rp 8.500.000</strong>
+          </div>
+
+          <div>
+            <span>Lease Ends</span>
+            <strong>28 Aug 2026</strong>
+          </div>
+        </div>
+
+        <div class="unit-features">
+          <span>2 BR</span>
+          <span>2 Bath</span>
+          <span>85 m²</span>
+          <span>Furnished</span>
+        </div>
+
+        <div class="unit-actions">
+          <button class="detail-btn">Detail</button>
+          <button class="delete-btn">
+            Delete
+          </button>
+        </div>
+      </article>
+
+      <article class="unit-card" data-status="available" data-name="a-103 azure penthouse available">
+        <div class="unit-top">
+          <span class="unit-code">A-103</span>
+          <span class="status available">Available</span>
+        </div>
+
+        <h2>Azure Penthouse</h2>
+        <p class="location">⌖ SCBD, Jakarta</p>
+
+        <div class="unit-info">
+          <div>
+            <span>Tenant</span>
+            <strong>-</strong>
+          </div>
+
+          <div>
+            <span>Monthly Rent</span>
+            <strong>Rp 8.500.000</strong>
+          </div>
+
+          <div>
+            <span>Availability</span>
+            <strong>Ready Now</strong>
+          </div>
+        </div>
+
+        <div class="unit-features">
+          <span>2 BR</span>
+          <span>2 Bath</span>
+          <span>85 m²</span>
+          <span>Furnished</span>
+        </div>
+
+        <div class="unit-actions">
+          <button class="detail-btn" onclick="window.location.href='mitra-units-detail.html'">
+            Detail
+          </button>
+
+          <button class="delete-btn">
+            Delete
+          </button>
+        </div>
+      </article>
+
+      <article class="unit-card" data-status="maintenance" data-name="a-104 azure penthouse ac maintenance">
+        <div class="unit-top">
+          <span class="unit-code">A-104</span>
+          <span class="status maintenance">Maintenance</span>
+        </div>
+
+        <h2>Azure Penthouse</h2>
+        <p class="location">⌖ SCBD, Jakarta</p>
+
+        <div class="unit-info">
+          <div>
+            <span>Issue</span>
+            <strong>AC Repair</strong>
+          </div>
+
+          <div>
+            <span>Monthly Rent</span>
+            <strong>Rp 8.500.000</strong>
+          </div>
+
+          <div>
+            <span>Est. Ready</span>
+            <strong>15 Jun 2026</strong>
+          </div>
+        </div>
+
+        <div class="unit-features">
+          <span>2 BR</span>
+          <span>2 Bath</span>
+          <span>85 m²</span>
+          <span>Furnished</span>
+        </div>
+
+        <div class="unit-actions">
+          <button class="detail-btn">Detail</button>
+          <button class="delete-btn">
+            Delete
+          </button>
+        </div>
+      </article>
+
+      <article class="unit-card" data-status="reserved" data-name="b-201 ivory residence reserved amanda">
+        <div class="unit-top">
+          <span class="unit-code">B-201</span>
+          <span class="status reserved">Reserved</span>
+        </div>
+
+        <h2>Ivory Residence</h2>
+        <p class="location">⌖ Dago, Bandung</p>
+
+        <div class="unit-info">
+          <div>
+            <span>Reserved By</span>
+            <strong>Amanda Putri</strong>
+          </div>
+
+          <div>
+            <span>Monthly Rent</span>
+            <strong>Rp 3.800.000</strong>
+          </div>
+
+          <div>
+            <span>Move-in</span>
+            <strong>20 Jun 2026</strong>
+          </div>
+        </div>
+
+        <div class="unit-features">
+          <span>1 BR</span>
+          <span>1 Bath</span>
+          <span>42 m²</span>
+          <span>Semi Furnished</span>
+        </div>
+
+        <div class="unit-actions">
+          <button class="detail-btn">Detail</button>
+          <button class="delete-btn">
+            Delete
+          </button>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <script src="../../script/mitra/mitra-units.js"></script>
+</body>
+</html>

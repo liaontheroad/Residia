@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Laporan Mitra | RESIDIA Admin</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../styles/admin/admin-report.css">
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="admin-sidebar">
+
+    <div class="sidebar-logo">
+      <img src="../../src/logo.png" alt="RESIDIA Logo">
+      <span>RESIDIA</span>
+    </div>
+
+    <div class="admin-profile">
+      <div class="avatar">A</div>
+      <p>Welcome back,</p>
+      <h3>Admin Residia</h3>
+      <span>Platform Manager</span>
+    </div>
+
+    <nav class="sidebar-menu">
+      <a href="admin-dashboard.html">▣ Dashboard</a>
+      <a href="admin-mitra.html">☰ Kelola Mitra</a>
+      <a href="admin-report.html" class="active">□ Laporan Mitra</a>
+      <a href="../login.html" class="logout">↪ Logout</a>
+    </nav>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="admin-main">
+
+    <!-- HEADER -->
+    <header class="admin-header">
+
+      <div>
+        <p class="small-label">PARTNER REPORT</p>
+        <h1>Laporan Mitra</h1>
+        <span>
+          Monitor mitra growth, verification performance, and partner portfolio activity across RESIDIA.
+        </span>
+      </div>
+
+      <div class="header-actions">
+        <button class="primary-btn" id="downloadReportBtn">Download Report</button>
+        <button class="outline-btn" id="printReportBtn">Print</button>
+      </div>
+
+    </header>
+
+    <!-- OVERVIEW -->
+    <section class="overview-section">
+
+      <article class="overview-card">
+        <span>☰</span>
+        <p>Total Mitra</p>
+        <h2>142</h2>
+        <small>All registered partners</small>
+      </article>
+
+      <article class="overview-card">
+        <span>✓</span>
+        <p>Verified Rate</p>
+        <h2>84%</h2>
+        <small>120 verified partners</small>
+      </article>
+
+      <article class="overview-card">
+        <span>◷</span>
+        <p>Avg Review Time</p>
+        <h2>2.4d</h2>
+        <small>Document verification</small>
+      </article>
+
+      <article class="overview-card warning">
+        <span>!</span>
+        <p>Need Follow Up</p>
+        <h2>19</h2>
+        <small>Pending or rejected partners</small>
+      </article>
+
+    </section>
+
+    <!-- REPORT GRID -->
+    <section class="report-grid">
+
+      <!-- LEFT -->
+      <div class="left-column">
+
+        <!-- GROWTH CHART -->
+        <section class="panel">
+
+          <div class="panel-header">
+            <div>
+              <p class="small-label">REGISTRATION GROWTH</p>
+              <h2>Mitra Registration Trend</h2>
+            </div>
+
+            <select id="periodFilter">
+              <option>This Year</option>
+              <option>This Month</option>
+              <option>Last 6 Months</option>
+            </select>
+          </div>
+
+          <div class="chart-box">
+            <div class="bar" style="height:45%"><span>Jan</span></div>
+            <div class="bar" style="height:52%"><span>Feb</span></div>
+            <div class="bar" style="height:48%"><span>Mar</span></div>
+            <div class="bar" style="height:66%"><span>Apr</span></div>
+            <div class="bar" style="height:78%"><span>May</span></div>
+            <div class="bar" style="height:86%"><span>Jun</span></div>
+            <div class="bar" style="height:64%"><span>Jul</span></div>
+            <div class="bar" style="height:72%"><span>Aug</span></div>
+          </div>
+
+        </section>
+
+        <!-- TOP MITRA -->
+        <section class="panel">
+
+          <div class="panel-header">
+            <div>
+              <p class="small-label">TOP PARTNER</p>
+              <h2>Most Active Mitra</h2>
+            </div>
+          </div>
+
+          <div class="ranking-list">
+
+            <article class="ranking-row">
+              <span class="rank">01</span>
+
+              <div>
+                <h3>Alexandra Living</h3>
+                <p>4 properties · 128 units · Jakarta</p>
+              </div>
+
+              <strong>Verified</strong>
+            </article>
+
+            <article class="ranking-row">
+              <span class="rank">02</span>
+
+              <div>
+                <h3>Beryl Residence</h3>
+                <p>2 properties · 74 units · Surabaya</p>
+              </div>
+
+              <strong>Verified</strong>
+            </article>
+
+            <article class="ranking-row">
+              <span class="rank">03</span>
+
+              <div>
+                <h3>Ivory Management</h3>
+                <p>2 properties · 58 units · Bandung</p>
+              </div>
+
+              <strong>Verified</strong>
+            </article>
+
+          </div>
+
+        </section>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="right-column">
+
+        <!-- STATUS SUMMARY -->
+        <section class="panel">
+
+          <p class="small-label">STATUS SUMMARY</p>
+          <h2>Mitra Verification</h2>
+
+          <div class="status-list">
+
+            <div class="status-row">
+              <span>Verified</span>
+              <strong>120</strong>
+            </div>
+
+            <div class="status-row">
+              <span>Pending</span>
+              <strong>15</strong>
+            </div>
+
+            <div class="status-row">
+              <span>Rejected</span>
+              <strong>7</strong>
+            </div>
+
+            <div class="status-row">
+              <span>Suspended</span>
+              <strong>3</strong>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- INSIGHT -->
+        <section class="panel insight-panel">
+
+          <p class="small-label">ADMIN INSIGHT</p>
+          <h2>Review Notes</h2>
+
+          <ul>
+            <li>Most pending mitra are waiting for ownership document validation.</li>
+            <li>Average verification process is under 3 days.</li>
+            <li>Jakarta has the highest number of active mitra this month.</li>
+            <li>Rejected applications mostly come from unclear legal documents.</li>
+          </ul>
+
+        </section>
+
+        <!-- EXPORT OPTIONS -->
+        <section class="panel">
+
+          <p class="small-label">EXPORT OPTIONS</p>
+          <h2>Report Format</h2>
+
+          <div class="export-options">
+            <button>Export as PDF</button>
+            <button>Export as Excel</button>
+            <button>Send to Email</button>
+          </div>
+
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="../../script/admin/admin-report.js"></script>
+</body>
+</html>

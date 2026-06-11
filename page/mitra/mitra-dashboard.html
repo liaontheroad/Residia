@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Mitra Dashboard | RESIDIA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../styles/mitra/mitra-dashboard.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="mitra-nav">
+    <a href="../index.html" class="logo">
+      <img src="../../src/logo.png" alt="">
+      RESIDIA
+    </a>
+
+    <div class="nav-menu">
+      <a href="mitra-dashboard.html" class="active">Dashboard</a>
+      <a href="mitra-properties.html">Properties</a>
+      <a href="mitra-units.html">Units</a>
+      <a href="mitra-bookings.html">Bookings</a>
+      <a href="mitra-payments.html">Payments</a>
+    </div>
+
+    <button class="hamburger" id="sidebarOpen">☰</button>
+  </nav>
+
+  <!-- SIDEBAR OVERLAY -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="mitra-sidebar" id="sidebar">
+
+    <div class="sidebar-top">
+      <button class="sidebar-close" id="sidebarClose">☰</button>
+
+      <div class="sidebar-logo">
+        <img src="../../src/logo.png" alt="">
+        <span>RESIDIA</span>
+      </div>
+    </div>
+
+    <div class="mitra-profile">
+      <div class="avatar">A</div>
+      <p>Welcome back,</p>
+      <h3>Alexandra</h3>
+      <span>Verified Partner</span>
+    </div>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">MITRA MENU</h4>
+
+    <a href="mitra-dashboard.html" class="sidebar-link active">▣ Dashboard</a>
+    <a href="mitra-properties.html" class="sidebar-link">⌂ Kelola Properti</a>
+    <a href="mitra-units.html" class="sidebar-link">▦ Kelola Unit</a>
+    <a href="mitra-bookings.html" class="sidebar-link">◷ Booking Masuk</a>
+    <a href="mitra-renter.html" class="sidebar-link">☰ Data Penyewa</a>
+    <a href="mitra-maintenance.html" class="sidebar-link">✦ Maintenance</a>
+    <a href="mitra-payments.html" class="sidebar-link">$ Pembayaran</a>
+
+    <div class="sidebar-line"></div>
+
+    <a href="#" class="sidebar-link">⚙ Pengaturan</a>
+    <a href="../login.html" class="sidebar-link logout">↪ Logout</a>
+
+  </aside>
+
+  <!-- HERO -->
+  <header class="mitra-hero">
+
+    <div class="hero-bg">
+      <img src="../../src/theimage.png" alt="">
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="small-label">PARTNER DASHBOARD</p>
+
+      <h1>
+        Portfolio<br>
+        Overview
+      </h1>
+
+      <p class="hero-subtitle">
+        Manage your residences, tenants, revenue, and requests with clarity.
+      </p>
+
+      <div class="hero-actions">
+        <button class="outline-btn">Generate Report</button>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <p>This Month</p>
+      <h3>Rp 128jt</h3>
+      <span>Total partner revenue</span>
+    </div>
+
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="dashboard-main">
+
+    <section class="kpi-grid">
+      <article class="kpi-card">
+        <span>⌂</span>
+        <p>Total Properties</p>
+        <h2>8</h2>
+        <small>+2 this month</small>
+      </article>
+
+      <article class="kpi-card">
+        <span>◉</span>
+        <p>Occupancy Rate</p>
+        <h2>87%</h2>
+        <small>5% higher than last month</small>
+      </article>
+
+      <article class="kpi-card">
+        <span>$</span>
+        <p>Monthly Revenue</p>
+        <h2>Rp 128jt</h2>
+        <small>Paid this month</small>
+      </article>
+
+      <article class="kpi-card warning">
+        <span>!</span>
+        <p>Pending Requests</p>
+        <h2>12</h2>
+        <small>Need your approval</small>
+      </article>
+    </section>
+
+    <section class="dashboard-grid">
+
+      <div class="left-column">
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="small-label">PERFORMANCE</p>
+              <h2>Property Performance</h2>
+            </div>
+
+            <a href="mitra-properties.html">View All</a>
+          </div>
+
+          <div class="property-list">
+
+            <article class="property-row">
+              <img src="../../src/featured.jpg" alt="">
+              <div>
+                <h3>Azure Penthouse</h3>
+                <p>SCBD, Jakarta</p>
+                <div class="progress"><span style="width:95%"></span></div>
+                <small>Occupancy 95%</small>
+              </div>
+              <strong>Rp 18jt</strong>
+            </article>
+
+            <article class="property-row">
+              <img src="../../src/apart2.jpg" alt="">
+              <div>
+                <h3>Ivory Residence</h3>
+                <p>Dago, Bandung</p>
+                <div class="progress"><span style="width:82%"></span></div>
+                <small>Occupancy 82%</small>
+              </div>
+              <strong>Rp 12jt</strong>
+            </article>
+
+            <article class="property-row">
+              <img src="../../src/apart3.jpg" alt="">
+              <div>
+                <h3>Mirasol Seminyak</h3>
+                <p>Seminyak, Bali</p>
+                <div class="progress"><span style="width:74%"></span></div>
+                <small>Occupancy 74%</small>
+              </div>
+              <strong>Rp 9jt</strong>
+            </article>
+
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel-header">
+            <div>
+              <p class="small-label">REVENUE</p>
+              <h2>Revenue Analytics</h2>
+            </div>
+
+            <div class="chart-tabs">
+              <button class="active" data-chart="revenue">Revenue</button>
+              <button data-chart="booking">Bookings</button>
+            </div>
+          </div>
+
+          <div class="chart-box">
+            <div class="bar" style="height:55%"><span>Jan</span></div>
+            <div class="bar" style="height:42%"><span>Feb</span></div>
+            <div class="bar" style="height:68%"><span>Mar</span></div>
+            <div class="bar" style="height:48%"><span>Apr</span></div>
+            <div class="bar" style="height:82%"><span>May</span></div>
+            <div class="bar" style="height:70%"><span>Jun</span></div>
+            <div class="bar" style="height:92%"><span>Jul</span></div>
+            <div class="bar" style="height:76%"><span>Aug</span></div>
+          </div>
+        </section>
+
+      </div>
+
+      <div class="right-column">
+
+        <section class="panel quick-panel">
+          <p class="small-label">WHAT TO LOOK OUT</p>
+          <h2>Needs Attention</h2>
+
+          <div class="attention-list">
+            <div>
+              <strong>5 Booking Requests</strong>
+              <p>Need approval today</p>
+            </div>
+
+            <div>
+              <strong>3 Maintenance Issues</strong>
+              <p>AC, water leak, and door lock</p>
+            </div>
+
+            <div>
+              <strong>2 Lease Expiring</strong>
+              <p>Within the next 7 days</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <p class="small-label">SHORTCUT</p>
+          <h2>Quick Actions</h2>
+
+          <div class="quick-actions">
+            <button class="detail-btn" onclick="window.location.href='mitra-add-property.html'">+ Add Property</button>
+            <button class="detail-btn" onclick="window.location.href='mitra-add-unit.html'">+ Add Unit</button>
+          </div>
+        </section>
+
+        <section class="panel">
+          <p class="small-label">UNIT STATUS</p>
+          <h2>Occupancy Map</h2>
+
+          <div class="unit-map">
+            <button class="occupied">A-101</button>
+            <button class="occupied">A-102</button>
+            <button class="empty">A-103</button>
+            <button class="maintenance">A-104</button>
+            <button class="occupied">B-201</button>
+            <button class="empty">B-202</button>
+          </div>
+        </section>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="../../script/mitra/mitra-dashboard.js"></script>
+</body>
+</html>

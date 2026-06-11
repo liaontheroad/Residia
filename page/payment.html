@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Your Payment | RESIDIA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/payment.css">
+</head>
+
+<body>
+
+  <nav class="payment-nav">
+    <a href="booking.html" class="back-link">← Back</a>
+
+    <div class="payment-logo">
+      <img src="../src/logo.png" alt="">
+      RESIDIA
+    </div>
+
+    <div class="secure-text">🔒 Secure Payment</div>
+  </nav>
+
+  <main class="payment-page">
+
+    <div class="stepper">
+      <div class="step done"><span>✓</span> Search</div>
+      <div class="line"></div>
+      <div class="step done"><span>✓</span> Property Detail</div>
+      <div class="line"></div>
+      <div class="step done"><span>✓</span> Review Booking</div>
+      <div class="line"></div>
+      <div class="step active"><span>4</span> Payment</div>
+    </div>
+
+    <h1>Complete Your Payment</h1>
+
+    <div class="payment-layout">
+
+      <section class="payment-left">
+
+        <div class="payment-card">
+          <div class="card-heading">
+            <span>1</span>
+            <h2>Renter Information</h2>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" value="Alexandra">
+            </div>
+
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" value="Chen">
+            </div>
+
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" value="alex.chen@email.com">
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" value="+62 812-3456-7890">
+            </div>
+
+            <div class="form-group full">
+              <label>ID / Passport Number</label>
+              <input type="text" placeholder="3174xxxxxxxxxxx">
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-card">
+          <div class="card-heading">
+            <span>2</span>
+            <h2>Payment Method</h2>
+          </div>
+
+          <div class="method-grid">
+            <button class="method active" data-method="card">💳 Credit / Debit Card</button>
+            <button class="method" data-method="bank">🏦 Bank Transfer</button>
+            <button class="method" data-method="wallet">💰 E-Wallet</button>
+          </div>
+
+          <div class="credit-card">
+            <div class="card-top">
+              <span>RESIDIA</span>
+              <div class="card-circles">
+                <i></i>
+                <i></i>
+              </div>
+            </div>
+
+            <div class="card-number" id="previewCardNumber">
+              •••• •••• •••• ••••
+            </div>
+
+            <div class="card-bottom">
+              <div>
+                <small>Card Holder</small>
+                <p id="previewCardName">YOUR NAME</p>
+              </div>
+
+              <div>
+                <small>Expires</small>
+                <p id="previewExpiry">MM/YY</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Card Number</label>
+            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+          </div>
+
+          <div class="form-group">
+            <label>Card Holder Name</label>
+            <input type="text" id="cardName" placeholder="As printed on your card">
+          </div>
+
+          <div class="form-grid two">
+            <div class="form-group">
+              <label>Expiry Date</label>
+              <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5">
+            </div>
+
+            <div class="form-group">
+              <label>CVV</label>
+              <input type="password" id="cvv" placeholder="•••" maxlength="4">
+            </div>
+          </div>
+
+          <label class="checkbox-row">
+            <input type="checkbox">
+            Save this card for future payments
+          </label>
+        </div>
+
+        <div class="payment-card">
+          <div class="card-heading">
+            <span>3</span>
+            <h2>Special Requests <small>(optional)</small></h2>
+          </div>
+
+          <textarea placeholder="Any specific requests or notes for your stay..."></textarea>
+        </div>
+
+        <label class="terms-row">
+          <input type="checkbox" id="agreeTerms">
+          <span>
+            I agree to RESIDIA'S Terms of Service, Privacy Policy, and Cancellation Policy.
+          </span>
+        </label>
+
+      </section>
+
+      <aside class="payment-summary">
+
+        <div class="summary-card">
+
+          <div class="property-mini">
+            <img src="../src/featured.jpg" alt="">
+
+            <div>
+              <span>Premium</span>
+              <h3>Azure Cove Residences</h3>
+              <p>Jl. Pantai Indah Kapuk, North Jakarta</p>
+              <small>🛏️ 2 · 🚿 2 · 📐 85 m² · ⭐ 4.9</small>
+            </div>
+          </div>
+
+          <div class="date-summary">
+            <div>
+              <span>Check-in</span>
+              <strong>June 1, 2026</strong>
+            </div>
+
+            <div>
+              <span>Check-out</span>
+              <strong>June 8, 2026</strong>
+            </div>
+          </div>
+
+          <div class="breakdown">
+            <h4>Price Breakdown</h4>
+
+            <div>
+              <span>Base price (1 Month)</span>
+              <strong>Rp 3.800.000</strong>
+            </div>
+
+            <div class="discount-line">
+              <span>Long-term discount (15%)</span>
+              <strong>-Rp 570.000</strong>
+            </div>
+
+            <p>Extra Services</p>
+
+            <div>
+              <span>Dishwasher Service</span>
+              <strong>Rp 200.000</strong>
+            </div>
+
+            <div>
+              <span>Dryer Service</span>
+              <strong>Rp 150.000</strong>
+            </div>
+
+            <div>
+              <span>Admin fee</span>
+              <strong>Rp 95.000</strong>
+            </div>
+
+            <div>
+              <span>Tax (10%)</span>
+              <strong>Rp 376.500</strong>
+            </div>
+          </div>
+
+          <div class="total">
+            <span>Total</span>
+            <div>
+              <strong>Rp 4.051.500</strong>
+              <small>incl. all taxes & fees</small>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="trust-badges">
+          <span>🛡 SSL Secured</span>
+          <span>🔒 256-bit Encryption</span>
+          <span>💳 PCI Compliant</span>
+        </div>
+
+        <button class="pay-btn" id="payBtn" disabled>
+          🔒 Pay Rp 4.051.500
+        </button>
+
+        <p class="pay-note" id="payNote">
+          Please agree to the terms & conditions to proceed.
+        </p>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <footer class="payment-footer">
+    <div>
+      <h3>RESIDIA</h3>
+      <p>© 2026 RESIDIA. All rights reserved. Your payment is secured and encrypted.</p>
+    </div>
+
+    <div>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Support</a>
+    </div>
+  </footer>
+
+  <div class="success-modal" id="successModal">
+    <div>
+      <button id="closeModal">×</button>
+      <h2>Payment Successful</h2>
+      <p>Your booking payment has been received. A confirmation will be sent to your email.</p>
+      <a href="index.html">Back to Home</a>
+    </div>
+  </div>
+
+  <script src="../script/payment.js"></script>
+</body>
+</html>

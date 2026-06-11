@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Azure Penthouse Management | RESIDIA Mitra</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../../styles/mitra/mitra-properties-detail.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="mitra-nav">
+    <a href="../index.html" class="logo">
+      <img src="../../src/logo.png" alt="RESIDIA Logo">
+      <span>RESIDIA</span>
+    </a>
+
+    <div class="nav-menu">
+      <a href="mitra-dashboard.html">Dashboard</a>
+      <a href="mitra-properties.html" class="active">Properties</a>
+      <a href="mitra-units.html">Units</a>
+      <a href="mitra-bookings.html">Bookings</a>
+      <a href="mitra-payments.html">Payments</a>
+    </div>
+<button class="hamburger" id="sidebarOpen">☰</button>
+  </nav>
+
+
+  <!-- HERO -->
+  <header class="detail-hero">
+
+    <div class="hero-image">
+      <img src="../../src/featured.jpg" alt="Azure Penthouse">
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <a href="mitra-properties.html" class="back-link">← Back to Properties</a>
+
+      <p class="small-label">PROPERTY MANAGEMENT</p>
+
+      <h1>
+        Azure<br>
+        Penthouse
+      </h1>
+
+      <p class="hero-subtitle">
+        Manage listing details, unit availability, performance, and rental activity.
+      </p>
+
+      <div class="hero-actions">
+        <button class="primary-btn" id="saveTopBtn">Save Changes</button>
+        <button class="outline-btn" id="previewBtn">Preview Public Page</button>
+      </div>
+    </div>
+
+    <div class="hero-status-card">
+      <p>Status</p>
+      <h3>Active Listing</h3>
+      <span>Last updated 2 days ago</span>
+    </div>
+
+  </header>
+
+  <!-- QUICK INFO -->
+  <section class="quick-info">
+
+    <div class="quick-box">
+      <span>Location</span>
+      <strong>SCBD, Jakarta</strong>
+    </div>
+
+    <div class="quick-box">
+      <span>Total Units</span>
+      <strong>40 Units</strong>
+    </div>
+
+    <div class="quick-box">
+      <span>Occupied</span>
+      <strong>38 Units</strong>
+    </div>
+
+    <div class="quick-box">
+      <span>Availability</span>
+      <strong>2 Units Left</strong>
+    </div>
+
+  </section>
+
+  <!-- MAIN DETAIL -->
+  <main class="detail-main">
+
+    <!-- LEFT CONTENT -->
+    <section class="detail-left">
+
+      <!-- OVERVIEW -->
+      <section class="panel property-overview">
+        <div class="panel-header">
+          <div>
+            <p class="small-label">OVERVIEW</p>
+            <h2>Property Summary</h2>
+          </div>
+
+          <button class="text-btn">Edit Overview</button>
+        </div>
+
+        <p>
+          Azure Penthouse is a premium residence positioned for high-value tenants
+          who seek privacy, skyline views, luxury furnishing, and direct access to
+          Jakarta’s central business district.
+        </p>
+
+        <div class="overview-stats">
+          <div>
+            <strong>95%</strong>
+            <span>Occupancy Rate</span>
+          </div>
+
+          <div>
+            <strong>Rp18jt</strong>
+            <span>Monthly Revenue</span>
+          </div>
+
+          <div>
+            <strong>4.9</strong>
+            <span>Average Rating</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDIT FORM -->
+      <section class="panel edit-panel">
+        <div class="panel-header">
+          <div>
+            <p class="small-label">EDIT LISTING</p>
+            <h2>Listing Information</h2>
+          </div>
+        </div>
+
+        <form id="propertyDetailForm">
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Property Name</label>
+              <input type="text" value="Azure Penthouse">
+            </div>
+
+            <div class="form-group">
+              <label>Property Type</label>
+              <select>
+                <option>Premium Apartment</option>
+                <option>Luxury Residence</option>
+                <option>Villa Apartment</option>
+                <option>Modern Suite</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Location</label>
+              <input type="text" value="SCBD, Jakarta">
+            </div>
+
+            <div class="form-group">
+              <label>Status</label>
+              <select>
+                <option>Active</option>
+                <option>Draft</option>
+                <option>Inactive</option>
+                <option>Full</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Monthly Price</label>
+              <input type="text" value="Rp 8.500.000">
+            </div>
+
+            <div class="form-group">
+              <label>Total Units</label>
+              <input type="number" value="40">
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label>Description</label>
+            <textarea>Luxury apartment with skyline view, premium furnishing, private access, and curated amenities for refined urban living.</textarea>
+          </div>
+
+          <button type="submit" class="primary-submit">Save Listing Information</button>
+
+        </form>
+      </section>
+
+      <!-- UNIT MANAGEMENT -->
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="small-label">UNIT STATUS</p>
+            <h2>Unit Management</h2>
+          </div>
+
+          <button class="text-btn">+ Add Unit</button>
+        </div>
+
+        <div class="unit-grid">
+          <button class="occupied">A-101</button>
+          <button class="occupied">A-102</button>
+          <button class="available">A-103</button>
+          <button class="maintenance">A-104</button>
+          <button class="occupied">B-201</button>
+          <button class="occupied">B-202</button>
+          <button class="available">B-203</button>
+          <button class="occupied">B-204</button>
+          <button class="occupied">C-301</button>
+          <button class="maintenance">C-302</button>
+          <button class="occupied">C-303</button>
+          <button class="occupied">C-304</button>
+        </div>
+
+        <div class="unit-legend">
+          <span><i class="dot occupied-dot"></i> Occupied</span>
+          <span><i class="dot available-dot"></i> Available</span>
+          <span><i class="dot maintenance-dot"></i> Maintenance</span>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="panel">
+        <div class="panel-header">
+          <div>
+            <p class="small-label">GALLERY</p>
+            <h2>Listing Images</h2>
+          </div>
+
+          <button class="text-btn">Upload Image</button>
+        </div>
+
+        <div class="gallery-grid">
+          <img src="../../src/featured.jpg" alt="">
+          <img src="../../src/gallery1.jpg" alt="">
+          <img src="../../src/apart2.jpg" alt="">
+          <img src="../../src/apart3.jpg" alt="">
+        </div>
+      </section>
+
+    </section>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="detail-right">
+
+      <section class="side-card">
+        <p class="small-label">PERFORMANCE</p>
+        <h2>This Month</h2>
+
+        <div class="side-stat">
+          <span>Revenue</span>
+          <strong>Rp 18.000.000</strong>
+        </div>
+
+        <div class="side-stat">
+          <span>Bookings</span>
+          <strong>12</strong>
+        </div>
+
+        <div class="side-stat">
+          <span>Pending Requests</span>
+          <strong>3</strong>
+        </div>
+
+        <div class="side-stat">
+          <span>Maintenance</span>
+          <strong>2 Issues</strong>
+        </div>
+      </section>
+
+      <section class="side-card">
+        <p class="small-label">BOOKING ACTIVITY</p>
+        <h2>Recent Requests</h2>
+
+        <div class="mini-list">
+          <div>
+            <strong>Kevin Hartono</strong>
+            <span>Viewing request · Today</span>
+          </div>
+
+          <div>
+            <strong>Amanda Putri</strong>
+            <span>Booking confirmation · Yesterday</span>
+          </div>
+
+          <div>
+            <strong>Rachel Tan</strong>
+            <span>Payment uploaded · 2 days ago</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="side-card warning-card">
+        <p class="small-label">ATTENTION</p>
+        <h2>Needs Review</h2>
+
+        <ul>
+          <li>2 units need photo updates.</li>
+          <li>1 maintenance request is overdue.</li>
+          <li>Lease for A-102 ends in 7 days.</li>
+        </ul>
+      </section>
+
+    </aside>
+
+  </main>
+
+  <script src="../../script/mitra/mitra-properties-detail.js"></script>
+
+</body>
+</html>
