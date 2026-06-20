@@ -78,9 +78,9 @@ const heroImage = document.getElementById("heroImage");
 const indicators = document.querySelectorAll(".indicator");
 
 const heroImages = [
-  "../src/hero-index.png",
-  "../src/hero-index-2.jpg",
-  "../src/hero-index-3.jpg"
+  "src/hero-index.png",
+  "src/hero-index-2.jpg",
+  "src/hero-index-3.jpg"
 ];
 
 let currentImage = 0;
