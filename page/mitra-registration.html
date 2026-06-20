@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Daftar Sebagai Mitra | RESIDIA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/mitra-registration.css">
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="mitra-topbar">
+
+    <a href="../index.html" class="logo">
+      <img src="../src/logo.png" alt="RESIDIA Logo">
+      RESIDIA
+    </a>
+
+    <nav class="top-menu">
+      <a href="../index.html">Home</a>
+      <a href="article.html">Discussion</a>
+      <a href="search.html">Search</a>
+      <a href="catalogue.html">Browse Catalog</a>
+      <a href="saved.html">Saved</a>
+    </nav>
+
+    <button class="hamburger" id="sidebarOpen">
+      ☰
+    </button>
+
+  </header>
+
+  <!-- ================= SIDEBAR OVERLAY ================= -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="side-menu" id="sidebar">
+
+    <div class="sidebar-top">
+      <button class="sidebar-close" id="sidebarClose">☰</button>
+
+      <div class="sidebar-logo">
+        <img src="../src/logo.png" alt="RESIDIA Logo">
+        <span>RESIDIA</span>
+      </div>
+    </div>
+
+    <p class="guest-text">
+      Welcome, Guest
+    </p>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">
+      EXPLORE
+    </h4>
+
+    <a href="https://residiaabout.wordpress.com/"
+       class="sidebar-link"
+       target="_blank"
+       rel="noopener noreferrer">
+      ⓘ About Us
+    </a>
+
+    <a href="catalogue.html" class="sidebar-link">
+      ▦ Browse Apartments
+    </a>
+
+    <a href="saved.html" class="sidebar-link">
+      ♡ Saved Residences
+    </a>
+
+    <a href="history-transaction.html" class="sidebar-link">
+      ▣ Transaction History
+    </a>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">
+      CONNECT
+    </h4>
+
+    <a href="#" class="sidebar-link">◎ Instagram</a>
+    <a href="#" class="sidebar-link">♘ Twitter</a>
+    <a href="#" class="sidebar-link">♧ Contact Person</a>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">
+      PARTNER
+    </h4>
+
+    <a href="mitra-registration.html" class="sidebar-link">
+      ✦ Daftar Sebagai Mitra
+    </a>
+
+    <div class="sidebar-line"></div>
+
+    <a href="login.html" class="login-link">
+      <button class="login-btn">
+        ⇥ Log in / Sign up
+      </button>
+    </a>
+
+  </aside>
+
+  <!-- ================= HERO ================= -->
+  <section class="mitra-hero">
+
+    <div class="hero-overlay"></div>
+
+    <img src="../src/featured.jpg" alt="RESIDIA partner registration hero">
+
+    <div class="hero-content">
+      <p>
+        PARTNER REGISTRATION
+      </p>
+
+      <h1>
+        BECOME A<br>
+        RESIDIA PARTNER
+      </h1>
+
+      <span>
+        Register your apartment business, submit verification documents, and start managing your properties through RESIDIA.
+      </span>
+    </div>
+
+  </section>
+
+  <!-- ================= REGISTRATION CONTENT ================= -->
+  <main class="registration-page">
+
+    <section class="registration-intro">
+
+      <div>
+        <p class="small-label">
+          PARTNER ACCESS
+        </p>
+
+        <h2>
+          Start Your Mitra Journey
+        </h2>
+      </div>
+
+      <p>
+        Fill in your business profile and upload the required verification files.
+        Once approved by admin, your account will gain access to the Mitra Dashboard.
+      </p>
+
+    </section>
+
+    <section class="registration-form-section">
+
+      <form class="mitra-form" id="mitraRegistrationForm">
+
+        <!-- FORM HEADER -->
+        <div class="form-header">
+          <p class="small-label">
+            MITRA DATA
+          </p>
+
+          <h2>
+            Registration Form
+          </h2>
+
+          <span>
+            Please make sure your business information matches your official verification documents.
+          </span>
+        </div>
+
+        <!-- BUSINESS DATA -->
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="ownerName">Owner Name</label>
+            <input id="ownerName" type="text" placeholder="Alexandra Putri">
+          </div>
+
+          <div class="form-group">
+            <label for="businessName">Business Name</label>
+            <input id="businessName" type="text" placeholder="Alexandra Living">
+          </div>
+
+          <div class="form-group">
+            <label for="partnerEmail">Email</label>
+            <input id="partnerEmail" type="email" placeholder="partner@email.com">
+          </div>
+
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input id="phoneNumber" type="text" placeholder="0812-xxxx-xxxx">
+          </div>
+
+          <div class="form-group full">
+            <label for="businessAddress">Business Address</label>
+            <input id="businessAddress" type="text" placeholder="SCBD, South Jakarta">
+          </div>
+
+          <div class="form-group">
+            <label for="npwpNumber">NPWP Number</label>
+            <input id="npwpNumber" type="text" placeholder="12.345.678.9-001">
+          </div>
+
+          <div class="form-group">
+            <label for="totalProperties">Total Properties</label>
+            <input id="totalProperties" type="number" placeholder="4">
+          </div>
+
+        </div>
+
+        <!-- DOCUMENTS -->
+        <div class="document-section">
+
+          <div class="document-heading">
+            <p class="small-label">
+              DOCUMENTS
+            </p>
+
+            <h2>
+              Verification Files
+            </h2>
+
+            <span>
+              Upload clear and valid documents for faster admin approval.
+            </span>
+          </div>
+
+          <div class="upload-grid">
+
+            <label class="upload-box">
+              <div>
+                <strong>KTP Owner</strong>
+                <p>Upload identity card of the business owner.</p>
+              </div>
+
+              <input type="file">
+            </label>
+
+            <label class="upload-box">
+              <div>
+                <strong>NPWP</strong>
+                <p>Upload tax identification document.</p>
+              </div>
+
+              <input type="file">
+            </label>
+
+            <label class="upload-box">
+              <div>
+                <strong>Ownership Letter</strong>
+                <p>Upload apartment ownership or authorization proof.</p>
+              </div>
+
+              <input type="file">
+            </label>
+
+            <label class="upload-box">
+              <div>
+                <strong>Selfie Verification</strong>
+                <p>Upload selfie photo for identity confirmation.</p>
+              </div>
+
+              <input type="file">
+            </label>
+
+          </div>
+
+        </div>
+
+        <!-- AGREEMENT -->
+        <div class="agreement-box">
+
+          <label>
+            <input type="checkbox">
+            <span>
+              I confirm that the submitted information is valid and agree to RESIDIA partner verification process.
+            </span>
+          </label>
+
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="submit-area">
+
+          <button type="button" class="secondary-btn" onclick="window.location.href='../index.html'">
+            Cancel
+          </button>
+
+          <button type="submit" class="primary-btn">
+            Submit Registration
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+  <!-- ================= QUOTE ================= -->
+  <section class="quote-section">
+
+    <p>
+      “A trusted property partnership begins with clarity, verification,
+      and a shared commitment to better living.”
+    </p>
+
+    <span>
+      RESIDIA · PARTNER ECOSYSTEM
+    </span>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="mitra-footer">
+
+    <div>
+      <h2>
+        RESIDIA
+      </h2>
+
+      <p>
+        Curating extraordinary living spaces for the discerning few.
+      </p>
+    </div>
+
+    <div>
+      <h4>
+        Explore
+      </h4>
+
+      <a href="search.html">Search</a>
+      <a href="catalogue.html">Catalogue</a>
+      <a href="saved.html">Saved</a>
+    </div>
+
+    <div>
+      <h4>
+        Company
+      </h4>
+
+      <a href="https://residiaabout.wordpress.com">About Us</a>
+      <a href="article.html">Articles</a>
+      <a href="https://residiaabout.wordpress.com">Careers</a>
+      <a href="https://residiaabout.wordpress.com">Press</a>
+    </div>
+
+    <div>
+      <h4>
+        Support
+      </h4>
+
+      <a href="https://residiaabout.wordpress.com">Help Center</a>
+      <a href="https://residiaabout.wordpress.com">Contact</a>
+      <a href="https://residiaabout.wordpress.com">Privacy</a>
+      <a href="https://residiaabout.wordpress.com">Terms</a>
+    </div>
+
+  </footer>
+
+  <script src="../script/mitra-registration.js"></script>
+
+</body>
+</html>

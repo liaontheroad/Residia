@@ -8,6 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../styles/saved.css">
@@ -15,115 +16,140 @@
 
 <body>
 
-  <!-- TOP NAV -->
+  <!-- ================= NAVBAR ================= -->
   <header class="saved-topbar">
-    <div class="top-left">
-      <a href="index.html" class="back-btn">←</a>
-      <div class="brand">RESIDIA</div>
+
+    <div class="logo">
+      <img src="../src/logo.png" alt="RESIDIA Logo">
+      RESIDIA
     </div>
 
     <nav class="top-menu">
-      <a href="index.html" class="">Home</a>
+      <a href="../index.html">Home</a>
       <a href="article.html">Discussion</a>
       <a href="search.html">Search</a>
       <a href="catalogue.html">Browse Catalog</a>
       <a href="saved.html" class="active">Saved</a>
     </nav>
 
-    <div class="top-actions">
-      <a href="saved.html" class="saved-active">♥ Saved (8)</a>
-      <div class="avatar-small">A</div>
-    </div>
+    <button class="hamburger" id="sidebarOpen">
+      ☰
+    </button>
+
   </header>
 
-  <!-- HERO -->
+  <!-- ================= SIDEBAR OVERLAY ================= -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="side-menu" id="sidebar">
+
+    <div class="sidebar-top">
+      <button class="sidebar-close" id="sidebarClose">☰</button>
+
+      <div class="sidebar-logo">
+        <img src="../src/logo.png" alt="RESIDIA Logo">
+        <span>RESIDIA</span>
+      </div>
+    </div>
+
+    <p class="guest-text">
+      Welcome, Guest
+    </p>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">
+      EXPLORE
+    </h4>
+
+    <a href="https://residiaabout.wordpress.com/"
+       class="sidebar-link"
+       target="_blank"
+       rel="noopener noreferrer">
+      ⓘ About Us
+    </a>
+
+    <a href="catalogue.html" class="sidebar-link">
+      ▦ Browse Apartments
+    </a>
+
+    <a href="saved.html" class="sidebar-link">
+      ♡ Saved Residences
+    </a>
+
+    <a href="history-transaction.html" class="sidebar-link">
+      ▣ Transaction History
+    </a>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">
+      CONNECT
+    </h4>
+
+    <a href="#" class="sidebar-link">◎ Instagram</a>
+    <a href="#" class="sidebar-link">♘ Twitter</a>
+    <a href="#" class="sidebar-link">♧ Contact Person</a>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">
+      PARTNER
+    </h4>
+
+    <a href="mitra-registration.html" class="sidebar-link">
+      ✦ Daftar Sebagai Mitra
+    </a>
+
+    <div class="sidebar-line"></div>
+
+    <a href="login.html" class="login-link">
+      <button class="login-btn">
+        ⇥ Log in / Sign up
+      </button>
+    </a>
+
+  </aside>
+
+  <!-- ================= HERO ================= -->
   <section class="saved-hero">
 
-    <div class="hero-text">
-      <p>PERSONAL COLLECTION</p>
-      <h1>Your Saved<br>Residences</h1>
-      <span>Keep track of extraordinary spaces you’ve selected for later.</span>
-      <div class="hero-line">
-        <small>8 PROPERTI TERSIMPAN</small>
-      </div>
-    </div>
+    <div class="hero-overlay"></div>
 
-    <div class="hero-image">
-      <img src="../src/saved-hero.jpg" alt="">
-      <div>
-        <small>Koleksi Pilihan</small>
-        <strong>Alexandra D.</strong>
-      </div>
+    <img src="../src/saved-hero.jpg" alt="Saved residences hero">
+
+    <div class="hero-content">
+      <p>
+        PERSONAL COLLECTION
+      </p>
+
+      <h1>
+        YOUR SAVED<br>
+        RESIDENCES
+      </h1>
+
+      <span>
+        Keep track of extraordinary spaces you’ve selected for later.
+      </span>
     </div>
 
   </section>
 
-  <!-- HERO STATS -->
-  <section class="saved-stats">
-    <div>
-      <span>♡</span>
-      <h3>8</h3>
-      <p>Saved Properties</p>
-    </div>
-
-    <div>
-      <span>✦</span>
-      <h3>3</h3>
-      <p>Recently Added</p>
-    </div>
-
-    <div>
-      <span>▣</span>
-      <h3>7</h3>
-      <p>Available Now</p>
-    </div>
-
-    <div>
-      <span>☆</span>
-      <h3>6</h3>
-      <p>Premium Collection</p>
-    </div>
-  </section>
-
+  <!-- ================= SAVED CONTENT ================= -->
   <main class="saved-page">
 
-    <!-- SIDEBAR -->
-    <aside class="account-sidebar">
-
-      <div class="profile-card">
-        <div class="avatar">A</div>
-        <p>Selamat datang,</p>
-        <h3>Alexandra D.</h3>
-        <div class="member-badge">★ Member Gold</div>
-      </div>
-
-      <nav class="account-menu">
-        <a href="index.html">⌂ Beranda</a>
-        <a href="search.html">⌕ Cari Properti</a>
-        <a href="saved.html" class="active">♡ Properti Tersimpan</a>
-        <a href="history-transaction.html">▣ Riwayat Transaksi</a>
-        <a href="#">⚙ Pengaturan Akun</a>
-        <a href="#" class="logout">↪ Keluar</a>
-      </nav>
-
-      <div class="collection-box">
-        <h4>Koleksi Anda</h4>
-
-        <div><span>Tersimpan</span><strong>8</strong></div>
-        <div><span>Tersedia Sekarang</span><strong>7</strong></div>
-        <div><span>Exclusive</span><strong>3</strong></div>
-        <div><span>Premium</span><strong>3</strong></div>
-      </div>
-
-    </aside>
-
-    <!-- CONTENT -->
     <section class="saved-content">
 
       <div class="saved-heading">
         <div>
-          <h2>Saved Residences</h2>
-          <p>8 properti tersimpan</p>
+          <h2>
+            Saved Residences
+          </h2>
+
+          <p>
+            8 properti tersimpan
+          </p>
         </div>
       </div>
 
@@ -140,11 +166,20 @@
 
       <div class="property-grid">
 
+        <!-- CARD 1 -->
         <article class="property-card" data-category="exclusive jakarta recent">
+
           <div class="property-img">
-            <img src="../src/featured.jpg" alt="">
-            <span class="badge blue">Exclusive</span>
-            <button class="heart active">♥</button>
+            <img src="../src/featured-apart.jpg" alt="Azure Penthouse">
+
+            <span class="badge blue">
+              Exclusive
+            </span>
+
+            <button class="heart active">
+              ♥
+            </button>
+
             <div class="img-bottom">
               <small>Disimpan 2 hari lalu</small>
               <small>Tersedia</small>
@@ -152,12 +187,15 @@
           </div>
 
           <div class="property-body">
+
             <div class="meta">
               <span>⌖ SCBD, Jakarta</span>
               <b>★ 4.9 (87)</b>
             </div>
 
-            <h3>Azure Penthouse</h3>
+            <h3>
+              Azure Penthouse
+            </h3>
 
             <div class="features">
               <span>▭ 3 KT</span>
@@ -176,14 +214,25 @@
                 <button class="remove-btn">⌫</button>
               </div>
             </div>
+
           </div>
+
         </article>
 
+        <!-- CARD 2 -->
         <article class="property-card" data-category="premium bandung">
+
           <div class="property-img">
-            <img src="../src/apart2.jpg" alt="">
-            <span class="badge gold">Premium</span>
-            <button class="heart active">♥</button>
+            <img src="../src/apart2-catalogue.jpg" alt="Ivory Residence">
+
+            <span class="badge gold">
+              Premium
+            </span>
+
+            <button class="heart active">
+              ♥
+            </button>
+
             <div class="img-bottom">
               <small>Disimpan 5 hari lalu</small>
               <small>Tersedia</small>
@@ -191,12 +240,15 @@
           </div>
 
           <div class="property-body">
+
             <div class="meta">
               <span>⌖ Dago, Bandung</span>
               <b>★ 4.7 (54)</b>
             </div>
 
-            <h3>Ivory Residence</h3>
+            <h3>
+              Ivory Residence
+            </h3>
 
             <div class="features">
               <span>▭ 2 KT</span>
@@ -215,14 +267,25 @@
                 <button class="remove-btn">⌫</button>
               </div>
             </div>
+
           </div>
+
         </article>
 
+        <!-- CARD 3 -->
         <article class="property-card" data-category="premium bali">
+
           <div class="property-img">
-            <img src="../src/apart3.jpg" alt="">
-            <span class="badge gold">Premium</span>
-            <button class="heart active">♥</button>
+            <img src="../src/apart1-catalogue.jpg" alt="Mirasol Seminyak">
+
+            <span class="badge gold">
+              Premium
+            </span>
+
+            <button class="heart active">
+              ♥
+            </button>
+
             <div class="img-bottom">
               <small>Disimpan 1 minggu lalu</small>
               <small>Tersedia</small>
@@ -230,12 +293,15 @@
           </div>
 
           <div class="property-body">
+
             <div class="meta">
               <span>⌖ Seminyak, Bali</span>
               <b>★ 4.9 (112)</b>
             </div>
 
-            <h3>Mirasol Seminyak</h3>
+            <h3>
+              Mirasol Seminyak
+            </h3>
 
             <div class="features">
               <span>▭ 2 KT</span>
@@ -254,27 +320,44 @@
                 <button class="remove-btn">⌫</button>
               </div>
             </div>
+
           </div>
+
         </article>
 
+        <!-- CARD 4 -->
         <article class="property-card unavailable" data-category="exclusive jakarta">
+
           <div class="property-img">
-            <img src="../src/saved-hero.jpg" alt="">
-            <span class="badge blue">Exclusive</span>
-            <span class="badge dark">Tidak Tersedia</span>
-            <button class="heart active">♥</button>
+            <img src="../src/card4-saved.jpg" alt="Velvet Suites SCBD">
+
+            <span class="badge blue">
+              Exclusive
+            </span>
+
+            <span class="badge dark">
+              Tidak Tersedia
+            </span>
+
+            <button class="heart active">
+              ♥
+            </button>
+
             <div class="img-bottom">
               <small>Disimpan 1 minggu lalu</small>
             </div>
           </div>
 
           <div class="property-body">
+
             <div class="meta">
               <span>⌖ SCBD, Jakarta</span>
               <b>★ 4.8 (43)</b>
             </div>
 
-            <h3>Velvet Suites SCBD</h3>
+            <h3>
+              Velvet Suites SCBD
+            </h3>
 
             <div class="features">
               <span>▭ 3 KT</span>
@@ -293,13 +376,21 @@
                 <button class="remove-btn">⌫</button>
               </div>
             </div>
+
           </div>
+
         </article>
 
+        <!-- CARD 5 -->
         <article class="property-card" data-category="surabaya">
+
           <div class="property-img">
-            <img src="../src/apart4.jpg" alt="">
-            <button class="heart active">♥</button>
+            <img src="../src/card5-saved.jpg" alt="Cobalt Tower Suite">
+
+            <button class="heart active">
+              ♥
+            </button>
+
             <div class="img-bottom">
               <small>Disimpan 2 minggu lalu</small>
               <small>Tersedia</small>
@@ -307,12 +398,15 @@
           </div>
 
           <div class="property-body">
+
             <div class="meta">
               <span>⌖ Darmo, Surabaya</span>
               <b>★ 4.6 (38)</b>
             </div>
 
-            <h3>Cobalt Tower Suite</h3>
+            <h3>
+              Cobalt Tower Suite
+            </h3>
 
             <div class="features">
               <span>▭ 2 KT</span>
@@ -331,14 +425,25 @@
                 <button class="remove-btn">⌫</button>
               </div>
             </div>
+
           </div>
+
         </article>
 
+        <!-- CARD 6 -->
         <article class="property-card" data-category="premium recent">
+
           <div class="property-img">
-            <img src="../src/article-4.jpg" alt="">
-            <span class="badge green">New Listing</span>
-            <button class="heart active">♥</button>
+            <img src="../src/card6-saved.jpg" alt="Onyx Residence Alam">
+
+            <span class="badge green">
+              New Listing
+            </span>
+
+            <button class="heart active">
+              ♥
+            </button>
+
             <div class="img-bottom">
               <small>Disimpan 1 hari lalu</small>
               <small>Tersedia</small>
@@ -346,12 +451,15 @@
           </div>
 
           <div class="property-body">
+
             <div class="meta">
               <span>⌖ Alam Sutera, Tangerang</span>
               <b>★ 4.5 (29)</b>
             </div>
 
-            <h3>Onyx Residence Alam</h3>
+            <h3>
+              Onyx Residence Alam
+            </h3>
 
             <div class="features">
               <span>▭ 3 KT</span>
@@ -370,7 +478,9 @@
                 <button class="remove-btn">⌫</button>
               </div>
             </div>
+
           </div>
+
         </article>
 
       </div>
@@ -379,81 +489,137 @@
 
   </main>
 
-  <!-- RECOMMENDATION -->
+  <!-- ================= RECOMMENDATION ================= -->
   <section class="recommend-section">
+
     <div class="section-title">
-      <p>REKOMENDASI</p>
-      <h2>Recommended Based on Your Taste</h2>
+      <p>
+        REKOMENDASI
+      </p>
+
+      <h2>
+        Recommended Based on Your Taste
+      </h2>
     </div>
 
     <div class="recommend-grid">
+
       <article>
-        <img src="../src/recommend-1.jpg" alt="">
+        <img src="../src/recommend-1.jpg" alt="Pearl Residences">
         <span>Exclusive</span>
-        <h3>Pearl Residences</h3>
-        <p>⌖ Menteng, Jakarta</p>
-        <strong>Rp 9.800.000 <small>/bulan</small></strong>
+
+        <h3>
+          Pearl Residences
+        </h3>
+
+        <p>
+          ⌖ Menteng, Jakarta
+        </p>
+
+        <strong>
+          Rp 9.800.000 <small>/bulan</small>
+        </strong>
       </article>
 
       <article>
-        <img src="../src/recommend-2.jpg" alt="">
+        <img src="../src/recommend-2.jpg" alt="Emerald Villa Ubud">
         <span>Premium</span>
-        <h3>Emerald Villa Ubud</h3>
-        <p>⌖ Ubud, Bali</p>
-        <strong>Rp 8.400.000 <small>/bulan</small></strong>
+
+        <h3>
+          Emerald Villa Ubud
+        </h3>
+
+        <p>
+          ⌖ Ubud, Bali
+        </p>
+
+        <strong>
+          Rp 8.400.000 <small>/bulan</small>
+        </strong>
       </article>
 
       <article>
-        <img src="../src/recommend-3.jpg" alt="">
+        <img src="../src/recommend-3.jpg" alt="Solara Suites Surabaya">
         <span>Premium</span>
-        <h3>Solara Suites Surabaya</h3>
-        <p>⌖ Pakuwon, Surabaya</p>
-        <strong>Rp 5.200.000 <small>/bulan</small></strong>
+
+        <h3>
+          Solara Suites Surabaya
+        </h3>
+
+        <p>
+          ⌖ Pakuwon, Surabaya
+        </p>
+
+        <strong>
+          Rp 5.200.000 <small>/bulan</small>
+        </strong>
       </article>
+
     </div>
+
   </section>
 
-  <!-- QUOTE -->
+  <!-- ================= QUOTE ================= -->
   <section class="quote-section">
+
     <p>
-      “A remarkable residence is more than a place to stay—it is a reflection of
+      “A remarkable residence is more than a place to stay — it is a reflection of
       how you choose to live.”
     </p>
-    <span>RESIDIA · EST. 2024</span>
+
+    <span>
+      RESIDIA · EST. 2024
+    </span>
+
   </section>
 
-  <!-- FOOTER -->
+  <!-- ================= FOOTER ================= -->
   <footer class="saved-footer">
+
     <div>
-      <h2>RESIDIA</h2>
-      <p>Curating extraordinary living spaces for the discerning few.</p>
+      <h2>
+        RESIDIA
+      </h2>
+
+      <p>
+        Curating extraordinary living spaces for the discerning few.
+      </p>
     </div>
 
     <div>
-      <h4>Explore</h4>
+      <h4>
+        Explore
+      </h4>
+
       <a href="search.html">Search</a>
       <a href="catalogue.html">Catalogue</a>
-      <a href="#">Map View</a>
-      <a href="#">New Listings</a>
     </div>
 
     <div>
-      <h4>Company</h4>
-      <a href="#">About Us</a>
+      <h4>
+        Company
+      </h4>
+
+      <a href="https://residiaabout.wordpress.com">About Us</a>
       <a href="article.html">Articles</a>
-      <a href="#">Careers</a>
-      <a href="#">Press</a>
+      <a href="https://residiaabout.wordpress.com">Careers</a>
+      <a href="https://residiaabout.wordpress.com">Press</a>
     </div>
 
     <div>
-      <h4>Support</h4>
-      <a href="#">Help Center</a>
-      <a href="#">Contact</a>
-      <a href="#">Privacy</a>
-      <a href="#">Terms</a>
+      <h4>
+        Support
+      </h4>
+
+      <a href="https://residiaabout.wordpress.com">Help Center</a>
+      <a href="https://residiaabout.wordpress.com">Contact</a>
+      <a href="https://residiaabout.wordpress.com">Privacy</a>
+      <a href="https://residiaabout.wordpress.com">Terms</a>
     </div>
+
   </footer>
 
   <script src="../script/saved.js"></script>
+
 </body>
 </html>

@@ -13,11 +13,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-
+  
   <!-- ================= HERO ================= -->
 
   <header class="hero">
@@ -27,16 +27,16 @@
   <nav>
 
     <div class="logo">
-    <img src="../src/logo.png" alt="">
+    <img src="src/logo.png" alt="">
       RESIDIA
     </div>
 
     <div class="menu">
-    <a href="index.html" class="active">Home</a>
-    <a href="article.html">Discussion</a>
-    <a href="search.html">Search</a>
-    <a href="catalogue.html">Browse Catalog</a>
-    <a href="saved.html">Saved</a>
+    <a href="page/index.html" class="active">Home</a>
+    <a href="page/article.html">Discussion</a>
+    <a href="page/search.html">Search</a>
+    <a href="page/catalogue.html">Browse Catalog</a>
+    <a href="page/saved.html">Saved</a>
   </div>
 
   <div class="hamburger" id="sidebarOpen">☰</div>
@@ -53,7 +53,7 @@
     <button class="sidebar-close" id="sidebarClose">☰</button>
 
     <div class="sidebar-logo">
-      <img src="../src/logo.png" alt="">
+      <img src="src/logo.png" alt="">
       <span>RESIDIA</span>
     </div>
   </div>
@@ -64,35 +64,44 @@
 
   <h4 class="sidebar-section-title">EXPLORE</h4>
 
-  <a href="#" class="sidebar-link">ⓘ About us</a>
+  <a href="https://residiaabout.wordpress.com/"
+    class="sidebar-link"
+    target="_blank"
+    rel="noopener noreferrer">
+    ⓘ About Us
+  </a>
   <a href="#" class="sidebar-link">▦ Browse Apartments</a>
-  <a href="history-transaction.html" class="sidebar-link">▣ Riwayat Transaksi</a>
+  <a href="page/history-transaction.html" class="sidebar-link">▣ Riwayat Transaksi</a>
 
   <div class="sidebar-line"></div>
 
   <h4 class="sidebar-section-title">CONNECT</h4>
 
-  <a href="#" class="sidebar-link">◎ Instagram</a>
-  <a href="#" class="sidebar-link">♘ Twitter</a>
-  <a href="#" class="sidebar-link">♧ Contact Person</a>
+  <a href="https://residiaabout.wordpress.com" class="sidebar-link">◎ Instagram</a>
+  <a href="https://residiaabout.wordpress.com" class="sidebar-link">♘ Twitter</a>
+  <a href="https://residiaabout.wordpress.com" class="sidebar-link">♧ Contact Person</a>
+<div class="sidebar-line"></div>
 
+<h4 class="sidebar-section-title">PARTNER</h4>
+
+<a href="page/mitra-registration.html" class="sidebar-link">
+  ✦ Daftar Sebagai Mitra
+</a>
   <div class="sidebar-line"></div>
 
-  <a href="login.html" class="login-link">
+  <a href="page/login.html" class="login-link">
     <button class="login-btn">⇥ Log in / Sign in</button>
   </a>
 
-  <p class="create-account">
-    Dont have account?
-    <a href="register.html">Create account</a>
-  </p>
+  
+
 
 </aside>
 
   <!-- BACKGROUND IMAGE -->
 
   <div class="hero-bg">
-    <img id="heroImage" src="../src/hero-index.png" alt="">
+    <img id="heroImage" src="src/hero-index.png" alt="">
   </div>
 
   <div class="overlay"></div>
@@ -132,10 +141,10 @@
           not just the way you pay.
         </p>
 
-        <button class="hero-btn">
-          Book Now
-          <span>→</span>
-        </button>
+        <a href="page/catalogue.html" class="hero-btn">
+        Book Now
+        <span>→</span>
+      </a>
 
       </div>
 
@@ -175,9 +184,9 @@
 
         </div>
 
-        <button class="btn">
-          See Promo
-        </button>
+        <a href="page/catalogue.html" class="btn">
+        See Promo
+      </a>
 
       </div>
 
@@ -197,10 +206,10 @@
 
       <!-- FLOATING IMAGES -->
 
-      <img src="../src/find-small-1.png" class="floating-img img-1" alt="">
-      <img src="../src/find-small-2.png" class="floating-img img-2" alt="">
-      <img src="../src/find-small-3.png" class="floating-img img-3" alt="">
-      <img src="../src/find-small-4.png" class="floating-img img-4" alt="">
+      <img src="src/find-small-1.png" class="floating-img img-1" alt="">
+      <img src="src/find-small-2.png" class="floating-img img-2" alt="">
+      <img src="src/find-small-3.png" class="floating-img img-3" alt="">
+      <img src="src/find-small-4.png" class="floating-img img-4" alt="">
 
       <h2>
         <span class="gold">FIND IT</span>
@@ -243,10 +252,10 @@
           not just the right budget.
         </p>
 
-        <button class="catalog-btn">
+        <a href="page/catalogue.html" class="catalog-btn">
           Browse Catalogue
           <span>→</span>
-        </button>
+        </a>
 
       </div>
 
@@ -254,7 +263,7 @@
 
       <div class="find-main-image">
 
-        <img src="../src/ginger.jpg" alt="">
+        <img src="src/ginger.jpg" alt="">
 
       </div>
 
@@ -278,10 +287,10 @@
         TODAY’S TRENDING
       </h2>
 
-      <button class="see-all-btn">
+      <a href="page/article.html" class="see-all-btn">
         SEE ALL
         <span>→</span>
-      </button>
+      </a>
 
     </div>
 
@@ -293,7 +302,7 @@
 
       <div class="featured-article">
 
-        <img src="../src/article-1.jpg" alt="">
+        <img src="src/article-1.jpg" alt="">
 
         <div class="featured-content">
 
@@ -306,9 +315,8 @@
             BUDGET, LOCATION, AND WHAT TO WATCH OUT FOR
           </h3>
 
-          <a href="article-detail.html">
+          <a href="page/article-detail.html">
             Read Full Article
-            <span>→</span>
           </a>
 
         </div>
@@ -323,7 +331,7 @@
 
         <div class="side-item">
 
-          <img src="../src/trending-1.png" alt="">
+          <img src="src/trending-1.png" alt="">
 
           <div class="side-content">
 
@@ -337,10 +345,9 @@
               APARTMENT LEASE
             </h4>
 
-            <a href="#">
-              Read Full Article
-              <span>→</span>
-            </a>
+            <span class="article-disabled">
+              Read Full Article →
+            </span>
 
           </div>
 
@@ -350,7 +357,7 @@
 
         <div class="side-item">
 
-          <img src="../src/trending-2.png" alt="">
+          <img src="src/trending-2.png" alt="">
 
           <div class="side-content">
 
@@ -364,10 +371,9 @@
               FOR RENTERS IN 2026
             </h4>
 
-            <a href="#">
-              Read Full Article
-              <span>→</span>
-            </a>
+            <span class="article-disabled">
+              Read Full Article →
+            </span>
 
           </div>
 
@@ -377,7 +383,7 @@
 
         <div class="side-item">
 
-          <img src="../src/trending-3.png" alt="">
+          <img src="src/trending-3.png" alt="">
 
           <div class="side-content">
 
@@ -391,10 +397,9 @@
               YOUR LIFESTYLE?
             </h4>
 
-            <a href="#">
-              Read Full Article
-              <span>→</span>
-            </a>
+            <span class="article-disabled">
+              Read Full Article →
+            </span>
 
           </div>
 
@@ -430,10 +435,10 @@
         <div class="vision-right">
             <div class="visi-large">VISI</div>
                 <div class="img-landscape-box">
-                <img alt="The Fallen Angel" src="../src/vision-left.png"/>
+                <img alt="The Fallen Angel" src="src/vision-left.png"/>
                 </div>
                 <div class="img-portrait-box">
-                <img alt="The School of Athens" src="../src/vision-right.png"/>
+                <img alt="The School of Athens" src="src/vision-right.png"/>
             </div>
         </div>
     </div>
@@ -446,8 +451,8 @@
   <div class="why-container">
 
     <!-- floating decor -->
-    <img src="../src/find-small-3.png" class="why-floating float-1">
-    <img src="../src/img2.png" class="why-floating float-2">
+    <img src="src/find-small-3.png" class="why-floating float-1">
+    <img src="src/img2.png" class="why-floating float-2">
 
     <!-- title -->
     <div class="why-title-wrap">

@@ -24,29 +24,83 @@
   <nav>
 
     <div class="logo">
-      <img src="src/logo.png" alt="">
+      <img src="../src/logo.png" alt="">
       RESIDIA
     </div>
 
     <div class="menu">
-      <a href="index.html">Home</a>
-      <a href="#">Discussion</a>
+      <a href="../index.html">Home</a>
+      <a href="article.html">Discussion</a>
       <a href="search.html">Search</a>
-      <a href="catalogue.html" class="active">Browse Catalog</a>
+      <a href="catalogue.html" >Browse Catalog</a>
       <a href="saved.html">Saved</a>
     </div>
 
-    <div class="hamburger">
+    <div class="hamburger" id="sidebarOpen">
       ☰
     </div>
 
   </nav>
 
+  <!-- SIDEBAR OVERLAY -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- SIDEBAR -->
+<aside class="side-menu" id="sidebar">
+
+  <div class="sidebar-top">
+    <button class="sidebar-close" id="sidebarClose">☰</button>
+
+    <div class="sidebar-logo">
+      <img src="../src/logo.png" alt="">
+      <span>RESIDIA</span>
+    </div>
+  </div>
+
+  <p class="guest-text">Welcome, Guest</p>
+
+  <div class="sidebar-line"></div>
+
+  <h4 class="sidebar-section-title">EXPLORE</h4>
+
+  <a href="https://residiaabout.wordpress.com/"
+     class="sidebar-link"
+     target="_blank"
+     rel="noopener noreferrer">
+    ⓘ About Us
+  </a>
+
+  <a href="catalogue.html" class="sidebar-link">▦ Browse Apartments</a>
+  <a href="history-transaction.html" class="sidebar-link">▣ Transaction History</a>
+
+  <div class="sidebar-line"></div>
+
+  <h4 class="sidebar-section-title">CONNECT</h4>
+
+  <a href="#" class="sidebar-link">◎ Instagram</a>
+  <a href="#" class="sidebar-link">♘ Twitter</a>
+  <a href="#" class="sidebar-link">♧ Contact Person</a>
+
+  <div class="sidebar-line"></div>
+
+  <h4 class="sidebar-section-title">PARTNER</h4>
+
+  <a href="mitra-registration.html" class="sidebar-link">
+    ✦ Daftar Sebagai Mitra
+  </a>
+
+  <div class="sidebar-line"></div>
+
+  <a href="login.html" class="login-link">
+    <button class="login-btn">⇥ Log in / Sign up</button>
+  </a>
+
+</aside>
   <!-- ================= HERO ================= -->
 
   <section class="detail-hero">
 
-    <img src="src/featured.jpg" alt="">
+    <img src="../src/featured-apart.jpg" alt="">
 
     <div class="detail-hero-overlay"></div>
 
@@ -107,7 +161,6 @@
       <h2>
         Where the horizon meets your private sanctuary.
       </h2>
-
       <p class="overview-text">
         Suspended above the city, The Azure Penthouse is designed
         for calm, privacy, and architectural elegance. Every corner
@@ -126,23 +179,42 @@
 
     </div>
 
-    <div class="overview-center">
-      <img src="../src/gallery1.jpg" alt="">
+    <div class="overview-center gallery-box">
+
+    <div class="main-gallery-image">
+      <img id="mainGalleryImage" src="../src/details-angle1.jpg" alt="Azure Penthouse Gallery">
     </div>
+
+    <div class="gallery-thumbs">
+      <button class="gallery-thumb active" data-img="../src/details-angle1.jpg">
+        <img src="../src/details-angle1.jpg" alt="">
+      </button>
+
+      <button class="gallery-thumb" data-img="../src/details-angle2.jpg">
+        <img src="../src/details-angle2.jpg" alt="">
+      </button>
+
+      <button class="gallery-thumb" data-img="../src/details-angle3.jpg">
+        <img src="../src/details-angle3.jpg" alt="">
+      </button>
+    </div>
+  </div>
 
     <div class="overview-right">
 
       <div class="price-card">
 
-        <span>STARTING FROM</span>
+        <div class="price-main">
+          <span>STARTING FROM</span>
 
-        <h3>IDR 850M</h3>
+          <h3>IDR 850M</h3>
 
-        <p>/ year</p>
+          <p>/ year</p>
 
-        <a href="booking.html" class="primary-btn">
-            Book Viewing
-        </a>
+          <a href="booking.html" class="primary-btn">
+            Book Now
+          </a>
+        </div>
 
         <ul>
           <li>Private lift access</li>
@@ -219,9 +291,9 @@
 
     <div class="materials-grid">
 
-      <img src="../src/material1.jpg" alt="">
-      <img src="../src/material2.jpg" alt="">
-      <img src="../src/material3.jpg" alt="">
+      <img src="../src/details-angle4.jpg" alt="">
+      <img src="../src/details-angle5.jpg" alt="">
+      <img src="../src/details-angle6.jpg" alt="">
 
     </div>
 
@@ -391,7 +463,7 @@
 
       <div class="related-card">
 
-        <img src="../src/apart1.jpg" alt="">
+        <img src="../src/apart1-catalogue.jpg" alt="">
 
         <h3>Mirasol Estates</h3>
 
@@ -401,7 +473,7 @@
 
       <div class="related-card">
 
-        <img src="../src/apart2.jpg" alt="">
+        <img src="../src/apart2-catalogue.jpg" alt="">
 
         <h3>The Ivory Suite</h3>
 
@@ -411,7 +483,7 @@
 
       <div class="related-card">
 
-        <img src="../src/apart3.jpg" alt="">
+        <img src="../src/apart3-catalogue.jpg" alt="">
 
         <h3>Symmetry Loft</h3>
 

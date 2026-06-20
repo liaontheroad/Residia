@@ -1,92 +1,123 @@
-const roleButtons = document.querySelectorAll(".role-tabs button");
-const roleText = document.getElementById("roleText");
-const selectedRole = document.getElementById("selectedRole");
-const quickLinks = document.querySelectorAll("[data-role-link]");
+/* ==========================
+   ROLE TABS
+========================== */
 
-const loginForm = document.getElementById("loginForm");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
+const roleButtons = document.querySelectorAll(".role-tabs button");
+const selectedRole = document.getElementById("selectedRole");
+const roleText = document.getElementById("roleText");
 
 roleButtons.forEach(button => {
   button.addEventListener("click", () => {
-    setRole(button.dataset.role);
+    roleButtons.forEach(btn => {
+      btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    const role = button.dataset.role;
+    selectedRole.value = role;
+
+    roleText.textContent = role.charAt(0).toUpperCase() + role.slice(1);
   });
 });
 
-quickLinks.forEach(link => {
-  link.addEventListener("click", e => {
+
+/* ==========================
+   LOGIN VALIDATION
+========================== */
+
+const loginForm = document.getElementById("loginForm");
+const emailInput = document.getElementById("email");
+const passwordInput = document.getElementById("password");
+
+if(loginForm){
+  loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    setRole(link.dataset.roleLink);
-  });
-});
 
-function setRole(role){
-  roleButtons.forEach(btn => {
-    btn.classList.toggle("active", btn.dataset.role === role);
-  });
+    clearErrors();
 
-  selectedRole.value = role;
-
-  const label = role.charAt(0).toUpperCase() + role.slice(1);
-  roleText.textContent = label;
-
-  if(role === "admin"){
-    email.placeholder = "admin@residia.com";
-  }else if(role === "mitra"){
-    email.placeholder = "mitra@residia.com";
-  }else{
-    email.placeholder = "you@email.com";
-  }
-}
-
-loginForm.addEventListener("submit", e => {
-  e.preventDefault();
-
-  let valid = true;
-
-  valid = validateField(email, "Email wajib diisi") && valid;
-  valid = validateField(password, "Password wajib diisi") && valid;
-
-  if(email.value && !email.value.includes("@")){
-    setError(email, "Format email tidak valid");
-    valid = false;
-  }
-
-  if(valid){
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
     const role = selectedRole.value;
 
-    if(role === "admin"){
-      window.location.href = "/page/admin/admin-dashboard.html";
-    }else if(role === "mitra"){
-      window.location.href = "/page/mitra/mitra-dashboard.html";
-    }else{
-      window.location.href = "index.html";
+    let isValid = true;
+
+    if(email === ""){
+      showError(emailInput, "Email is required.");
+      isValid = false;
+    }else if(!isValidEmail(email)){
+      showError(emailInput, "Please enter a valid email.");
+      isValid = false;
     }
-  }
+
+    if(password === ""){
+      showError(passwordInput, "Password is required.");
+      isValid = false;
+    }else if(password.length < 6){
+      showError(passwordInput, "Password must be at least 6 characters.");
+      isValid = false;
+    }
+
+    if(!isValid) return;
+
+    if(role === "admin"){
+      window.location.href = "/admin/admin-dashboard.html";
+    }else if(role === "mitra"){
+      window.location.href = "/mitra/mitra-dashboard.html";
+    }else{
+      window.location.href = "../index.html";
+    }
+  });
+}
+
+
+/* ==========================
+   ERROR HANDLING
+========================== */
+
+function showError(input, message){
+  const formGroup = input.closest(".form-group");
+  const errorText = formGroup.querySelector("small");
+
+  formGroup.classList.add("error");
+  errorText.textContent = message;
+}
+
+function clearErrors(){
+  const formGroups = document.querySelectorAll(".form-group");
+
+  formGroups.forEach(group => {
+    group.classList.remove("error");
+
+    const errorText = group.querySelector("small");
+
+    if(errorText){
+      errorText.textContent = "";
+    }
+  });
+}
+
+function isValidEmail(email){
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+
+/* ==========================
+   INPUT CLEAN ERROR
+========================== */
+
+[emailInput, passwordInput].forEach(input => {
+  if(!input) return;
+
+  input.addEventListener("input", () => {
+    const formGroup = input.closest(".form-group");
+
+    formGroup.classList.remove("error");
+
+    const errorText = formGroup.querySelector("small");
+
+    if(errorText){
+      errorText.textContent = "";
+    }
+  });
 });
-
-function validateField(input, message){
-  if(input.value.trim() === ""){
-    setError(input, message);
-    return false;
-  }
-
-  clearError(input);
-  return true;
-}
-
-function setError(input, message){
-  const group = input.closest(".form-group");
-  const small = group.querySelector("small");
-
-  group.classList.add("error");
-  small.textContent = message;
-}
-
-function clearError(input){
-  const group = input.closest(".form-group");
-  const small = group.querySelector("small");
-
-  group.classList.remove("error");
-  small.textContent = "";
-}

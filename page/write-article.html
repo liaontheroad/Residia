@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Write Article | RESIDIA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/write-article.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">
+      <img src="../src/logo.png" alt="RESIDIA Logo">
+      RESIDIA
+    </div>
+
+    <div class="menu">
+      <a href="../index.html">Home</a>
+      <a href="article.html" class="active">Discussion</a>
+      <a href="search.html">Search</a>
+      <a href="catalogue.html">Browse Catalog</a>
+      <a href="saved.html">Saved</a>
+    </div>
+
+    <div class="hamburger" id="sidebarOpen">☰</div>
+  </nav>
+
+  <!-- SIDEBAR OVERLAY -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="side-menu" id="sidebar">
+
+    <div class="sidebar-top">
+      <button class="sidebar-close" id="sidebarClose">☰</button>
+
+      <div class="sidebar-logo">
+        <img src="../src/logo.png" alt="RESIDIA Logo">
+        <span>RESIDIA</span>
+      </div>
+    </div>
+
+    <p class="guest-text">Welcome, Guest</p>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">EXPLORE</h4>
+
+    <a href="https://residiaabout.wordpress.com/"
+       class="sidebar-link"
+       target="_blank"
+       rel="noopener noreferrer">
+      ⓘ About Us
+    </a>
+
+    <a href="catalogue.html" class="sidebar-link">▦ Browse Apartments</a>
+    <a href="saved.html" class="sidebar-link">♡ Saved Residences</a>
+    <a href="history-transaction.html" class="sidebar-link">▣ Transaction History</a>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">COMMUNITY</h4>
+
+    <a href="article.html" class="sidebar-link">✎ Discussion</a>
+    <a href="write-article.html" class="sidebar-link">✦ Write a Tip</a>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">CONNECT</h4>
+
+    <a href="#" class="sidebar-link">◎ Instagram</a>
+    <a href="#" class="sidebar-link">♘ Twitter</a>
+    <a href="#" class="sidebar-link">♧ Contact Person</a>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">PARTNER</h4>
+
+    <a href="mitra-registration.html" class="sidebar-link">
+      ✦ Daftar Sebagai Mitra
+    </a>
+
+    <div class="sidebar-line"></div>
+
+    <a href="login.html" class="login-link">
+      <button class="login-btn">⇥ Log in / Sign up</button>
+    </a>
+
+  </aside>
+
+  <!-- HERO -->
+  <header class="write-hero">
+
+    <div class="hero-overlay"></div>
+
+    <img src="../src/article-1.jpg" alt="Write article hero">
+
+    <div class="hero-content">
+      <p>COMMUNITY PUBLICATION</p>
+
+      <h1>
+        WRITE<br>
+        A TIP
+      </h1>
+
+      <span>
+        Share your apartment living tips, rental experience, or neighborhood insights with other RESIDIA users.
+      </span>
+    </div>
+
+  </header>
+
+  <!-- WRITE FORM -->
+  <main class="write-page">
+
+    <section class="write-intro">
+
+      <div>
+        <p class="small-label">MEDIUM-STYLE DISCUSSION</p>
+
+        <h2>
+          Publish Your Story
+        </h2>
+      </div>
+
+      <p>
+        Your article will be published directly to the Discussion page. RESIDIA may moderate articles that are reported or violate community guidelines.
+      </p>
+
+    </section>
+
+    <section class="write-layout">
+
+      <!-- FORM -->
+      <form class="write-form" id="writeArticleForm">
+
+        <div class="form-header">
+          <p class="small-label">ARTICLE DETAILS</p>
+
+          <h2>
+            Create Article
+          </h2>
+
+          <span>
+            Write helpful content for new renters, apartment seekers, or people exploring a new city.
+          </span>
+        </div>
+
+        <div class="form-group">
+          <label for="articleTitle">Article Title</label>
+          <input type="text" id="articleTitle" placeholder="Example: 5 Things I Wish I Knew Before Renting My First Apartment">
+          <small></small>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="articleCategory">Category</label>
+            <select id="articleCategory">
+              <option value="">Choose category</option>
+              <option value="tips">Tips</option>
+              <option value="experience">Experience</option>
+              <option value="guide">Guide</option>
+              <option value="neighborhood">Neighborhood</option>
+            </select>
+            <small></small>
+          </div>
+
+          <div class="form-group">
+            <label for="articleAuthor">Author Name</label>
+            <input type="text" id="articleAuthor" placeholder="Alexandra D.">
+            <small></small>
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="articleExcerpt">Short Description</label>
+          <textarea id="articleExcerpt" placeholder="Write a short summary of your article..."></textarea>
+          <small></small>
+        </div>
+
+        <div class="form-group">
+          <label for="articleContent">Article Content</label>
+          <textarea id="articleContent" class="content-area" placeholder="Start writing your tips, story, or experience here..."></textarea>
+          <small></small>
+        </div>
+
+        <div class="upload-section">
+
+          <p class="small-label">COVER IMAGE</p>
+
+          <label class="upload-box">
+            <div>
+              <strong>Upload Cover Image</strong>
+              <p>Use a clean apartment, city, or lifestyle image for your article cover.</p>
+            </div>
+
+            <input type="file" id="coverImage" accept="image/*">
+          </label>
+
+        </div>
+
+        <div class="guideline-box">
+
+          <h3>
+            Community Guidelines
+          </h3>
+
+          <ul>
+            <li>Share useful and honest apartment-related tips.</li>
+            <li>Avoid offensive, harmful, or misleading content.</li>
+            <li>Do not publish private data such as phone numbers or addresses.</li>
+          </ul>
+
+        </div>
+
+        <div class="submit-area">
+
+          <button type="button" class="secondary-btn" onclick="window.location.href='article.html'">
+            Cancel
+          </button>
+
+          <button type="button" class="preview-btn" id="previewBtn">
+            Preview
+          </button>
+
+          <button type="submit" class="primary-btn">
+            Publish Article
+          </button>
+
+        </div>
+
+      </form>
+
+      <!-- PREVIEW -->
+      <aside class="preview-panel">
+
+        <p class="small-label">LIVE PREVIEW</p>
+
+        <article class="preview-card">
+
+          <div class="preview-image">
+            <img id="previewImage" src="../src/article-1.jpg" alt="Article preview">
+            <span id="previewCategory">Tips</span>
+          </div>
+
+          <div class="preview-content">
+            <h3 id="previewTitle">
+              Your article title will appear here
+            </h3>
+
+            <p id="previewExcerpt">
+              Your short description will appear here as a quick preview for readers.
+            </p>
+
+            <div class="preview-meta">
+              <span id="previewAuthor">Alexandra D.</span>
+              <span>Just now</span>
+            </div>
+          </div>
+
+        </article>
+
+        <div class="publish-note">
+          <h4>Publishing Flow</h4>
+
+          <p>
+            User publishes directly like Medium. Admin only moderates articles if they are reported or inappropriate.
+          </p>
+        </div>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+  <!-- QUOTE -->
+  <section class="quote-section">
+
+    <p>
+      “The best living advice often comes from people who have already opened the door before you.”
+    </p>
+
+    <span>RESIDIA · COMMUNITY DISCUSSION</span>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-section">
+
+    <div class="footer-image">
+      <img src="../src/footer.png" alt="">
+    </div>
+
+    <div class="footer-content">
+
+      <div class="footer-col">
+        <h4>Residia</h4>
+
+        <p>
+          Surabaya, Indonesia<br>
+          Premium apartment rental platform
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+
+        <p>hello@residia.com</p>
+
+        <div class="socials">
+          <a href="#">f</a>
+          <a href="#">x</a>
+        </div>
+      </div>
+
+      <div class="footer-col newsletter">
+        <h4>Subscribe to our newsletter</h4>
+
+        <div class="subscribe-box">
+          <input type="email" placeholder="Your email">
+          <button>Subscribe <span>→</span></button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright <span>RESIDIA</span>, All Rights Reserved</p>
+
+      <div>
+        <a href="#">Term of Use</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="../script/write-article.js"></script>
+
+</body>
+</html>

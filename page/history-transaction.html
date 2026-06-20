@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Riwayat Transaksi | RESIDIA</title>
+  <title>Transaction History | RESIDIA</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,71 +16,145 @@
 
 <body>
 
-  <!-- TOP BAR -->
+  <!-- ================= NAVBAR ================= -->
   <header class="history-topbar">
-    <a href="index.html" class="back-btn">←</a>
 
-    <div class="brand">
-      <img src="../src/logo.png" alt="">
-      <span>RESIDIA</span>
+    <div class="logo">
+      <img src="../src/logo.png" alt="RESIDIA Logo">
+      RESIDIA
     </div>
 
-    <a href="search.html" class="top-link">Cari Properti</a>
+    <nav class="top-menu">
+      <a href="../index.html">Home</a>
+      <a href="article.html">Discussion</a>
+      <a href="search.html">Search</a>
+      <a href="catalogue.html">Browse Catalog</a>
+      <a href="saved.html">Saved</a>
+    </nav>
+
+    <button class="hamburger" id="sidebarOpen">
+      ☰
+    </button>
+
   </header>
 
+  <!-- ================= SIDEBAR OVERLAY ================= -->
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="side-menu" id="sidebar">
+
+    <div class="sidebar-top">
+      <button class="sidebar-close" id="sidebarClose">☰</button>
+
+      <div class="sidebar-logo">
+        <img src="../src/logo.png" alt="RESIDIA Logo">
+        <span>RESIDIA</span>
+      </div>
+    </div>
+
+    <p class="guest-text">
+      Welcome, Guest
+    </p>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">
+      EXPLORE
+    </h4>
+
+    <a href="https://residiaabout.wordpress.com/"
+       class="sidebar-link"
+       target="_blank"
+       rel="noopener noreferrer">
+      ⓘ About Us
+    </a>
+
+    <a href="catalogue.html" class="sidebar-link">
+      ▦ Browse Apartments
+    </a>
+
+    <a href="saved.html" class="sidebar-link">
+      ♡ Saved Residences
+    </a>
+
+    <a href="history-transaction.html" class="sidebar-link">
+      ▣ Transaction History
+    </a>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">
+      CONNECT
+    </h4>
+
+    <a href="#" class="sidebar-link">◎ Instagram</a>
+    <a href="#" class="sidebar-link">♘ Twitter</a>
+    <a href="#" class="sidebar-link">♧ Contact Person</a>
+
+    <div class="sidebar-line"></div>
+
+    <h4 class="sidebar-section-title">
+      PARTNER
+    </h4>
+
+    <a href="mitra-registration.html" class="sidebar-link">
+      ✦ Daftar Sebagai Mitra
+    </a>
+
+    <div class="sidebar-line"></div>
+
+    <a href="login.html" class="login-link">
+      <button class="login-btn">
+        ⇥ Log in / Sign up
+      </button>
+    </a>
+
+  </aside>
+
+  <!-- ================= HERO ================= -->
+  <section class="history-hero">
+
+    <div class="hero-overlay"></div>
+
+    <img src="../src/history-hero.jpg" alt="Transaction history hero">
+
+    <div class="hero-content">
+      <p>
+        BOOKING ARCHIVE
+      </p>
+
+      <h1>
+        TRANSACTION<br>
+        HISTORY
+      </h1>
+
+      <span>
+        Review your bookings, invoices, payment status, and rental journey with RESIDIA.
+      </span>
+    </div>
+
+  </section>
+
+  <!-- ================= HISTORY CONTENT ================= -->
   <main class="history-page">
 
-    <!-- SIDEBAR -->
-    <aside class="account-sidebar">
-
-      <div class="profile-card">
-        <div class="avatar">A</div>
-
-        <p>Selamat datang,</p>
-        <h3>Alexandra D.</h3>
-
-        <div class="member-badge">★ Member Gold</div>
-      </div>
-
-      <nav class="account-menu">
-        <a href="index.html">⌂ Beranda</a>
-        <a href="search.html">⌕ Cari Properti</a>
-        <a href="#">♡ Properti Tersimpan</a>
-        <a href="history-transaction.html" class="active">▣ Riwayat Transaksi</a>
-        <a href="#">⚙ Pengaturan Akun</a>
-        <a href="#" class="logout">↪ Keluar</a>
-      </nav>
-
-      <div class="summary-box">
-        <h4>RINGKASAN</h4>
-
-        <div>
-          <span>Total Transaksi</span>
-          <strong>5</strong>
-        </div>
-
-        <div>
-          <span>Sedang Aktif</span>
-          <strong>1</strong>
-        </div>
-
-        <div>
-          <span>Selesai</span>
-          <strong>2</strong>
-        </div>
-      </div>
-
-    </aside>
-
-    <!-- CONTENT -->
     <section class="history-content">
 
       <div class="page-heading">
-        <h1>Riwayat Transaksi</h1>
-        <p>Kelola semua pemesanan dan riwayat pembayaran Anda.</p>
+        <div>
+          <h1>
+            Transaction History
+          </h1>
+
+          <p>
+            Kelola semua pemesanan dan riwayat pembayaran Anda.
+          </p>
+        </div>
       </div>
 
       <div class="stats-grid">
+
         <div class="stat-card">
           <p>Total Transaksi</p>
           <h3>5</h3>
@@ -104,9 +178,11 @@
           <h3>1</h3>
           <span>perlu tindakan</span>
         </div>
+
       </div>
 
       <div class="filter-bar">
+
         <div class="filter-tabs">
           <button class="active" data-filter="all">Semua</button>
           <button data-filter="aktif">Aktif <span>1</span></button>
@@ -120,26 +196,36 @@
           <option value="termahal">Harga Tertinggi</option>
           <option value="termurah">Harga Terendah</option>
         </select>
+
       </div>
 
       <div class="transaction-list">
 
+        <!-- TRANSACTION 1 -->
         <article class="transaction-card" data-status="aktif" data-price="25500000">
+
           <div class="transaction-image">
-            <img src="../src/featured.jpg" alt="">
+            <img src="../src/featured-apart.jpg" alt="Azure Penthouse">
             <span>Exclusive</span>
           </div>
 
           <div class="transaction-info">
+
             <div class="transaction-top">
               <p>#RSD-2024-8821</p>
               <span class="status active">Aktif</span>
             </div>
 
-            <h2>Azure Penthouse</h2>
-            <p class="location">⌖ Pantai Indah Kapuk, Jakarta</p>
+            <h2>
+              Azure Penthouse
+            </h2>
+
+            <p class="location">
+              ⌖ Pantai Indah Kapuk, Jakarta
+            </p>
 
             <div class="date-grid">
+
               <div>
                 <span>Check-in</span>
                 <strong>1 Jan 2025</strong>
@@ -154,9 +240,11 @@
                 <span>Durasi</span>
                 <strong>3 bulan</strong>
               </div>
+
             </div>
 
             <div class="transaction-bottom">
+
               <div>
                 <span>Total Pembayaran</span>
                 <h3>Rp 25.500.000</h3>
@@ -167,26 +255,38 @@
                 <button>⇩ Invoice</button>
                 <button class="detail-btn">⊙ Detail</button>
               </div>
+
             </div>
+
           </div>
+
         </article>
 
+        <!-- TRANSACTION 2 -->
         <article class="transaction-card" data-status="selesai" data-price="11400000">
+
           <div class="transaction-image">
-            <img src="../src/apart2.jpg" alt="">
+            <img src="../src/apart2-catalogue.jpg" alt="Ivory Residence">
             <span>Premium</span>
           </div>
 
           <div class="transaction-info">
+
             <div class="transaction-top">
               <p>#RSD-2024-7743</p>
               <span class="status done">Selesai</span>
             </div>
 
-            <h2>Ivory Residence</h2>
-            <p class="location">⌖ Dago, Bandung</p>
+            <h2>
+              Ivory Residence
+            </h2>
+
+            <p class="location">
+              ⌖ Dago, Bandung
+            </p>
 
             <div class="date-grid">
+
               <div>
                 <span>Check-in</span>
                 <strong>1 Sep 2024</strong>
@@ -201,9 +301,11 @@
                 <span>Durasi</span>
                 <strong>3 bulan</strong>
               </div>
+
             </div>
 
             <div class="transaction-bottom">
+
               <div>
                 <span>Total Pembayaran</span>
                 <h3>Rp 11.400.000</h3>
@@ -215,26 +317,38 @@
                 <button>⇩ Invoice</button>
                 <button class="detail-btn">⊙ Detail</button>
               </div>
+
             </div>
+
           </div>
+
         </article>
 
+        <!-- TRANSACTION 3 -->
         <article class="transaction-card" data-status="selesai" data-price="12400000">
+
           <div class="transaction-image">
-            <img src="../src/apart3.jpg" alt="">
+            <img src="../src/apart1-catalogue.jpg" alt="Mirasol Seminyak">
             <span>Premium</span>
           </div>
 
           <div class="transaction-info">
+
             <div class="transaction-top">
               <p>#RSD-2024-6102</p>
               <span class="status done">Selesai</span>
             </div>
 
-            <h2>Mirasol Seminyak</h2>
-            <p class="location">⌖ Seminyak, Bali</p>
+            <h2>
+              Mirasol Seminyak
+            </h2>
+
+            <p class="location">
+              ⌖ Seminyak, Bali
+            </p>
 
             <div class="date-grid">
+
               <div>
                 <span>Check-in</span>
                 <strong>15 Jun 2024</strong>
@@ -249,9 +363,11 @@
                 <span>Durasi</span>
                 <strong>2 bulan</strong>
               </div>
+
             </div>
 
             <div class="transaction-bottom">
+
               <div>
                 <span>Total Pembayaran</span>
                 <h3>Rp 12.400.000</h3>
@@ -263,26 +379,38 @@
                 <button>⇩ Invoice</button>
                 <button class="detail-btn">⊙ Detail</button>
               </div>
+
             </div>
+
           </div>
+
         </article>
 
+        <!-- TRANSACTION 4 -->
         <article class="transaction-card cancelled" data-status="dibatalkan" data-price="8200000">
+
           <div class="transaction-image">
-            <img src="../src/apart4.jpg" alt="">
+            <img src="../src/card5-saved.jpg" alt="Cobalt Tower Suite">
             <span>Premium</span>
           </div>
 
           <div class="transaction-info">
+
             <div class="transaction-top">
               <p>#RSD-2024-5580</p>
               <span class="status cancelled">Dibatalkan</span>
             </div>
 
-            <h2>Cobalt Tower Suite</h2>
-            <p class="location">⌖ Darmo, Surabaya</p>
+            <h2>
+              Cobalt Tower Suite
+            </h2>
+
+            <p class="location">
+              ⌖ Darmo, Surabaya
+            </p>
 
             <div class="date-grid">
+
               <div>
                 <span>Check-in</span>
                 <strong>1 Apr 2024</strong>
@@ -297,9 +425,11 @@
                 <span>Durasi</span>
                 <strong>2 bulan</strong>
               </div>
+
             </div>
 
             <div class="transaction-bottom">
+
               <div>
                 <span>Total Refund</span>
                 <h3>Rp 8.200.000</h3>
@@ -310,26 +440,38 @@
                 <button>⇩ Invoice</button>
                 <button class="detail-btn">⊙ Detail</button>
               </div>
+
             </div>
+
           </div>
+
         </article>
 
+        <!-- TRANSACTION 5 -->
         <article class="transaction-card" data-status="menunggu" data-price="36000000">
+
           <div class="transaction-image">
-            <img src="../src/article-4.jpg" alt="">
+            <img src="../src/card4-saved.jpg" alt="Velvet Suites SCBD">
             <span>Exclusive</span>
           </div>
 
           <div class="transaction-info">
+
             <div class="transaction-top">
               <p>#RSD-2025-0044</p>
               <span class="status waiting">Menunggu</span>
             </div>
 
-            <h2>Velvet Suites SCBD</h2>
-            <p class="location">⌖ SCBD, Jakarta</p>
+            <h2>
+              Velvet Suites SCBD
+            </h2>
+
+            <p class="location">
+              ⌖ SCBD, Jakarta
+            </p>
 
             <div class="date-grid">
+
               <div>
                 <span>Check-in</span>
                 <strong>1 Apr 2025</strong>
@@ -344,9 +486,11 @@
                 <span>Durasi</span>
                 <strong>3 bulan</strong>
               </div>
+
             </div>
 
             <div class="transaction-bottom">
+
               <div>
                 <span>Total Pembayaran</span>
                 <h3>Rp 36.000.000</h3>
@@ -357,8 +501,11 @@
                 <button>⇩ Invoice</button>
                 <button class="detail-btn">⊙ Detail</button>
               </div>
+
             </div>
+
           </div>
+
         </article>
 
       </div>
@@ -367,9 +514,65 @@
 
   </main>
 
+  <!-- ================= QUOTE ================= -->
+  <section class="quote-section">
+
+    <p>
+      “Every booking tells a story — of places discovered, choices made,
+      and the comfort of finding somewhere that feels like yours.”
+    </p>
+
+    <span>
+      RESIDIA · EST. 2024
+    </span>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
   <footer class="history-footer">
-    <h2>RESIDIA</h2>
-    <p>© 2025 RESIDIA · Luxury Living, Redefined</p>
+
+    <div>
+      <h2>
+        RESIDIA
+      </h2>
+
+      <p>
+        Curating extraordinary living spaces for the discerning few.
+      </p>
+    </div>
+
+    <div>
+      <h4>
+        Explore
+      </h4>
+
+      <a href="search.html">Search</a>
+      <a href="catalogue.html">Catalogue</a>
+      <a href="saved.html">Saved</a>
+    </div>
+
+    <div>
+      <h4>
+        Company
+      </h4>
+
+      <a href="https://residiaabout.wordpress.com">About Us</a>
+      <a href="article.html">Articles</a>
+      <a href="https://residiaabout.wordpress.com">Careers</a>
+      <a href="https://residiaabout.wordpress.com">Press</a>
+    </div>
+
+    <div>
+      <h4>
+        Support
+      </h4>
+
+      <a href="https://residiaabout.wordpress.com">Help Center</a>
+      <a href="https://residiaabout.wordpress.com">Contact</a>
+      <a href="https://residiaabout.wordpress.com">Privacy</a>
+      <a href="https://residiaabout.wordpress.com">Terms</a>
+    </div>
+
   </footer>
 
   <script src="../script/history-transaction.js"></script>

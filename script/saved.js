@@ -1,8 +1,55 @@
 /* ==========================
-   SAVED PAGE JS
+   NAVBAR SCROLL
 ========================== */
 
-/* FILTER BUTTONS */
+const savedTopbar = document.querySelector(".saved-topbar");
+
+window.addEventListener("scroll", () => {
+  if(!savedTopbar) return;
+
+  if(window.scrollY > 50){
+    savedTopbar.classList.add("scrolled");
+  }else{
+    savedTopbar.classList.remove("scrolled");
+  }
+});
+
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+const sidebar = document.getElementById("sidebar");
+const sidebarOverlay = document.getElementById("sidebarOverlay");
+const sidebarOpen = document.getElementById("sidebarOpen");
+const sidebarClose = document.getElementById("sidebarClose");
+
+if(sidebarOpen && sidebar && sidebarOverlay){
+  sidebarOpen.addEventListener("click", () => {
+    sidebar.classList.add("active");
+    sidebarOverlay.classList.add("active");
+  });
+}
+
+if(sidebarClose){
+  sidebarClose.addEventListener("click", closeSidebar);
+}
+
+if(sidebarOverlay){
+  sidebarOverlay.addEventListener("click", closeSidebar);
+}
+
+function closeSidebar(){
+  if(sidebar && sidebarOverlay){
+    sidebar.classList.remove("active");
+    sidebarOverlay.classList.remove("active");
+  }
+}
+
+
+/* ==========================
+   FILTER BUTTONS
+========================== */
 
 const filterButtons = document.querySelectorAll(".saved-filters button");
 const propertyCards = document.querySelectorAll(".property-card");
@@ -10,55 +57,52 @@ const propertyCards = document.querySelectorAll(".property-card");
 filterButtons.forEach(button => {
   button.addEventListener("click", () => {
 
-    filterButtons.forEach(btn =>
-      btn.classList.remove("active")
-    );
+    filterButtons.forEach(btn => {
+      btn.classList.remove("active");
+    });
 
     button.classList.add("active");
 
     const filter = button.dataset.filter;
 
     propertyCards.forEach(card => {
-
-      if (filter === "all") {
+      if(filter === "all"){
         card.classList.remove("hidden");
         return;
       }
 
-      const categories =
-        card.dataset.category || "";
+      const categories = card.dataset.category || "";
 
-      if (categories.includes(filter)) {
+      if(categories.includes(filter)){
         card.classList.remove("hidden");
-      } else {
+      }else{
         card.classList.add("hidden");
       }
     });
+
   });
 });
 
 
 /* ==========================
-   HEART BUTTON
+   FAVORITE BUTTON
 ========================== */
 
-const hearts =
-  document.querySelectorAll(".heart");
+const hearts = document.querySelectorAll(".heart");
 
 hearts.forEach(heart => {
-
-  heart.addEventListener("click", () => {
+  heart.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
 
     heart.classList.toggle("active");
 
-    if (heart.classList.contains("active")) {
-      heart.innerHTML = "♥";
-    } else {
-      heart.innerHTML = "♡";
+    if(heart.classList.contains("active")){
+      heart.textContent = "♥";
+    }else{
+      heart.textContent = "♡";
     }
-
   });
-
 });
 
 
@@ -66,30 +110,23 @@ hearts.forEach(heart => {
    REMOVE PROPERTY
 ========================== */
 
-const removeButtons =
-  document.querySelectorAll(".remove-btn");
+const removeButtons = document.querySelectorAll(".remove-btn");
 
 removeButtons.forEach(button => {
-
   button.addEventListener("click", () => {
+    const card = button.closest(".property-card");
 
-    const card =
-      button.closest(".property-card");
+    if(!card) return;
 
-    card.style.transition =
-      "all .4s ease";
-
+    card.style.transition = "all .4s ease";
     card.style.opacity = "0";
-    card.style.transform =
-      "translateY(20px)";
+    card.style.transform = "translateY(20px)";
 
     setTimeout(() => {
       card.remove();
       updateSavedCount();
     }, 400);
-
   });
-
 });
 
 
@@ -97,79 +134,32 @@ removeButtons.forEach(button => {
    UPDATE COUNTS
 ========================== */
 
-function updateSavedCount() {
-
-  const cards =
-    document.querySelectorAll(".property-card");
-
+function updateSavedCount(){
+  const cards = document.querySelectorAll(".property-card");
   const total = cards.length;
 
-  /* Hero Saved Count */
-  const heroCount =
-    document.querySelector(".hero-line small");
+  const headingCount = document.querySelector(".saved-heading p");
 
-  if (heroCount) {
-    heroCount.textContent =
-      `${total} PROPERTI TERSIMPAN`;
+  if(headingCount){
+    headingCount.textContent = `${total} properti tersimpan`;
   }
-
-  /* Top Nav */
-  const savedTop =
-    document.querySelector(".saved-active");
-
-  if (savedTop) {
-    savedTop.textContent =
-      `♥ Saved (${total})`;
-  }
-
-  /* Sidebar Count */
-  const collectionRows =
-    document.querySelectorAll(
-      ".collection-box strong"
-    );
-
-  if (collectionRows.length > 0) {
-    collectionRows[0].textContent = total;
-  }
-
-  /* Stat Box */
-  const statNumber =
-    document.querySelector(
-      ".saved-stats h3"
-    );
-
-  if (statNumber) {
-    statNumber.textContent = total;
-  }
-
 }
 
 
 /* ==========================
-   VIEW DETAILS
+   VIEW DETAILS HOVER
 ========================== */
 
-const viewButtons =
-  document.querySelectorAll(
-    '.card-actions a'
-  );
+const viewButtons = document.querySelectorAll(".card-actions a");
 
 viewButtons.forEach(button => {
-
   button.addEventListener("mouseenter", () => {
-
-    button.style.transform =
-      "translateY(-2px)";
-
+    button.style.transform = "translateY(-2px)";
   });
 
   button.addEventListener("mouseleave", () => {
-
-    button.style.transform =
-      "translateY(0)";
-
+    button.style.transform = "translateY(0)";
   });
-
 });
 
 
@@ -177,35 +167,23 @@ viewButtons.forEach(button => {
    FADE IN ANIMATION
 ========================== */
 
-const observer =
-  new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
-
-        entry.target.style.opacity = "1";
-        entry.target.style.transform =
-          "translateY(0)";
-
-      }
-
-    });
-
-  }, {
-    threshold: 0.1
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
+    }
   });
+}, {
+  threshold:0.1
+});
 
 propertyCards.forEach(card => {
-
   card.style.opacity = "0";
-  card.style.transform =
-    "translateY(30px)";
-  card.style.transition =
-    "all .6s ease";
+  card.style.transform = "translateY(30px)";
+  card.style.transition = "all .6s ease";
 
   observer.observe(card);
-
 });
 
 
@@ -213,27 +191,16 @@ propertyCards.forEach(card => {
    RECOMMENDATION CARDS
 ========================== */
 
-const recommendations =
-  document.querySelectorAll(
-    ".recommend-grid article"
-  );
+const recommendations = document.querySelectorAll(".recommend-grid article");
 
 recommendations.forEach(card => {
-
   card.addEventListener("mouseenter", () => {
-
-    card.style.transform =
-      "translateY(-6px)";
-
+    card.style.transform = "translateY(-6px)";
   });
 
   card.addEventListener("mouseleave", () => {
-
-    card.style.transform =
-      "translateY(0)";
-
+    card.style.transform = "translateY(0)";
   });
-
 });
 
 
@@ -242,9 +209,6 @@ recommendations.forEach(card => {
 ========================== */
 
 window.addEventListener("load", () => {
-
   document.body.style.opacity = "1";
-
   updateSavedCount();
-
 });

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sign Up | RESIDIA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Cinzel+Decorative:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/sign-up.css">
+</head>
+
+<body>
+
+  <main class="auth-page">
+
+    <!-- LEFT VISUAL -->
+    <section class="auth-visual">
+
+      <img src="../src/login-bg.jpg" alt="RESIDIA sign up visual">
+
+      <div class="visual-overlay"></div>
+
+      <div class="visual-content">
+
+        <a href="../index.html" class="back-btn">
+          ← Back Home
+        </a>
+
+        <div class="visual-bottom">
+          <p class="visual-label">
+            JOIN RESIDIA
+          </p>
+
+          <h1>
+            Begin<br>
+            Living
+          </h1>
+
+          <span>
+            Create your account and explore curated residences, saved collections, and seamless bookings.
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- RIGHT PANEL -->
+    <section class="auth-panel">
+
+      <div class="auth-card">
+
+        <div class="brand-mini">
+          <img src="../src/logo.png" alt="RESIDIA Logo">
+          <span>RESIDIA</span>
+        </div>
+
+        <p class="small-label">
+          CREATE ACCOUNT
+        </p>
+
+        <h2>
+          Sign Up
+        </h2>
+
+        <p class="subtitle">
+          Buat akun untuk menyimpan properti favorit, melakukan booking, dan mengakses layanan RESIDIA.
+        </p>
+
+        <form id="signUpForm">
+
+          <div class="form-grid">
+
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" placeholder="Alexandra">
+              <small></small>
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" placeholder="Putri">
+              <small></small>
+            </div>
+
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="you@email.com">
+            <small></small>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" placeholder="0812-xxxx-xxxx">
+            <small></small>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Create your password">
+            <small></small>
+          </div>
+
+          <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" placeholder="Repeat your password">
+            <small></small>
+          </div>
+
+          <div class="agreement-box">
+
+            <label>
+              <input type="checkbox" id="agreement">
+              <span>
+                I agree to RESIDIA Terms, Privacy Policy, and account verification process.
+              </span>
+            </label>
+
+            <small id="agreementError"></small>
+
+          </div>
+
+          <button type="submit" class="submit-btn">
+            Create Account
+          </button>
+
+        </form>
+
+        <div class="auth-divider">
+          <span></span>
+          <p>Already have an account?</p>
+          <span></span>
+        </div>
+
+        <p class="login-text">
+          Return to
+          <a href="login.html">Login</a>
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="../script/sign-up.js"></script>
+
+</body>
+</html>

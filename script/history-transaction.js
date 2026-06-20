@@ -1,87 +1,171 @@
-const filterButtons = document.querySelectorAll(".filter-tabs button");
-const transactionList = document.querySelector(".transaction-list");
-const transactionCards = Array.from(document.querySelectorAll(".transaction-card"));
-const sortSelect = document.getElementById("sortSelect");
+/* ==========================
+   NAVBAR SCROLL
+========================== */
 
-/* FILTER STATUS */
+const historyTopbar = document.querySelector(".history-topbar");
+
+window.addEventListener("scroll", () => {
+  if(!historyTopbar) return;
+
+  if(window.scrollY > 50){
+    historyTopbar.classList.add("scrolled");
+  }else{
+    historyTopbar.classList.remove("scrolled");
+  }
+});
+
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+const sidebar = document.getElementById("sidebar");
+const sidebarOverlay = document.getElementById("sidebarOverlay");
+const sidebarOpen = document.getElementById("sidebarOpen");
+const sidebarClose = document.getElementById("sidebarClose");
+
+if(sidebarOpen && sidebar && sidebarOverlay){
+  sidebarOpen.addEventListener("click", () => {
+    sidebar.classList.add("active");
+    sidebarOverlay.classList.add("active");
+  });
+}
+
+if(sidebarClose){
+  sidebarClose.addEventListener("click", closeSidebar);
+}
+
+if(sidebarOverlay){
+  sidebarOverlay.addEventListener("click", closeSidebar);
+}
+
+function closeSidebar(){
+  if(sidebar && sidebarOverlay){
+    sidebar.classList.remove("active");
+    sidebarOverlay.classList.remove("active");
+  }
+}
+
+
+/* ==========================
+   FILTER TRANSACTIONS
+========================== */
+
+const filterButtons = document.querySelectorAll(".filter-tabs button");
+const transactionCards = document.querySelectorAll(".transaction-card");
 
 filterButtons.forEach(button => {
   button.addEventListener("click", () => {
-    filterButtons.forEach(btn => btn.classList.remove("active"));
+
+    filterButtons.forEach(btn => {
+      btn.classList.remove("active");
+    });
+
     button.classList.add("active");
 
     const filter = button.dataset.filter;
 
     transactionCards.forEach(card => {
-      const status = card.dataset.status;
+      if(filter === "all"){
+        card.classList.remove("hidden");
+        return;
+      }
 
-      if(filter === "all" || filter === status){
-        card.style.display = "grid";
-      } else {
-        card.style.display = "none";
+      const status = card.dataset.status || "";
+
+      if(status === filter){
+        card.classList.remove("hidden");
+      }else{
+        card.classList.add("hidden");
       }
     });
+
   });
 });
 
-/* SORT TRANSAKSI */
 
-sortSelect.addEventListener("change", () => {
-  const value = sortSelect.value;
+/* ==========================
+   SORT TRANSACTIONS
+========================== */
 
-  let sortedCards = [...transactionCards];
+const sortSelect = document.getElementById("sortSelect");
+const transactionList = document.querySelector(".transaction-list");
 
-  if(value === "termahal"){
-    sortedCards.sort((a, b) => {
-      return Number(b.dataset.price) - Number(a.dataset.price);
+if(sortSelect && transactionList){
+  sortSelect.addEventListener("change", () => {
+    const cards = Array.from(document.querySelectorAll(".transaction-card"));
+    const sortValue = sortSelect.value;
+
+    if(sortValue === "termahal"){
+      cards.sort((a,b) => {
+        return Number(b.dataset.price) - Number(a.dataset.price);
+      });
+    }
+
+    if(sortValue === "termurah"){
+      cards.sort((a,b) => {
+        return Number(a.dataset.price) - Number(b.dataset.price);
+      });
+    }
+
+    if(sortValue === "terbaru"){
+      cards.sort((a,b) => {
+        return 0;
+      });
+    }
+
+    cards.forEach(card => {
+      transactionList.appendChild(card);
     });
-  }
+  });
+}
 
-  if(value === "termurah"){
-    sortedCards.sort((a, b) => {
-      return Number(a.dataset.price) - Number(b.dataset.price);
-    });
-  }
 
-  if(value === "terbaru"){
-    sortedCards = [...transactionCards];
-  }
+/* ==========================
+   BUTTON HOVER
+========================== */
 
-  sortedCards.forEach(card => {
-    transactionList.appendChild(card);
+const actionButtons = document.querySelectorAll(".action-buttons button");
+
+actionButtons.forEach(button => {
+  button.addEventListener("mouseenter", () => {
+    button.style.transform = "translateY(-2px)";
+  });
+
+  button.addEventListener("mouseleave", () => {
+    button.style.transform = "translateY(0)";
   });
 });
 
-/* DETAIL BUTTON */
 
-const detailButtons = document.querySelectorAll(".detail-btn");
+/* ==========================
+   FADE IN ANIMATION
+========================== */
 
-detailButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    window.location.href = "azure-details.html";
-  });
-});
-
-/* INVOICE BUTTON DEMO */
-
-const invoiceButtons = document.querySelectorAll(".action-buttons button:not(.detail-btn)");
-
-invoiceButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    if(button.textContent.includes("Invoice")){
-      alert("Invoice feature can be connected to backend later.");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
     }
   });
+}, {
+  threshold:0.1
 });
 
-/* CARD HOVER EFFECT */
-
 transactionCards.forEach(card => {
-  card.addEventListener("mouseenter", () => {
-    card.style.boxShadow = "0 18px 45px rgba(0, 77, 108, 0.12)";
-  });
+  card.style.opacity = "0";
+  card.style.transform = "translateY(30px)";
+  card.style.transition = "all .6s ease";
 
-  card.addEventListener("mouseleave", () => {
-    card.style.boxShadow = "0 8px 25px rgba(0,0,0,.05)";
-  });
+  observer.observe(card);
+});
+
+
+/* ==========================
+   PAGE LOAD
+========================== */
+
+window.addEventListener("load", () => {
+  document.body.style.opacity = "1";
 });
